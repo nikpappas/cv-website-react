@@ -1,0 +1,218 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+a{
+  text-decoration: none;
+  color: #A40000;
+}
+a:hover{
+  opacity: 0.6;
+}
+body{
+  overflow-x: hidden;
+  font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  background-color: white;
+  color: black;
+}
+ul{
+  list-style-type: none;
+}
+.header{
+  background-color: #202121;
+  width: 100%;
+}
+.header-left{
+  position: relative;
+  left: 5%;
+  top: 0;
+  padding-bottom: 2%;
+  color:white;
+}
+.header h1 {
+  align:center;
+  font-variant: small-caps;
+  margin-bottom: 0;
+  font-size: 2.5em;
+}
+.header h3{
+  float:left;
+  padding-bottom: 2%;
+}
+.logo{
+  margin-top: 2%;
+  display: inline-block;
+}
+.personal{
+  position: absolute;
+  top:30%;
+  margin-left: 2%;
+  padding-bottom: 1%;
+  display: inline-block;
+}
+.Plinks{
+  position: fixed;
+  right:2%;
+  top: 2%;
+  z-index: 1;
+}
+.Plinks img{
+    height: 30px;
+}
+.Plinks img:hover{
+  filter: opacity(.5);
+}
+.education, .work, .skills, .languages, .hobbies, .software, .projects {
+  padding-top: 2%;
+  padding-bottom: 2%;
+  min-height: 55px;
+  width: 100%;
+}
+.edu-entries{
+  display: none;
+  padding: 2%;
+}
+.education h1, .work h1, .software h1, .hobbies h1{
+  text-shadow: 0px 0px 10px rgba(100,110,110,.4);
+  z-index: 1;
+  position: absolute;
+  right: 5%;
+}
+.education h1:hover, .work h1:hover, .software h1:hover,
+.skills h1:hover, .languages h1:hover, .projects h1:hover, .hobbies h1:hover{
+  opacity: 0.6;
+}
+.education th{
+  min-width: 240px;
+  position: relative;
+  left: -10%;
+}
+.dates{
+  font-size: 130%;
+  font-weight: bolder;
+}
+
+.skills h1, .languages h1, .projects h1{
+  text-shadow: 0px 0px 10px rgba(170,150,150,.3);
+  position: absolute;
+  left: 5%;
+}
+.uob,.duth,.ugr {
+  width: 120%;
+  padding: 20px;
+  position:relative;
+  left: -20%;
+}
+.uob-logo, .ugr-logo{
+  position:relative;
+  left:-14%;
+}
+.duth-logo {
+  min-width: 240px;
+  font-weight: bold;
+  font-family: Arial;
+  font-size: 80%;
+}
+.duth-logo img{
+  display: inline-block;
+  position:relative;
+  padding-right: 10px;
+  float:left;
+}
+.duth-logo-letters h1,h2,h3{
+  position: relative;
+  left:-2%;
+  display: block;
+  text-align: left;
+}
+.worklist{
+  padding: 3%;
+  padding-top: 5%;
+  position: relative;
+  left:-20%;
+}
+.skills, .languages, .projects{
+  color: white;
+  background-color: #202121;
+}
+.education, .work, .software, .hobbies{
+  color: #202121;
+}
+.textJava, .textC{
+  display: none;
+  text-align: right;
+  width: 30%;
+  position: relative;
+  /*display: inline-block;*/
+  left: 10%;
+}
+.skills ul{
+  width: 45%;
+}
+.skilList, .languagelist, .softList, .worklist, .projectlist{
+  display: none;
+}
+.languages ul{
+  width: 25%;
+}
+.skills ul, .languages ul{
+  position: relative;
+  left:5%;
+  padding-top: 3%;
+  padding-left:  10%;
+  padding-right: 10%;
+  padding-bottom: 5%;
+}
+.skills li{
+  display: inline-block;
+  vertical-align: top;
+  padding-right: 3%;
+}
+.languages li{
+  display: inline-block;
+  vertical-align: top;
+  padding-right: 8%;
+}
+.software ul{
+  position: relative;
+  right:15%;
+  padding-top: 3%;
+  padding-left:  10%;
+  padding-right: 10%;
+  padding-bottom: 5%;
+  width: 45%;
+}
+.software li{
+  display: inline-block;
+  vertical-align: top;
+  padding-right: 3%;
+}
+
+.skills li img, .software li img{
+  height: 50px;
+}
+.software h3{
+  position:absolute;
+  left:15%;
+}
+.projects ul{
+  left:10%;
+  padding: 5%;
+  text-align: left;
+  font-size: larger;
+}
+.row{
+  width:100%;
+}
+/*---------Tooltips-----------*/
+
+.tooltiptext {
+    visibility: hidden;
+    z-index: 1;
+    display: block;
+    /*top:-20px;*/
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
