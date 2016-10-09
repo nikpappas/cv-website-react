@@ -23,9 +23,14 @@
       </div>
     </div>
     <div class="Plinks">
+      <div class="personalInfo">
+        Phone number: +447751718491<br/>
+        e-Mail : nikolaospappa@gmail.com
+      </div>
       <ul>
-        <li><a href="https://uk.linkedin.com/in/nikos-pappas"><img src="images/linkedin.png" heigth="50px" /></a></li>
-        <li><a href="mailto:nikolaospappa@gmail.com"><img src="images/mail.png" heigth="50px" /></a></li>
+        <li><a href="https://uk.linkedin.com/in/nikos-pappas"><img src="images/linkedin.png" heigth="50px" alt="linkedIn" /></a></li>
+        <li><a href="mailto:nikolaospappa@gmail.com"><img src="images/mail.png" heigth="50px" alt="e-Mail" /></a></li>
+        <li><a onclick="showClick(perInfo)"><img src="images/contact.png" alt="Contact info" /></a></li>
       </ul>
     </div>
     <center>
@@ -94,7 +99,7 @@
       </div>
     </div>
     <div class="skills">
-      <h1 onclick="showClick(skills)">Programming Skills</h1>
+      <h1 onclick="closeClickSkill(skills,progLang)">Programming Skills</h1>
       <div class="textJava">
         Java is the first programming language I used. I started with auxiliary calculating applications
         for while I was studying civil engineering.
@@ -102,24 +107,27 @@
       <div class="textC">
         I began learning C as the main programming language of my Master's course.
       </div>
-
+      <div class="textHtml">
+        I first started using HTML in a computer science class in High-School, then in University of bristol
+        i had a unit on web technologies. <a href="http:elvasite.s3-website-eu-west-1.amazonaws.com">Sample.</a>
+      </div>
       <ul class="skilList">
         <li>
-          <div class="tooltip" onclick="showSkill(javaProg)">
+          <div class="tooltip" onclick="showSkill(javaProg,progLang)">
             <span class="tooltiptext">Java</span>
             <img src="images/skills/java-logo.png" alt="Java"/>
             <img src="images/skills/star.png"><img src="images/skills/star.png"><img src="images/skills/star.png"><img src="images/skills/star.png"><img src="images/skills/circle.png">
           </div>
         </li>
         <li>
-          <div class="tooltip" onclick="showSkill(cProg)">
+          <div class="tooltip" onclick="showSkill(cProg,progLang)">
             <span class="tooltiptext">C-programming</span>
             <img src="images/skills/c-logo.png"    alt="C-programming"/>
             <img src="images/skills/star.png"><img src="images/skills/star.png"><img src="images/skills/star.png"><img src="images/skills/circle.png"><img src="images/skills/circle.png">
           </div>
         </li>
         <li>
-          <div class="tooltip">
+          <div class="tooltip" onclick="showSkill(htmlProg,progLang)">
             <span class="tooltiptext">HTML</span>
             <img src="images/skills/html5-64.png"  alt="html"/>
             <img src="images/skills/star.png"><img src="images/skills/star.png"><img src="images/skills/circle.png"><img src="images/skills/circle.png"><img src="images/skills/circle.png">
@@ -149,7 +157,7 @@
       </ul>
     </div>
     <div class="work">
-      <h1 onclick="showClick(work)">Working Experience</h1>
+      <h1 onclick="showClick(work)">Employment Experience</h1>
       <div class="worklist">
         <h3>Motion Tracking Annotation (SHPERE)</h3>
         <h3>Electrician assistant (Bristol Sparks)</h3>
@@ -157,19 +165,34 @@
       </div>
     </div>
     <div class="languages">
-      <h1 onclick="showClick(language)">Spoken Languages</h1>
+      <h1 onclick="showSkill(language,spokLang)">Spoken Languages</h1>
+      <div class="eng">
+        Ielts band 8.0 2015<br/>
+        B2 Cambridge Advanced   2006<br/>
+        C1 Michigan Proficiency 2006
+      </div>
+      <div class="gre">
+        Mother language
+      </div>
+      <div class="spa">
+        B2 national greek dimploma.<br/>
+        Lived studyed worked in spain.
+      </div>
+      <div class="ger">
+        B2 Zertificat 2004
+      </div>
       <ul class="languagelist">
-        <li>
+        <li onclick="showSkill(english,spokLang)">
           <h2>English</h2>
           <img src="images/skills/star24.png"><img src="images/skills/star24.png"><img src="images/skills/star24.png"><img src="images/skills/star24.png"><img src="images/skills/circle24.png">
         </li>
-        <li>
-          <h2>Spanish</h2><img src="images/skills/star24.png"><img src="images/skills/star24.png"><img src="images/skills/star24.png"><img src="images/skills/star24.png"><img src="images/skills/circle24.png">
+        <li onclick="showSkill(spanish,spokLang)">
+          <h2>Spanish</h2><img src="images/skills/star24.png"><img src="images/skills/star24.png"><img src="images/skills/star24.png"><img src="images/skills/star24.png"><img src="images/skills/star24.png">
         </li>
-        <li>
+        <li onclick="showSkill(greek,spokLang)">
           <h2>Greek</h2><img src="images/skills/star24.png"><img src="images/skills/star24.png"><img src="images/skills/star24.png"><img src="images/skills/star24.png"><img src="images/skills/star24.png">
         </li>
-        <li>
+        <li onclick="showSkill(german,spokLang)">
           <h2>German</h2><img src="images/skills/star24.png"/><img src="images/skills/star24.png"/><img src="images/skills/circle24.png"/><img src="images/skills/circle24.png"/><img src="images/skills/circle24.png"/>
         </li>
     </div>

@@ -62,6 +62,20 @@ ul{
 .Plinks img:hover{
   filter: opacity(.5);
 }
+.personalInfo{
+  display: none;
+  /*display: inline-block;*/
+  position: absolute;
+  padding: 20px;
+  right: 100%;
+  margin-right: 10px;
+  border-radius: 3px;
+  color: #BFC1C1;
+  min-width: 200px;
+  width:25%;
+  background-color: #555555;
+  z-index: -2;
+}
 .education, .work, .skills, .languages, .hobbies, .software, .projects {
   padding-top: 2%;
   padding-bottom: 2%;
@@ -72,15 +86,22 @@ ul{
   display: none;
   padding: 2%;
 }
+.education hr{
+  position:relative;
+  left:-10%;
+}
 .education h1, .work h1, .software h1, .hobbies h1{
   text-shadow: 0px 0px 10px rgba(100,110,110,.4);
   z-index: 1;
   position: absolute;
   right: 5%;
+  text-align: right;
+  width: 100%;
 }
 .education h1:hover, .work h1:hover, .software h1:hover,
 .skills h1:hover, .languages h1:hover, .projects h1:hover, .hobbies h1:hover{
   opacity: 0.6;
+  text-shadow: 0px 0px 5px rgba(100,110,110,.8);
 }
 .education th{
   min-width: 240px;
@@ -96,6 +117,9 @@ ul{
   text-shadow: 0px 0px 10px rgba(170,150,150,.3);
   position: absolute;
   left: 5%;
+  text-align: left;
+  width: 100%;
+  z-index: 1;
 }
 .uob,.duth,.ugr {
   width: 120%;
@@ -138,13 +162,15 @@ ul{
 .education, .work, .software, .hobbies{
   color: #202121;
 }
-.textJava, .textC{
+.textJava, .textC, .textHtml,
+.eng,.gre,.spa,.ger{
   display: none;
   text-align: right;
   width: 30%;
   position: relative;
   /*display: inline-block;*/
   left: 10%;
+  z-index: 1;
 }
 .skills ul{
   width: 45%;
@@ -190,6 +216,7 @@ ul{
 
 .skills li img, .software li img{
   height: 50px;
+  cursor: pointer;
 }
 .software h3{
   position:absolute;
