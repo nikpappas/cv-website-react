@@ -16,6 +16,8 @@ var spanish  = document.getElementsByClassName('spa');
 var german    = document.getElementsByClassName('ger');
 var perInfo  = document.getElementsByClassName('personalInfo');
 var spokLang = [english, greek, spanish, german];
+var uobList = document.getElementsByClassName("uob-unitList");
+var duthList = document.getElementsByClassName("duth-unitList");
 function showClick(className){
   var style = window.getComputedStyle(className[0]);
   if(style.getPropertyValue("display")=="none"){

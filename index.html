@@ -2,7 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-GB" xml:lang="en-GB">
   <head>
     <meta charset="UTF-8"/>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Open+Sans+Condensed:300|Raleway" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> -->
     <!-- <link href='https://fonts.googleapis.com/css?family=Fredericka+the+Great' rel='stylesheet' type='text/css'/> -->
     <link rel="stylesheet" type="text/css"  href="mainStyle.css" />
     <link rel="shortcut icon" href="images/logo-outer64.png"/>
@@ -53,6 +54,23 @@
             </th>
           </tr>
         </table>
+        <div class="uob-details">
+          <ul>
+            <li><strong>Average: 74</strong> %</li>
+            <li><strong>Project:</strong> <em>Mammography Interpretation Tool<br/>
+              using Covolutional Neural Networks</em><a href="downloads/npposter.pdf" download> (Poster)</a></li>
+            <li onclick="showClick(uobList)">Units List +</a></li>
+            <li><ul class="uob-unitList">
+              <li>Programming in C - <strong>73</strong> %</li>
+              <li>Computer Architecture - <strong>75</strong> %</li>
+              <li>Software Engineering - <strong>68</strong> %</li>
+              <li>Web Technologies -<strong>78</strong> %</li>
+              <li>Databases - <strong>82</strong> %</li>
+              <li>Research Skills - <strong>66</strong> %</li>
+              <li>Object Oriented Programming - Java - <strong>75</strong> %</li>
+            </ul></li>
+          </ul>
+        </div>
       </div>
       <hr/>
       <div class ="ugr">
@@ -95,6 +113,26 @@
             Structural Engineering MEng
           </th>
         </table>
+        <div class="duth-details">
+          <ul>
+            <li><strong>Average:</strong> 7.07/10</li>
+            <li><strong>Project:</strong> <em>Experimental Corroboration Of The Behaviour Of A Bolted<br/>
+              RBS Connection Under Cyclic Load </em><a href="downloads/nppresentation.pdf" download>(Presentation)</a></li>
+            <li onclick="showClick(duthList)">Selected Unit List +</li>
+              <li><ul class="duth-unitList">
+              <li>Fuzzy Logic - <strong>10/</strong>10</li>
+              <li>Informatics - Fortran <strong>9</strong>/10</li>
+              <li>Mechanics of Rigid Body - <strong>9</strong>/10</li>
+              <li>Theory of Elastic Stability - <strong>10</strong>/10</li>
+              <li>Plates and Shells - <strong>9.5</strong>/10</li>
+              <li>Theory of Elasticity - <strong>7.5</strong>/10</li>
+              <li>Steel Structures - <strong>8.5</strong>/10</li>
+              <li>Laboratory Topics in Reinforced Concrete - <strong>8.5</strong>/10</li>
+              <li>Fluid Mechanics - <strong>7</strong>/10</li>
+              <li>Numerical Analysis - <strong>7</strong>/10</li>
+            </ul></li>
+          </ul>
+        </div>
         </div>
       </div>
     </div>
@@ -159,13 +197,14 @@
     <div class="work">
       <h1 onclick="showClick(work)">Employment Experience</h1>
       <div class="worklist">
-        <h3>Motion Tracking Annotation (SHPERE)</h3>
-        <h3>Electrician assistant (Bristol Sparks)</h3>
-        <h3>blabalabalabalabaalba abalabalbalba abalabla </h3>
+        <h3>2016 - Motion Tracking Annotation (SHPERE, Bristol)</h3>
+        <h3>2015 - Electrician assistant (Bristol Sparks, Bristol)</h3>
+        <h3>2015 - Bartender (Hole In The Wall, Bristol)</h3>
+        <h3>2014 - Research Assistant in (GTE, Madrid) </h3>
       </div>
     </div>
     <div class="languages">
-      <h1 onclick="showSkill(language,spokLang)">Spoken Languages</h1>
+      <h1 onclick="closeClickSkill(language,spokLang)">Spoken Languages</h1>
       <div class="eng">
         Ielts band 8.0 2015<br/>
         B2 Cambridge Advanced   2006<br/>
@@ -274,7 +313,8 @@
       <h1 onclick="showClick(proj)">Projects</h1>
       <ul class="projectlist">
         <li>Mammography Interpretation Tool using Computer Vision</li>
-        <li>Experimental Corroboration of RBS moment </li>
+        <li>Experimental Corroboration of Reduced Beam Section moment connections (Abaqus)</li>
+        <li>University forum website database (SQLite)</li>
         <li><a href="http:elvasite.s3-website-eu-west-1.amazonaws.com">Website of Artist</a></li>
     </div>
     <div class="hobbies">
