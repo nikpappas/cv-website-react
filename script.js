@@ -8,7 +8,9 @@ var proj     = document.getElementsByClassName('projectlist');
 var javaProg = document.getElementsByClassName('textJava');
 var cProg    = document.getElementsByClassName('textC');
 var htmlProg = document.getElementsByClassName('textHtml');
-var progLang = [javaProg, cProg, htmlProg];
+var sqlite = document.getElementsByClassName('textSQL');
+var nodeJS = document.getElementsByClassName('textJS');
+var progLang = [javaProg, cProg, htmlProg, sqlite, nodeJS];
 // ------- spoken languages
 var english  = document.getElementsByClassName('eng');
 var greek    = document.getElementsByClassName('gre');
@@ -18,6 +20,8 @@ var perInfo  = document.getElementsByClassName('personalInfo');
 var spokLang = [english, greek, spanish, german];
 var uobList = document.getElementsByClassName("uob-unitList");
 var duthList = document.getElementsByClassName("duth-unitList");
+var anatoliaList = document.getElementsByClassName('anatolia-extraList');
+var header = document.getElementsByTagName('header');
 function showClick(className){
   var style = window.getComputedStyle(className[0]);
   if(style.getPropertyValue("display")=="none"){
@@ -40,3 +44,12 @@ function closeClickSkill(className,list){
   closeSkill(list);
   showClick(className);
 }
+function whenScrolling(){
+  var top = (window.pageYOffset || document.scrollTop)  - (document.clientTop || 0);
+  if(top>5){
+    header[0].className = "header-scrolled";
+  }else{
+    header[0].className ="";
+  }
+}
+window.addEventListener("scroll", whenScrolling);

@@ -18,6 +18,7 @@ a:hover{
   opacity: 0.6;
 }
 body{
+  margin-top: 150px;
   overflow-x: hidden;
   /*font-family: "Raleway","Helvetica Neue",Helvetica,Arial,sans-serif;*/
   font-family: "Open Sans Condensed","Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -27,9 +28,16 @@ body{
 ul{
   list-style-type: none;
 }
-.header{
+header{
   background-color: #202121;
   width: 100%;
+  position: fixed;
+  top:0;
+  transition: all 0.6s ease;
+  z-index: 3;
+}
+header.header-scrolled{
+  opacity: 0.97;
 }
 .header-left{
   position: relative;
@@ -37,13 +45,25 @@ ul{
   top: 0;
   padding-bottom: 2%;
   color:white;
+  transition: all 0.6s ease;
 }
-.header h1 {
+.header-left img{
+  transition: all 0.6s ease;
+}
+.header-scrolled .header-left img{
+  height: 50px;
+}
+header h1 {
   align:center;
   font-variant: small-caps;
   margin-bottom: 0;
   font-size: 2.5em;
+  transition: all 0.6s ease;
 }
+header.header-scrolled h1 {
+  font-size: 2em;
+}
+
 .header h3{
   float:left;
   padding-bottom: 2%;
@@ -63,7 +83,20 @@ ul{
   position: fixed;
   right:2%;
   top: 2%;
-  z-index: 2;
+  z-index: 4;
+  transition: all 0.6s ease;
+}
+.Plist{
+  transition: all 0.6s ease;
+}
+.header-scrolled li{
+  float:right;
+  display: inline;
+  vertical-align: top;
+}
+header li{
+  transition: all 0.6s ease;
+  transition-delay: 0.6s;
 }
 .Plinks img{
   cursor: pointer;
@@ -134,7 +167,7 @@ ul{
   width: 100%;
   z-index: 1;
 }
-.uob,.duth,.ugr {
+.uob,.duth,.ugr, .anatolia {
   width: 120%;
   padding: 20px;
   position:relative;
@@ -166,12 +199,12 @@ ul{
 .uob-details, .ugr-details, .duth-details{
   /*display: none;*/
 }
-.uob-details ul, .ugr-details ul, .duth-details ul{
+.uob-details ul, .ugr-details ul, .duth-details ul , .anatolia-details ul{
   text-align: right;
   position: relative;
   /*left: 35%;*/
 }
-.uob-unitList, .duth-unitList{
+.uob-unitList, .duth-unitList, .anatolia-extraList{
   display: none;
 }
 .worklist{
@@ -187,12 +220,12 @@ ul{
 .education, .work, .software, .hobbies{
   color: #202121;
 }
-.textJava, .textC, .textHtml,
+.textJava, .textC, .textHtml, .textCpp, .textSQL, .textJS,
 .eng,.gre,.spa,.ger{
   color: ;
   display: none;
   text-align: right;
-  width: 30%;
+  width: 32%;
   position: relative;
   /*display: inline-block;*/
   left: 10%;
@@ -264,13 +297,14 @@ ul{
 /*---------Tooltips-----------*/
 
 .tooltiptext {
-    visibility: hidden;
-    z-index: 1;
-    display: block;
-    font-family: "Raleway", sans-serif;
-    /*top:-20px;*/
+  visibility: hidden;
+  display: block;
+  font-family: "Raleway", sans-serif;
+  z-index: 3;
 }
-
+.tooltiptext span{
+}
 .tooltip:hover .tooltiptext {
+    z-index: 3;
     visibility: visible;
 }
