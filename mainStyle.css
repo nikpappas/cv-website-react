@@ -12,7 +12,7 @@
 }
 a{
   text-decoration: none;
-  color: #A40000;
+  color: #BA0000;
 }
 a:hover{
   opacity: 0.6;
@@ -36,8 +36,13 @@ header{
   transition: all 0.6s ease;
   z-index: 3;
 }
+.skills, .languages, .projects{
+  color: white;
+  background-color: #202121;
+}
 header.header-scrolled{
-  opacity: 0.97;
+  background-color: #203121;
+  /*opacity: 0.97;*/
 }
 .header-left{
   position: relative;
@@ -86,7 +91,8 @@ header.header-scrolled h1 {
   z-index: 4;
   transition: all 0.6s ease;
 }
-.Plist{
+.Plist img{
+  /*filter: sepia(100) hue-rotate(10deg) saturate(100);*/
   transition: all 0.6s ease;
 }
 .header-scrolled li{
@@ -208,21 +214,30 @@ header li{
   display: none;
 }
 .worklist{
-  padding: 3%;
+  text-align: right;
   padding-top: 5%;
   position: relative;
-  left:-20%;
+  left:-10%;
+  padding-bottom: 3%;
 }
-.skills, .languages, .projects{
-  color: white;
-  background-color: #202121;
+.worklist p{
+  margin-top: 1em;
+  font-family: "Raleway";
+}
+.worklist hr{
+  margin-bottom: 1em;
+}
+.skills hr{
+  color: gold;
+  margin: .25em auto;
 }
 .education, .work, .software, .hobbies{
   color: #202121;
 }
-.textJava, .textC, .textHtml, .textCpp, .textSQL, .textJS,
+.textJava, .textC, .textHtml, .textCpp, .textSQL, .textJS, .textPy,
 .eng,.gre,.spa,.ger{
-  color: ;
+  vertical-align: bottom;
+  margin-bottom: 70px;
   display: none;
   text-align: right;
   width: 32%;
@@ -243,11 +258,12 @@ header li{
 
 .languages ul{
   width: 25%;
+  cursor: pointer;
 }
 .skills ul, .languages ul{
   position: relative;
   left:5%;
-  padding-top: 3%;
+  padding-top: 5%;
   padding-left:  10%;
   padding-right: 10%;
   padding-bottom: 5%;
@@ -291,20 +307,27 @@ header li{
   text-align: left;
   font-size: larger;
 }
+.projectlist p{
+  width:50%;
+  margin-left: 10%;
+}
+.projectlist h3{
+  margin-left: 5%;
+}
 .row{
   width:100%;
 }
 /*---------Tooltips-----------*/
-
+.tooltip{
+  z-index: 4;
+}
 .tooltiptext {
   visibility: hidden;
   display: block;
   font-family: "Raleway", sans-serif;
-  z-index: 3;
-}
-.tooltiptext span{
+  z-index: 4;
+  position: relative;
 }
 .tooltip:hover .tooltiptext {
-    z-index: 3;
     visibility: visible;
 }

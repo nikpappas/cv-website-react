@@ -177,13 +177,17 @@
       <h1 onclick="closeClickSkill(skills,progLang)">Programming Skills</h1>
       <div class="textJava">
         My experience with Java started with auxiliary calculating applications,
-        while I was studying <strong>civil engineering</strong>.<br/>
-        <span style="color:white"><strong>Projects:</strong></span> Mammography Interpretation Tool (<a href="http://caffe.berkeleyvision.org/">Caffe</a>), Face Recognition Pong Game<br/>
+        while I was studying <strong>civil engineering</strong>, such as <strong>column stress analysis</strong> and
+        <strong>rebar calculation</strong> for concrete members. Later on I refined my knowledge on Java with the equivalent
+        unit at University of Bristol.<br/><br/>
+        <span style="color:white"><strong>Projects:</strong></span> Mammography Interpretation Tool
+        (<a href="http://caffe.berkeleyvision.org/">Caffe</a>),<br/>
+        Face Recognition Pong Game, generic database.<br/><br/>
         <span style="color:white"><strong>APIs used:</strong></span> SQL, OpenCV
       </div>
       <div class="textC">
-        I began learning C as the main programming language of my Master's course.<br/>
-        <span style="color:white"><strong>Projects:</strong></span> Teletext decoder, <a href="https://github.com/nikopapp/GameOfLife">Game Of Life</a>, Computer Vision using OpenCV<br/>
+        The main programming language of my Master's course, was C. Within the course I used data structures, such as <strong> linked lists, queues, trees</strong> and <strong>stacks</strong>.<br/><br/>
+        <span style="color:white"><strong>Projects:</strong></span> Teletext decoder, <a href="https://github.com/nikopapp/GameOfLife">Game Of Life</a>, Image Processing and Computer Vision apps using OpenCV.<br/><br/>
         <span style="color:white"><strong>Libraries used:</strong></span> SDL, OpenCV, atlas, lmdb, pthread.
       </div>
       <div class="textCpp">
@@ -198,6 +202,11 @@
       </div>
       <div class="textJS">
         I used NodeJS to program a server of a dynamic website, along with the database it is backed with.
+      </div>
+      <div class="textPy">
+        I used Python, and more specifically Jupyter (iPython) Notebooks in order to visualize the layers
+        of the Convolutional Neural Network used for the Mammography Interpretation Tool.<br/><br/>
+        <span style="color:white"><strong>Modules Used:</strong></span> NumPy, matplotlib, caffe.
       </div>
       <ul class="skilList">
         <li>
@@ -236,7 +245,7 @@
           </div>
         </li>
         <li>
-          <div class="tooltip">
+          <div class="tooltip" onclick="showSkill(python,progLang)">
             <span class="tooltiptext">Python</span>
             <img src="images/skills/python.png"   alt="Python"/>
             <img src="images/skills/star.png"><img src="images/skills/star.png"><img src="images/skills/star.png"><img src="images/skills/circle.png"><img src="images/skills/circle.png">
@@ -244,9 +253,16 @@
         </li>
         <li>
           <div class="tooltip">
+            <span class="tooltiptext">MATLAB</span>
+            <img src="images/skills/matlab.png"   alt="MATLAB"/>
+            <img src="images/skills/star.png"/><img src="images/skills/star.png"/><img src="images/skills/star.png"/><img src="images/skills/circle.png"/><img src="images/skills/circle.png"/>
+          </div>
+        </li>
+        <li>
+          <div class="tooltip">
             <span class="tooltiptext">NodeJS</span>
             <img src="images/skills/nodejs.png"   alt="NodeJS"/>
-            <img src="images/skills/star.png"/><img src="images/skills/star.png"/><img src="images/skills/star.png"/><img src="images/skills/circle.png"/><img src="images/skills/circle.png"/>
+            <img src="images/skills/star.png"/><img src="images/skills/star.png"/><img src="images/skills/circle.png"/><img src="images/skills/circle.png"/><img src="images/skills/circle.png"/>
           </div>
         </li>
       </ul>
@@ -255,9 +271,14 @@
       <h1 onclick="showClick(work)">Employment Experience</h1>
       <div class="worklist">
         <h3>2016 - Motion Tracking Annotation (SHPERE, Bristol)</h3>
-        <h3>2015 - Electrician assistant (Bristol Sparks, Bristol)</h3>
+        <p>Annotating raw data from motion detection cameras with VICON's Nexux Motion Capture Software.<br/> (2 months, Part-Time, Paid)</p><hr/>
+        <h3>2015 - Electrician Assistant (Bristol Sparks, Bristol)</h3>
+        <p> Installing electrical circuits and CCTV systems.<br/> (2 months, Part-Time, Paid)</p><hr/>
         <h3>2015 - Bartender (Hole In The Wall, Bristol)</h3>
+        <p> Serving drinks and food and making sure the bar is organised and clean. <br/>(4 months, Full-Time, Paid)</p><hr/>
         <h3>2014 - Research Assistant in (GTE, Madrid) </h3>
+        <p> Calculating simple structures for construction.<br/>
+           Researching <strong>folding trusses</strong> as a future investment. <br/>(3 months, Full-Time, Volunteering)</p><hr/>
       </div>
     </div>
     <div class="languages">
@@ -280,7 +301,7 @@
       <ul class="languagelist">
         <li onclick="showSkill(english,spokLang)">
           <h2>English</h2>
-          <img src="images/skills/star24.png"><img src="images/skills/star24.png"><img src="images/skills/star24.png"><img src="images/skills/star24.png"><img src="images/skills/circle24.png">
+          <img src="images/skills/star24.png"><img src="images/skills/star24.png"><img src="images/skills/star24.png"><img src="images/skills/star24.png"><img src="images/skills/star24.png">
         </li>
         <li onclick="showSkill(spanish,spokLang)">
           <h2>Spanish</h2><img src="images/skills/star24.png"><img src="images/skills/star24.png"><img src="images/skills/star24.png"><img src="images/skills/star24.png"><img src="images/skills/star24.png">
@@ -306,6 +327,45 @@
           </li>
           <li>
             <div class="tooltip">
+              <span class="tooltiptext">Revit</span>
+              <img src="images/software/revit.png" alt="Revit"/>
+              <img src="images/skills/star.png"/><img src="images/skills/star.png"/><img src="images/skills/circle.png"/><img src="images/skills/circle.png"/><img src="images/skills/circle.png"/>
+            </div>
+          </li>
+          <li>
+            <div class="tooltip">
+              <span class="tooltiptext">SolidWorks</span>
+              <img src="images/software/solidworks.png" alt="SolidWorks"/>
+              <img src="images/skills/star.png"/><img src="images/skills/star.png"/><img src="images/skills/star.png"/><img src="images/skills/circle.png"/><img src="images/skills/circle.png"/>
+            </div>
+          </li>
+        </ul>
+        <h3>Rendering</h3>
+        <ul>
+          <li>
+            <div class="tooltip">
+              <span class="tooltiptext">Maya</span>
+              <img src="images/software/maya.png" alt="Maya"/>
+              <img src="images/skills/star.png"/><img src="images/skills/star.png"/><img src="images/skills/circle.png"/><img src="images/skills/circle.png"/><img src="images/skills/circle.png"/>
+          </li>
+          <li>
+            <div class="tooltip">
+              <span class="tooltiptext">Artlantis</span>
+              <img src="images/software/artlantis.png" alt="Artlantis"/>
+              <img src="images/skills/star.png"/><img src="images/skills/star.png"/><img src="images/skills/star.png"/><img src="images/skills/circle.png"/><img src="images/skills/circle.png"/>
+          </li>
+        </ul>
+        <h3>Finite Element Analysis</h3>
+        <ul>
+          <li>
+            <div class="tooltip">
+              <span class="tooltiptext">Simulia Abaqus</span>
+              <img src="images/software/abaqus.png" alt="Maya"/>
+              <img src="images/skills/star.png"/><img src="images/skills/star.png"/><img src="images/skills/star.png"/><img src="images/skills/star.png"/><img src="images/skills/circle.png"/>
+            </div>
+          </li>
+          <li>
+            <div class="tooltip">
               <span class="tooltiptext">Robot</span>
               <img src="images/software/robot.png" alt="Robot Structural Analysis"/>
               <img src="images/skills/star.png"/><img src="images/skills/star.png"/><img src="images/skills/star.png"/><img src="images/skills/circle.png"/><img src="images/skills/circle.png"/>
@@ -313,8 +373,8 @@
           </li>
           <li>
             <div class="tooltip">
-              <span class="tooltiptext">Revit</span>
-              <img src="images/software/revit.png" alt="Revit"/>
+              <span class="tooltiptext">Inventor</span>
+              <img src="images/software/inventor.png" alt="Inventor"/>
               <img src="images/skills/star.png"/><img src="images/skills/star.png"/><img src="images/skills/circle.png"/><img src="images/skills/circle.png"/><img src="images/skills/circle.png"/>
             </div>
           </li>
@@ -369,8 +429,35 @@
     <div class="projects">
       <h1 onclick="showClick(proj)">Projects</h1>
       <ul class="projectlist">
-        <li>Mammography Interpretation Tool using Computer Vision</li>
-        <li>Experimental Corroboration of Reduced Beam Section moment connections (Abaqus)</li>
+        <li>
+          <h3>Mammography Interpretation Tool using Computer Vision</h3>
+          <p>
+            Convolutional Neural Networks (CNNs) are machine
+            learning structures able to implement aspects of
+            biological vision systems. They can be used in
+            Computer Vision applications to recognise and classify
+            objects in given imagery. This project aims at producing
+            a mammary gland screening tool using CNNs.
+            The minimum deliverable is a tool that is able to
+            segment volumes with densities that differ from the
+            expected in a provided mammography sample. The
+            project aims at highlighting suspected regions of
+            malignant tumour in these segments. The system would
+            ideally be able to assist doctors in the assessment of
+            mammography samples.
+          </p>
+          <p>
+            The framework used for the CNNs is <a href="http://caffe.berkeleyvision.org/">Caffe</a>,
+            a framwork developed by <em>Berkeley Vision and Learning Center.
+          </p>
+        </li>
+        <li>
+          <h3>Experimental Corroboration of Reduced Beam Section moment connections</h3>
+          <p>
+            This project included a full scale Eurocode compliant epxeriment and its
+            corroboration from a Finite Element Analysis model run in <a href="">Abaqus</a>
+          </p>
+        </li>
         <li>University forum website database (SQLite)</li>
         <li><a href="http:elvasite.s3-website-eu-west-1.amazonaws.com">Website of Artist</a></li>
     </div>

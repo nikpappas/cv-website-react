@@ -8,9 +8,11 @@ var proj     = document.getElementsByClassName('projectlist');
 var javaProg = document.getElementsByClassName('textJava');
 var cProg    = document.getElementsByClassName('textC');
 var htmlProg = document.getElementsByClassName('textHtml');
-var sqlite = document.getElementsByClassName('textSQL');
-var nodeJS = document.getElementsByClassName('textJS');
-var progLang = [javaProg, cProg, htmlProg, sqlite, nodeJS];
+var sqlite   = document.getElementsByClassName('textSQL');
+var nodeJS   = document.getElementsByClassName('textJS');
+var python   = document.getElementsByClassName('textPy');
+var cpp      = document.getElementsByClassName('textCpp');
+var progLang = [javaProg, cProg, htmlProg, sqlite, nodeJS, python, cpp];
 // ------- spoken languages
 var english  = document.getElementsByClassName('eng');
 var greek    = document.getElementsByClassName('gre');
