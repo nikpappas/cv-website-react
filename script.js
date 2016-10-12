@@ -18,8 +18,10 @@ var english  = document.getElementsByClassName('eng');
 var greek    = document.getElementsByClassName('gre');
 var spanish  = document.getElementsByClassName('spa');
 var german    = document.getElementsByClassName('ger');
-var perInfo  = document.getElementsByClassName('personalInfo');
 var spokLang = [english, greek, spanish, german];
+// ------- misc
+var hobbies = document.getElementsByClassName('hobbyList');
+var perInfo  = document.getElementsByClassName('personalInfo');
 var uobList = document.getElementsByClassName("uob-unitList");
 var duthList = document.getElementsByClassName("duth-unitList");
 var anatoliaList = document.getElementsByClassName('anatolia-extraList');

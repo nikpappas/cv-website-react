@@ -148,12 +148,14 @@ header li{
   right: 5%;
   text-align: right;
   width: 100%;
+  padding-bottom: 1em;
 }
 .education h1:hover, .work h1:hover, .software h1:hover,
 .skills h1:hover, .languages h1:hover, .projects h1:hover, .hobbies h1:hover{
   cursor: pointer;
-  opacity: 0.6;
-  text-shadow: 0px 0px 5px rgba(100,110,110,.8);
+  opacity: 0.65;
+  text-shadow: 0px 0px 5px rgba(80,110,100,.8);
+  transform: translate(2px,3px);
 }
 .education th{
   min-width: 240px;
@@ -172,6 +174,7 @@ header li{
   text-align: left;
   width: 100%;
   z-index: 1;
+  padding-bottom: 1em;
 }
 .uob,.duth,.ugr, .anatolia {
   width: 120%;
@@ -247,9 +250,9 @@ header li{
   z-index: 1;
   /*font-family: "Josefin Sans";*/
   font-family: "Raleway", sans-serif;
-  color: #e9cc4e;
+  color: #e9cc4e; /*text gold*/
 }
-.skills ul{
+.skills ul, .hobbies ul{
   width: 45%;
 }
 .skilList, .languagelist, .softList, .worklist, .projectlist{
@@ -297,6 +300,22 @@ header li{
   height: 50px;
   cursor: pointer;
 }
+.hobbies ul{
+  margin-top: 4em;
+  margin-bottom: 3em;
+}
+.hobbies li{
+  vertical-align: top;
+  float: right;
+  margin-right: 4%;
+}
+.hobbies img{
+  height: 100px;
+  border-radius: 3px;
+}
+.hobbyList{
+  display: none;
+}
 .software h3{
   position:absolute;
   left:15%;
@@ -305,14 +324,23 @@ header li{
   left:10%;
   padding: 5%;
   text-align: left;
-  font-size: larger;
 }
 .projectlist p{
   width:50%;
   margin-left: 10%;
+  font-family: "Raleway",sans-serif;
+  color: #e9cc4e; /*text gold*/
+  margin-top: 1em;
+  margin-bottom: 1em;
+  display: inline-block;
 }
 .projectlist h3{
   margin-left: 5%;
+}
+.projectImage{
+  display: inline-block;
+  position: absolute;
+  right: 10%;
 }
 .row{
   width:100%;
@@ -322,7 +350,7 @@ header li{
   z-index: 4;
 }
 .tooltiptext {
-  visibility: hidden;
+  /*visibility: hidden;*/
   display: block;
   font-family: "Raleway", sans-serif;
   z-index: 4;
