@@ -2,6 +2,9 @@
   margin: 0;
   padding: 0;
 }
+h1{
+  transition: all 0.15s ease;
+}
 ::selection {
   background: #d8b517; /* WebKit/Blink Browsers */
   color: #202121;
@@ -239,7 +242,6 @@ header li{
 .uob-details ul, .ugr-details ul, .duth-details ul , .anatolia-details ul{
   text-align: right;
   position: relative;
-  /*left: 35%;*/
 }
 .uob-unitList, .duth-unitList, .anatolia-extraList{
   display: none;
@@ -304,6 +306,16 @@ header li{
   vertical-align: top;
   padding-right: 3%;
 }
+.langLogo{
+  transition: all 0.3s ease;
+  border-radius: 12px;
+  box-shadow: 0 0 4px 2px #151616;
+  opacity: 0.82;
+}
+.skills li:hover .langLogo{
+  opacity: 1;
+  box-shadow: 0 0 4px 1px #AC8;
+}
 .languages li{
   display: inline-block;
   vertical-align: top;
@@ -361,14 +373,18 @@ header li{
   margin-top: 1em;
   margin-bottom: 1em;
   display: inline-block;
+  text-align: justify;
 }
 .projectlist h3{
+  margin-top: 1em;
   margin-left: 5%;
 }
 .projectImage{
+  border-radius: 3px;
+  align-content: center;
   display: inline-block;
-  position: absolute;
-  right: 10%;
+  margin-left: 10%;
+  height: 150px;
 }
 .row{
   width:100%;
