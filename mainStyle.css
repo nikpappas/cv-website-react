@@ -21,17 +21,23 @@ a:hover{
   opacity: 0.6;
 }
 body{
+  text-align: center;
   margin-top: 150px;
   overflow-x: hidden;
   /*font-family: "Raleway","Helvetica Neue",Helvetica,Arial,sans-serif;*/
   font-family: "Open Sans Condensed","Helvetica Neue",Helvetica,Arial,sans-serif;
-  background-color: white;
+  background-color: #343636;
   color: black;
+  width: 100%;
+}
+.body-m{
+  font-size: small;
 }
 ul{
   list-style-type: none;
 }
 header{
+  text-align: left;
   background-color: #202121;
   width: 100%;
   position: fixed;
@@ -87,7 +93,7 @@ header.header-scrolled{
   transition: all 0.6s ease;
 }
 .header-scrolled .header-left img{
-  height: 50px;
+  height: 40px;
 }
 header h1 {
   align:center;
@@ -97,7 +103,7 @@ header h1 {
   transition: all 0.6s ease;
 }
 header.header-scrolled h1 {
-  font-size: 2em;
+  font-size: 1.7em;
 }
 
 .header h3{
@@ -158,6 +164,32 @@ header li{
   opacity: 0.93;
   z-index: 2;
 }
+.myAbst-m{
+  color: white;
+  font-size: small;
+  width: 60%;
+  margin: auto;
+}
+.myAbst-m p{
+  width: 60%;
+  margin: 3% auto;
+  padding-top: 30px;
+}
+.myAbst{
+  /*background-color: #353737;*/
+  color: white;
+  font-size: large;
+  padding: 10% auto;
+  width:100%;
+}
+.myAbst p{
+  margin: 5% auto;
+  padding-top: 50px;
+  width:60%;
+}
+.education, .work, .software, .hobbies{
+  background-color: white;
+}
 .education, .work, .skills, .languages, .hobbies, .software, .projects {
   padding-top: 2%;
   padding-bottom: 2%;
@@ -168,6 +200,9 @@ header li{
   display: none;
   padding: 2%;
 }
+.edu-entries-m{
+  transform: scale(0.7);
+}
 .education hr{
   position:relative;
   /*left:-10%;*/
@@ -176,7 +211,7 @@ header li{
   text-shadow: 0px 0px 10px rgba(100,110,110,.4);
   z-index: 1;
   position: absolute;
-  right: 5%;
+  right: 22%;
   text-align: right;
   width: 100%;
   padding-bottom: 1em;
@@ -197,11 +232,19 @@ header li{
   font-size: 130%;
   font-weight:bolder;
 }
-
+.expandableTxt{
+  cursor: pointer;
+  font-weight: bold;
+  opacity: 0.9;
+}
+.expandableTxt:hover{
+  color:black;
+  opacity: 1;
+}
 .skills h1, .languages h1, .projects h1{
   text-shadow: 0px 0px 10px rgba(170,150,150,.3);
   position: absolute;
-  left: 5%;
+  left: 22%;
   text-align: left;
   width: 100%;
   z-index: 1;
@@ -246,11 +289,14 @@ header li{
 .uob-unitList, .duth-unitList, .anatolia-extraList{
   display: none;
 }
+.worklist-m{
+  font-size: smaller;
+}
 .worklist{
   text-align: right;
   padding-top: 5%;
   position: relative;
-  left:-10%;
+  left:-5%;
   padding-bottom: 3%;
 }
 .worklist p{
@@ -267,22 +313,41 @@ header li{
 .education, .work, .software, .hobbies{
   color: #202121;
 }
-.textJava, .textC, .textHtml, .textCpp, .textSQL, .textJS, .textPy,
+.textJava h3, .textC h3, .textHtml h3, .textCpp h3,
+ .textSQL h3, .textJS h3, .textPy h3, .textMAT h3{
+   text-align: center;
+   font-weight: bold;
+   font-size: larger;
+}
+.textJava, .textC, .textHtml, .textCpp, .textSQL, .textJS, .textPy,.textMAT,
 .eng,.gre,.spa,.ger{
-  vertical-align: bottom;
-  margin-bottom: 70px;
+  /*vertical-align: bottom;*/
+  margin:auto;
+  margin-top: 8%;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
   display: none;
-  text-align: right;
-  width: 32%;
+  text-align: center;
+  width: 35%;
   position: relative;
-  /*display: inline-block;*/
-  left: 10%;
+  /*display: block;*/
+  /*left: 10%;*/
   z-index: 1;
+  min-height: 180px;
   /*font-family: "Josefin Sans";*/
+  font-size: large;
   font-family: "Raleway", sans-serif;
   color: #e9cc4e; /*text gold*/
 }
+.eng,.gre,.spa,.ger{
+  min-height: 250px;
+  width: 20%;
+  text-align: right;
+  margin-right: 0;
+}
 .skills ul, .hobbies ul{
+  margin:auto;
+  margin-top: 8%;
   width: 45%;
 }
 .skilList, .languagelist, .softList, .worklist, .projectlist{
@@ -293,13 +358,20 @@ header li{
   width: 25%;
   cursor: pointer;
 }
-.skills ul, .languages ul{
+.skills ul{
   position: relative;
   left:5%;
   padding-top: 5%;
   padding-left:  10%;
   padding-right: 10%;
   padding-bottom: 5%;
+}
+.languages ul{
+  position:relative;
+  left:5%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+
 }
 .skills li{
   display: inline-block;
@@ -312,7 +384,7 @@ header li{
   box-shadow: 0 0 4px 2px #151616;
   opacity: 0.82;
 }
-.skills li:hover .langLogo{
+.skills li:hover .langLogo,.skills li:focus .langLogo{
   opacity: 1;
   box-shadow: 0 0 4px 1px #AC8;
 }
@@ -323,16 +395,12 @@ header li{
 }
 .software ul{
   position: relative;
-  right:15%;
-  padding-top: 3%;
-  padding-left:  10%;
-  padding-right: 10%;
-  padding-bottom: 5%;
+  /*left:5%;*/
+  margin:5% auto;
   width: 45%;
 }
 .software li{
   display: inline-block;
-  vertical-align: top;
   padding-right: 3%;
 }
 
@@ -357,7 +425,7 @@ header li{
   display: none;
 }
 .software h3{
-  position:absolute;
+  /*position:absolute;*/
   left:15%;
 }
 .projects ul{
@@ -388,6 +456,13 @@ header li{
 }
 .row{
   width:100%;
+}
+.footer-m{
+  font-size: smaller;
+}
+footer{
+  background-color: white;
+  color:black;
 }
 /*---------Tooltips-----------*/
 .tooltip{
