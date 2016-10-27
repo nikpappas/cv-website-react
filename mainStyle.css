@@ -160,7 +160,7 @@ header li{
   color: #BFC1C1;
   min-width: 200px;
   width:25%;
-  background-color: #555555;
+  background-color: #343636;
   opacity: 0.93;
   z-index: 2;
 }
@@ -302,7 +302,11 @@ header li{
   left:-5%;
   padding-bottom: 3%;
 }
-.worklist p{
+.worklist-m{
+  margin: 5em auto;
+  font-family: "Raleway";
+}
+#worklist p{
   margin-top: 1em;
   font-family: "Raleway";
 }
@@ -434,7 +438,7 @@ header li{
 .projects ul{
   left:10%;
   padding: 5%;
-  text-align: left;
+  text-align: center;
 }
 .projectlist p{
   width:50%;
@@ -448,7 +452,7 @@ header li{
 }
 .projectlist h3{
   margin-top: 1em;
-  margin-left: 5%;
+  margin-left: 25%;
 }
 .projectImage{
   border-radius: 3px;

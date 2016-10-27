@@ -88,6 +88,16 @@ function whenResize(){
   // console.log("height:"+window.screen.availHeight);
   // console.log("width:"+window.screen.availWidth);
 }
-window.addEventListener("scroll", whenScrolling);
-window.addEventListener("resize", whenResize);
-whenResize();
+function setUp(){
+  var expImg = document.getElementById('projExp');
+  expImg.onmouseenter = function(){
+    expImg.setAttribute("src", "images/projects/experiment-fem.png");
+  };
+  expImg.onmouseleave = function(){
+    expImg.setAttribute("src", "images/projects/experiment-real.png");
+  };
+  window.addEventListener("scroll", whenScrolling);
+  window.addEventListener("resize", whenResize);
+  whenResize();
+}
+window.onload = setUp();
