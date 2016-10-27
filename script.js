@@ -1,55 +1,54 @@
-var edu      = document.getElementsByClassName('edu-entries');
-var skills   = document.getElementsByClassName('skilList');
-var work     = document.getElementsByClassName('worklist');
-var language = document.getElementsByClassName('languagelist');
-var software = document.getElementsByClassName('softList');
-var proj     = document.getElementsByClassName('projectlist');
+var edu      = document.getElementById('edu-entries');
+var skills   = document.getElementById('skilList');
+var work     = document.getElementById('worklist');
+var language = document.getElementById('languagelist');
+var software = document.getElementById('softList');
+var proj     = document.getElementById('projectlist');
 // ------- skills
-var javaProg = document.getElementsByClassName('textJava');
-var cProg    = document.getElementsByClassName('textC');
-var htmlProg = document.getElementsByClassName('textHtml');
-var sqlite   = document.getElementsByClassName('textSQL');
-var nodeJS   = document.getElementsByClassName('textJS');
-var matlab   = document.getElementsByClassName('textMAT');
-var python   = document.getElementsByClassName('textPy');
-var cpp      = document.getElementsByClassName('textCpp');
+var javaProg = document.getElementsByClassName('textJava')[0];
+var cProg    = document.getElementsByClassName('textC')[0];
+var htmlProg = document.getElementsByClassName('textHtml')[0];
+var sqlite   = document.getElementsByClassName('textSQL')[0];
+var nodeJS   = document.getElementsByClassName('textJS')[0];
+var matlab   = document.getElementsByClassName('textMAT')[0];
+var python   = document.getElementsByClassName('textPy')[0];
+var cpp      = document.getElementsByClassName('textCpp')[0];
 var progLang = [javaProg, cProg, htmlProg, sqlite, nodeJS, python, cpp, matlab];
 // ------- spoken languages
-var english  = document.getElementsByClassName('eng');
-var greek    = document.getElementsByClassName('gre');
-var spanish  = document.getElementsByClassName('spa');
-var german    = document.getElementsByClassName('ger');
+var english  = document.getElementsByClassName('eng')[0];
+var greek    = document.getElementsByClassName('gre')[0];
+var spanish  = document.getElementsByClassName('spa')[0];
+var german    = document.getElementsByClassName('ger')[0];
 var spokLang = [english, greek, spanish, german];
 // ------- misc
-var hobbies = document.getElementsByClassName('hobbyList');
-var perInfo  = document.getElementsByClassName('personalInfo');
-var uobList = document.getElementsByClassName("uob-unitList");
-var duthList = document.getElementsByClassName("duth-unitList");
-var anatoliaList = document.getElementsByClassName('anatolia-extraList');
+var hobbies = document.getElementsByClassName('hobbyList')[0];
+var perInfo  = document.getElementsByClassName('personalInfo')[0];
+var uobList = document.getElementsByClassName("uob-unitList")[0];
+var duthList = document.getElementsByClassName("duth-unitList")[0];
+var anatoliaList = document.getElementsByClassName('anatolia-extraList')[0];
 var header = document.getElementsByTagName('header');
 function showClick(className){
-  var style = window.getComputedStyle(className[0]);
+  var style = window.getComputedStyle(className);
   if(style.getPropertyValue("display")=="none"){
-    className[0].style.display = "inline-block";
+    className.style.display = "inline-block";
   } else{
-    className[0].style.display = "none";
+    className.style.display = "none";
   }
 }
 function showSkill(className,list){
   closeSkill(list);
-  className[0].style.display = "inline-block";
+  className.style.display = "inline-block";
   // new---start
-  skills[0].style.width="80%";
-  skills[0].style.marginTop="3%";
+  skills.style.width="80%";
+  skills.style.marginTop="3%";
   // skills[0].style.float="right";
   // new --end
 }
 function closeSkill(list){
-  skills[0].style.width="45%";
-  skills[0].style.marginTop="8%";
+  skills.style.width="45%";
+  skills.style.marginTop="8%";
   for(var i=0; i<list.length;i++){
-    console.log(list[i]);
-    list[i][0].style.display = "none";
+    list[i].style.display = "none";
   }
 }
 function closeClickSkill(className,list){
@@ -70,12 +69,6 @@ function whenMobile(){
   document.getElementsByTagName('footer')[0].className="footer-m";
   document.getElementById('edu-entries').className="edu-entries-m";
   document.getElementById('worklist').className="worklist-m";
-  // var eduEnt = document.getElementsByClassName('edu-entries')[0];
-  // eduEnt.style.width="70%";
-  // var eduLogo = eduEnt.getElementsByClassName('logo');
-  // for(var i=0;i<eduLogo.length;i++){
-  //   eduLogo[i].style.transform="scale(.7)";
-  // }
 
 }
 function whenDesktop(){

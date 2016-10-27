@@ -196,12 +196,15 @@ header li{
   min-height: 55px;
   width: 100%;
 }
-.edu-entries{
+#edu-entries{
   display: none;
+}
+.edu-entries{
   padding: 2%;
 }
 .edu-entries-m{
   transform: scale(0.7);
+  -moz-transform: scale(0.7);
 }
 .education hr{
   position:relative;
@@ -350,7 +353,7 @@ header li{
   margin-top: 8%;
   width: 45%;
 }
-.skilList, .languagelist, .softList, .worklist, .projectlist{
+#skilList, .languagelist, #softList, #worklist, #projectlist{
   display: none;
 }
 
