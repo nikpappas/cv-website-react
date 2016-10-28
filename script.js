@@ -1,3 +1,4 @@
+var abst     = document.getElementById('myAbst');
 var edu      = document.getElementById('edu-entries');
 var skills   = document.getElementById('skilList');
 var work     = document.getElementById('worklist');
@@ -57,6 +58,13 @@ function closeClickSkill(className,list){
 }
 function whenScrolling(){
   var top = (window.pageYOffset || document.scrollTop)  - (document.clientTop || 0);
+  if(top>50){
+    // abst.style.opacity="0";
+    abst.className="myAbst-scrolled";
+  }else{
+    // abst.style.opacity="1";
+    abst.className="myAbst";
+  }
   if(top>5){
     header[0].className = "header-scrolled";
   }else{

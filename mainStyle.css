@@ -73,12 +73,13 @@ header span{
   font-family: "Raleway",sans-serif;
   font-size: 80%;
 }
-.skills, .languages, .projects{
+.skills, .languages, .software{
   color: white;
   background-color: #202121;
 }
 header.header-scrolled{
-  background-color: #203121;
+  /*background-color: #203121; //green header*/
+  background-color: #343636;
   /*opacity: 0.97;*/
 }
 .header-left{
@@ -164,6 +165,10 @@ header li{
   opacity: 0.93;
   z-index: 2;
 }
+.myAbst-scrolled{
+  opacity:0;
+  transform: scale(.6);
+}
 .myAbst-m{
   color: white;
   font-size: small;
@@ -175,19 +180,23 @@ header li{
   margin: 3% auto;
   padding-top: 30px;
 }
-.myAbst{
-  /*background-color: #353737;*/
+#myAbst{
+  transition: all 0.6s ease;
   color: white;
-  font-size: large;
   padding: 10% auto;
   width:100%;
+  font-size: large;
 }
-.myAbst p{
+.myAbst{
+  /*background-color: #353737;*/
+  font-size: large;
+}
+#myAbst p{
   margin: 5% auto;
   padding-top: 50px;
-  width:60%;
+  width:40%;
 }
-.education, .work, .software, .hobbies{
+.education, .work, .projects, .hobbies{
   background-color: white;
 }
 .education, .work, .skills, .languages, .hobbies, .software, .projects {
@@ -200,17 +209,18 @@ header li{
   display: none;
 }
 .edu-entries{
-  padding: 2%;
+  padding: 10% auto;
+  padding-top: 5%;
 }
 .edu-entries-m{
   transform: scale(0.7);
   -moz-transform: scale(0.7);
 }
 .education hr{
+  left: -10%;
   position:relative;
-  /*left:-10%;*/
 }
-.education h1, .work h1, .software h1, .hobbies h1{
+.education h1, .work h1, .projects h1, .hobbies h1{
   text-shadow: 0px 0px 10px rgba(100,110,110,.4);
   z-index: 1;
   position: absolute;
@@ -244,7 +254,7 @@ header li{
   color:black;
   opacity: 1;
 }
-.skills h1, .languages h1, .projects h1{
+.skills h1, .languages h1, .software h1{
   text-shadow: 0px 0px 10px rgba(170,150,150,.3);
   position: absolute;
   left: 22%;
@@ -254,7 +264,7 @@ header li{
   padding-bottom: 1em;
 }
 .uob,.duth,.ugr, .anatolia {
-  width: 120%;
+  width: 110%;
   padding: 20px;
   position:relative;
   left: -20%;
@@ -282,12 +292,10 @@ header li{
   display: block;
   text-align: left;
 }
-.uob-details, .ugr-details, .duth-details{
-  /*display: none;*/
-}
 .uob-details ul, .ugr-details ul, .duth-details ul , .anatolia-details ul{
   text-align: right;
   position: relative;
+  left:-5%;
 }
 .uob-unitList, .duth-unitList, .anatolia-extraList{
   display: none;
@@ -317,7 +325,7 @@ header li{
   color: gold;
   margin: .25em auto;
 }
-.education, .work, .software, .hobbies{
+.education, .work, .projects, .hobbies{
   color: #202121;
 }
 .textJava h3, .textC h3, .textHtml h3, .textCpp h3,
@@ -359,6 +367,7 @@ header li{
 }
 #skilList, .languagelist, #softList, #worklist, #projectlist{
   display: none;
+  padding-top: 5%;
 }
 
 .languages ul{
@@ -432,8 +441,9 @@ header li{
   display: none;
 }
 .software h3{
+  text-align: right;
   /*position:absolute;*/
-  left:15%;
+  left:-15%;
 }
 .projects ul{
   left:10%;
@@ -444,7 +454,8 @@ header li{
   width:50%;
   margin-left: 10%;
   font-family: "Raleway",sans-serif;
-  color: #e9cc4e; /*text gold*/
+  /*color: #e9cc4e; /*text gold*/*/
+  color: black;
   margin-top: 1em;
   margin-bottom: 1em;
   display: inline-block;
