@@ -487,11 +487,8 @@ header li{
   height: auto;
   max-height: 400px;
 }
-.projectImage figcaption{
-  /*position: relative;
-  left:15%;*/
-  /*margin-left: 5%;*/
-  text-align: left;
+figure figcaption{
+  margin-left: 5%;
 }
 .row{
   width:100%;
