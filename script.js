@@ -40,14 +40,15 @@ function showSkill(className,list){
   closeSkill(list);
   className.style.display = "inline-block";
   // new---start
-  skills.style.width="80%";
-  skills.style.marginTop="3%";
+  // skills.style.width="30%";
+  // skills.style.marginTop="3%";
+
   // skills[0].style.float="right";
   // new --end
 }
 function closeSkill(list){
-  skills.style.width="45%";
-  skills.style.marginTop="8%";
+  // skills.style.width="45%";
+  // skills.style.marginTop="8%";
   for(var i=0; i<list.length;i++){
     list[i].style.display = "none";
   }
@@ -58,7 +59,7 @@ function closeClickSkill(className,list){
 }
 function whenScrolling(){
   var top = (window.pageYOffset || document.scrollTop)  - (document.clientTop || 0);
-  if(top>50){
+  if(top>100){
     // abst.style.opacity="0";
     abst.className="myAbst-scrolled";
   }else{
@@ -77,7 +78,6 @@ function whenMobile(){
   document.getElementsByTagName('footer')[0].className="footer-m";
   document.getElementById('edu-entries').className="edu-entries-m";
   document.getElementById('worklist').className="worklist-m";
-
 }
 function whenDesktop(){
   document.getElementById('myAbst').className="myAbst";

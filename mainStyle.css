@@ -20,6 +20,12 @@ a{
 a:hover{
   opacity: 0.6;
 }
+.photoLink:hover{
+  opacity: 1;
+}
+.photoLink:hover img{
+  filter:brightness(0.8);
+}
 body{
   text-align: center;
   margin-top: 150px;
@@ -165,21 +171,6 @@ header li{
   opacity: 0.93;
   z-index: 2;
 }
-.myAbst-scrolled{
-  opacity:0;
-  transform: scale(.6);
-}
-.myAbst-m{
-  color: white;
-  font-size: small;
-  width: 60%;
-  margin: auto;
-}
-.myAbst-m p{
-  width: 60%;
-  margin: 3% auto;
-  padding-top: 30px;
-}
 #myAbst{
   transition: all 0.6s ease;
   color: white;
@@ -187,14 +178,30 @@ header li{
   width:100%;
   font-size: large;
 }
+#myAbst p{
+  text-align: justify;
+  margin: 5% auto;
+  padding-top: 50px;
+  width:50%;
+}
+
+.myAbst-scrolled{
+  opacity:0;
+  transform: scale(.7);
+}
+.myAbst-m{
+  color: white;
+  font-size: small;
+  width: 100%;
+}
+.myAbst-m p{
+  width: 100%;
+  margin: 3% auto;
+  padding-top: 30px;
+}
 .myAbst{
   /*background-color: #353737;*/
   font-size: large;
-}
-#myAbst p{
-  margin: 5% auto;
-  padding-top: 50px;
-  width:40%;
 }
 .education, .work, .projects, .hobbies{
   background-color: white;
@@ -224,7 +231,7 @@ header li{
   text-shadow: 0px 0px 10px rgba(100,110,110,.4);
   z-index: 1;
   position: absolute;
-  right: 22%;
+  right: 15%;
   text-align: right;
   width: 100%;
   padding-bottom: 1em;
@@ -257,7 +264,7 @@ header li{
 .skills h1, .languages h1, .software h1{
   text-shadow: 0px 0px 10px rgba(170,150,150,.3);
   position: absolute;
-  left: 22%;
+  left: 15%;
   text-align: left;
   width: 100%;
   z-index: 1;
@@ -295,7 +302,7 @@ header li{
 .uob-details ul, .ugr-details ul, .duth-details ul , .anatolia-details ul{
   text-align: right;
   position: relative;
-  left:-5%;
+  /*left:-5%;*/
 }
 .uob-unitList, .duth-unitList, .anatolia-extraList{
   display: none;
@@ -337,22 +344,26 @@ header li{
 .textJava, .textC, .textHtml, .textCpp, .textSQL, .textJS, .textPy,.textMAT,
 .eng,.gre,.spa,.ger{
   /*vertical-align: bottom;*/
-  margin:auto;
-  margin-top: 8%;
-  margin-bottom: 0px;
-  padding-bottom: 0px;
+  margin:0% auto;
+  left:5%;
+  background-color: #202121;
   display: none;
-  text-align: center;
-  width: 35%;
+  text-align: justify;
+  width: 40%;
   position: relative;
   /*display: block;*/
-  /*left: 10%;*/
+  /*top: 25%;*/
   z-index: 1;
-  min-height: 180px;
+  min-height: 200px;
   /*font-family: "Josefin Sans";*/
   font-size: large;
   font-family: "Raleway", sans-serif;
+  padding: 3% auto;
   color: #e9cc4e; /*text gold*/
+}
+.textJava p, .textC p, .textHtml p, .textCpp p, .textSQL p, .textJS p, .textPy p,.textMAT p{
+  width:90%;
+  margin-bottom: 5%;
 }
 .eng,.gre,.spa,.ger{
   min-height: 250px;
@@ -362,32 +373,34 @@ header li{
 }
 .skills ul, .hobbies ul{
   margin:auto;
-  margin-top: 8%;
+  margin-top: 5%;
   width: 45%;
 }
 #skilList, .languagelist, #softList, #worklist, #projectlist{
   display: none;
   padding-top: 5%;
 }
+#projectlist{
+  position:relative;
+  left:-3%;
+}
 
 .languages ul{
   width: 25%;
   cursor: pointer;
+  position:relative;
+  left:12%;
+  padding-top: 5%;
+  padding-bottom: 5%;
 }
 .skills ul{
   position: relative;
-  left:5%;
+  /*left:5%;*/
   padding-top: 5%;
   padding-left:  10%;
   padding-right: 10%;
   padding-bottom: 5%;
-}
-.languages ul{
-  position:relative;
-  left:5%;
-  padding-top: 5%;
-  padding-bottom: 5%;
-
+  text-align: right;
 }
 .skills li{
   display: inline-block;
@@ -452,7 +465,7 @@ header li{
 }
 .projectlist p{
   width:50%;
-  margin-left: 10%;
+  margin-left: 5%;
   font-family: "Raleway",sans-serif;
   /*color: #e9cc4e; /*text gold*/*/
   color: black;
@@ -466,11 +479,19 @@ header li{
   margin-left: 25%;
 }
 .projectImage{
+  left:10%;
+  padding: 5%;
   border-radius: 3px;
-  align-content: center;
-  display: inline-block;
-  margin-left: 10%;
-  height: 150px;
+  margin-left: 5%;
+  max-width: 50%;
+  height: auto;
+  max-height: 400px;
+}
+.projectImage figcaption{
+  /*position: relative;
+  left:15%;*/
+  /*margin-left: 5%;*/
+  text-align: left;
 }
 .row{
   width:100%;
