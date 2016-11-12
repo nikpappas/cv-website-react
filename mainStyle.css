@@ -190,46 +190,32 @@ header li{
 
 }
 nav{
-  position: fixed;
-  right:20px;
-  width:3em;
-  display: inline-block;
-  text-align: right;
-}
-
-/*nav{ old nav with floating right
   position: absolute;
   width:80%;
   display: inline-block;
   text-align: right;
-}*/
+}
 nav ul{
   position: absolute;
   right:0%;
-  /*display: flex;*/
-}
-nav ul li:hover img{
-  height: 2em;
+  margin: 3em auto;
+  display: flex;
 }
 nav ul li{
   display: inline;
   margin-left:20px;
 }
 nav ul li img{
-  border-radius: 0.5em;
-  background-color: #303131;
-  height: 1.5em;
-  padding: .5em .5em .5em .5em;
+  height: 2em;
 }
 nav ul li a{
   color:white;
 }
 nav ul li .tooltiptext{
-  position:relative;
-  display:inline;
+  position:absolute;
   text-align: right;
-  top:0;
-  right:3em;
+  /*top:-1.6em;*/
+  right:0;
 }
 #skillAnchor, #workAnchor, #langAnchor, #projAnchor, #softAnchor{
   position: relative;
