@@ -27,6 +27,7 @@ a:hover{
   filter:brightness(0.8);
 }
 body{
+  scroll-behavior: smooth;
   text-align: center;
   margin-top: 150px;
   overflow-x: hidden;
@@ -86,7 +87,7 @@ header span{
 header.header-scrolled{
   /*background-color: #203121; //green header*/
   background-color: #343636;
-  /*opacity: 0.97;*/
+  opacity: 0.97;
 }
 .header-left{
   position: relative;
@@ -182,21 +183,62 @@ header li{
   text-align: justify;
   margin: 5% auto;
   padding-top: 50px;
-  width:50%;
+  margin: 3% auto;
 }
+.myAbst p{
+  width:50%;
 
-.myAbst-scrolled{
-  opacity:0;
-  transform: scale(.7);
+}
+nav{
+  position: absolute;
+  width:80%;
+  display: inline-block;
+  text-align: right;
+}
+nav ul{
+  position: absolute;
+  right:0%;
+  margin: 3em auto;
+  display: flex;
+}
+nav ul li{
+  display: inline;
+  margin-left:20px;
+}
+nav ul li img{
+  height: 2em;
+}
+nav ul li a{
+  color:white;
+}
+nav ul li .tooltiptext{
+  position:absolute;
+  text-align: right;
+  /*top:-1.6em;*/
+  right:0;
+}
+#skillAnchor, #workAnchor, #langAnchor, #projAnchor, #softAnchor{
+  position: relative;
+  top:-8em;
+}
+.header-scrolled nav ul{
+  margin: 1em auto;
+}
+.header-scrolled nav ul li img{
+  height: 0.5em;
+
 }
 .myAbst-m{
   color: white;
   font-size: small;
   width: 100%;
+  margin:0;
+  padding:0;
 }
 .myAbst-m p{
-  width: 100%;
-  margin: 3% auto;
+  width: 80%;
+  margin:0;
+  padding:0;
   padding-top: 30px;
 }
 .myAbst{
@@ -235,6 +277,9 @@ header li{
   text-align: right;
   width: 100%;
   padding-bottom: 1em;
+}
+.education, .work, .projects, .hobbies{
+  color: #202121;
 }
 .education h1:hover, .work h1:hover, .software h1:hover,
 .skills h1:hover, .languages h1:hover, .projects h1:hover, .hobbies h1:hover{
@@ -332,9 +377,6 @@ header li{
   color: gold;
   margin: .25em auto;
 }
-.education, .work, .projects, .hobbies{
-  color: #202121;
-}
 .textJava h3, .textC h3, .textHtml h3, .textCpp h3,
  .textSQL h3, .textJS h3, .textPy h3, .textMAT h3{
    text-align: center;
@@ -395,7 +437,7 @@ header li{
 }
 .skills ul{
   position: relative;
-  /*left:5%;*/
+  width:50%;
   padding-top: 5%;
   padding-left:  10%;
   padding-right: 10%;
@@ -432,9 +474,12 @@ header li{
   display: inline-block;
   padding-right: 3%;
 }
-
+.skills li a{
+  outline: 0;
+  color:white;
+}
 .skills li img, .software li img{
-  height: 50px;
+  height: 45px;
   cursor: pointer;
 }
 .hobbies ul{
@@ -467,7 +512,7 @@ header li{
   width:50%;
   margin-left: 5%;
   font-family: "Raleway",sans-serif;
-  /*color: #e9cc4e; /*text gold*/*/
+  /*color: #e9cc4e; /*text gold*/
   color: black;
   margin-top: 1em;
   margin-bottom: 1em;
@@ -513,4 +558,29 @@ footer{
 }
 .tooltip:hover .tooltiptext {
     visibility: visible;
+}
+/*------No script warning screen -------*/
+#disclaimer,#disclaimerBack{
+  visibility: hidden;
+  top:0;
+  left:0;
+  z-index: 7;
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(20, 21, 21, 0.1);
+  text-align: center;
+  color:white;
+}
+#disclaimerBack{
+  color:rgba(210,214,215,1);
+  background-color: rgba(20, 21, 21, 0.8);
+  filter: blur(1em);
+}
+
+#disclaimer h1, #disclaimerBack h1{
+  text-align: center;
+  margin: 6em auto;
+  background-color: rgba(0,0,0,0);
 }

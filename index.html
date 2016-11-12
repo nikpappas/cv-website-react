@@ -8,47 +8,90 @@
     <link rel="stylesheet" type="text/css"  href="mainStyle.css" />
     <link rel="shortcut icon" href="images/logo-outer64.png"/>
     <title>Nikolaos Pappas Curriculum Vitae</title>
+    <noscript>
+      <style>
+        body{         overflow: hidden; }
+        #disclaimer,#disclaimerBack{  visibility: visible;  }
+      </style>
+    </noscript>
   </head>
-  <header>
-    <div class="header-left">
-      <div class="logo">
-        <img src="images/logo-outer128.png" alt="MyLogo" height="94" />
-      </div>
-      <div class="personal">
-        <h1>Nikolaos Pappas</h1>
-      </div>
-    </div>
-    <div class="Plinks">
-      <div class="personalInfo">
-        <a href="downloads/npcv.pdf" download><strong>Curriculum Vitae</strong></a><br/>
-        Phone number: +447751718491<br/>
-        e-Mail : nikolaospappa@gmail.com
-      </div>
-      <ul class="Plist">
-        <li><a target="blank" href="https://uk.linkedin.com/in/nikos-pappas"><img src="images/linkedin.png" alt="linkedIn" height="50" /></a></li>
-        <li><a href="mailto:nikolaospappa@gmail.com"><img src="images/mail.png" alt="e-Mail" height="50" /></a></li>
-        <li><a onclick="showClick(perInfo)"><img src="images/contact.png" alt="Contact info" height="50" /></a></li>
-      </ul>
-      <!-- <span style="color:#D1D2D2">
-        <img src="images/cog.svg" alt="cog" height="50" /> <br/>
-          Please, bear in mind that the page<br/>
-          is still under construction.
-      </span> -->
-      </div>
-  </header>
   <body>
-      <div id="myAbst" class="myAbst">
-        <p>I have recently graduated from the University of Bristol, where I had a MSc
-course in <strong>Computer Science</strong>, expecting a first class degree. I have previously
-studied <strong>Civil Engineering (Structural)</strong> at the Democritus University of Thrace. The skills
-I obtained from my education, along with my experience working and undertaking
-projects, are mainly <strong>problem solving</strong>, ease in <strong>adapting rapidly</strong> and the capability
-to undertake a broad variety of tasks. I am looking forward to use and enhance these
-skills, and become a productive member of our society.
-        </p>
+    <header>
+      <div class="header-left">
+        <div class="logo">
+          <img src="images/logo-outer128.png" alt="MyLogo" height="94" />
+        </div>
+        <div class="personal">
+          <h1>Nikolaos Pappas</h1>
+        </div>
+        <nav>
+          <ul>
+            <li>
+              <div class="tooltip">
+                <a href="#myAbst" onclick="showClick(edu,true)"><img src="images/nav/edu.png">
+                <span class="tooltiptext">Education</span></a>
+              </div>
+            </li>
+            <li>
+              <div class="tooltip">
+                <a href="#skillAnchor" onclick="closeClickSkill(skills,progLang,true)"><img src="images/nav/skills.png">
+                <span class="tooltiptext">Programming Skills</span></a>
+              </div>
+            </li>
+            <li>
+              <div class="tooltip">
+                <a href="#workAnchor" onclick="showClick(work,true)"><img src="images/nav/work.png">
+                <span class="tooltiptext">Working Experience</span></a>
+              </div>
+            </li>
+            <li>
+              <div class="tooltip">
+                <a href="#langAnchor" onclick="closeClickSkill(language,spokLang,true)"><img src="images/nav/lang.png">
+                <span class="tooltiptext">Spoken Languages</span></a>
+              </div>
+            </li>
+            <li>
+              <div class="tooltip">
+                <a href="#projAnchor" onclick="showClick(proj,true)"><img src="images/nav/project.png">
+                <span class="tooltiptext">Projects</span></a>
+              </div>
+            </li>
+            <li>
+              <div class="tooltip">
+                <a href="#softAnchor" onclick="showClick(software,true)"><img src="images/nav/software.png">
+                <span class="tooltiptext">Software</span></a>
+              </div>
+            </li>
+
+          </ul>
+        </nav>
       </div>
-      <div class="education">
-        <h1 onclick="showClick(edu)">Education +</h1>
+      <div class="Plinks">
+        <div class="personalInfo">
+          <a href="downloads/npcv.pdf" download><strong>Curriculum Vitae</strong></a><br/>
+          Phone number: +447751718491<br/>
+          e-Mail : nikolaospappa@gmail.com
+        </div>
+        <ul class="Plist">
+          <li><a target="blank" href="https://uk.linkedin.com/in/nikos-pappas"><img src="images/linkedin.png" alt="linkedIn" height="50" /></a></li>
+          <li><a href="mailto:nikolaospappa@gmail.com"><img src="images/mail.png" alt="e-Mail" height="50" /></a></li>
+          <li><a onclick="showClick(perInfo)"><img src="images/contact.png" alt="Contact info" height="50" /></a></li>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <section id="myAbst" class="myAbst">
+        <p>I have recently graduated from the University of Bristol, where I had a MSc
+          course in <strong>Computer Science</strong>, expecting a first class degree. I have previously
+          studied <strong>Civil Engineering (Structural)</strong> at the Democritus University of Thrace. The skills
+          I obtained from my education, along with my experience working and undertaking
+          projects, are mainly <strong>problem solving</strong>, ease in <strong>adapting rapidly</strong> and the capability
+          to undertake a broad variety of tasks. I am looking forward to using and enhancing these
+          skills, and become a productive member of our society.
+        </p>
+      </section>
+      <section id="edu" class="education">
+        <heading><h1 onclick="showClick(edu)">Education +</h1></heading>
         <div id="edu-entries" class="edu-entries">
           <div class ="uob">
             <table>
@@ -148,22 +191,22 @@ skills, and become a productive member of our society.
                   </div>
                 </div>
                 <hr/>
-                <div class ="anatolia">
-                  <table>
-                    <tr>
-                      <th class=dates>
-                        2001 - 2007
-                      </th>
-                      <th class="logo">
-                        <div class="duth-logo">
-                          <img src="images/logo_anatolia_rgb.jpg" alt="Anatolia College" height="52" />
-                          <div class="duth-logo-letters">
-                            <h2>Anatolia</h2>
-                            <h3>College of</h3>
-                            <h3>Thessaloniki</h3>
-                          </div>
-                        </div>
-                      </div>
+            <div class ="anatolia">
+              <table>
+                <tr>
+                  <th class=dates>
+                    2001 - 2007
+                  </th>
+                  <th class="logo">
+              <div class="duth-logo">
+                <img src="images/logo_anatolia_rgb.jpg" alt="Anatolia College" height="52" />
+                <div class="duth-logo-letters">
+                  <h2>Anatolia</h2>
+                  <h3>College of</h3>
+                  <h3>Thessaloniki</h3>
+                </div>
+              </div>
+            </div>
                     </th>
                     <th>
                       High School
@@ -184,180 +227,192 @@ skills, and become a productive member of our society.
                 </div>
               </div>
             </div>
-          </div>
-    <div class="skills">
-      <h1 onclick="closeClickSkill(skills,progLang)">+ Programming Skills</h1>
-      <ul id="skilList" class="skilList">
-        <li>
-          <div class="tooltip" onclick="showSkill(javaProg,progLang)">
-            <span class="tooltiptext">Java</span>
-            <img class="langLogo" src="images/skills/java-logo.png" alt="Java"/>
-            <img src="images/skills/star.png" alt="star"><img src="images/skills/star.png" alt="star"><img src="images/skills/star.png" alt="star"><img src="images/skills/star.png" alt="star"><img src="images/skills/circle.png" alt="circle" />
-          </div>
-        </li>
-        <li>
-          <div class="tooltip" onclick="showSkill(cProg,progLang)">
-            <span class="tooltiptext">C-programming</span>
-            <img class="langLogo" src="images/skills/c-logo.png"    alt="C-programming"/>
-            <img src="images/skills/star.png" alt="star"><img src="images/skills/star.png" alt="star"><img src="images/skills/star.png" alt="star"><img src="images/skills/circle.png" alt="circle" /><img src="images/skills/circle.png" alt="circle" />
-          </div>
-        </li>
-        <li>
-          <div class="tooltip" onclick="showSkill(cpp,progLang)">
-            <span class="tooltiptext">C++</span>
-            <img class="langLogo" src="images/skills/cpp-logo.png"  alt="C++"/>
-            <img src="images/skills/star.png" alt="star"><img src="images/skills/star.png" alt="star"><img src="images/skills/circle.png" alt="circle" /><img src="images/skills/circle.png" alt="circle" /><img src="images/skills/circle.png" alt="circle" />
-          </div>
-        </li>
-        <li>
-          <div class="tooltip" onclick="showSkill(htmlProg,progLang)">
-            <span class="tooltiptext">HTML</span>
-            <img class="langLogo" src="images/skills/html5-64.png"  alt="html"/>
-            <img src="images/skills/star.png" alt="star"><img src="images/skills/star.png" alt="star"><img src="images/skills/circle.png" alt="circle" /><img src="images/skills/circle.png" alt="circle" /><img src="images/skills/circle.png" alt="circle" />
-          </div>
-        </li>
-        <li>
-          <div class="tooltip" onclick="showSkill(sqlite,progLang)">
-            <span class="tooltiptext">SQLite</span>
-            <img class="langLogo" src="images/skills/sql.png"       alt="SQLite"/>
-            <img src="images/skills/star.png" alt="star"><img src="images/skills/star.png" alt="star"><img src="images/skills/star.png" alt="star"><img src="images/skills/star.png" alt="star"><img src="images/skills/circle.png" alt="circle" />
-          </div>
-        </li>
-        <li>
-          <div class="tooltip" onclick="showSkill(python,progLang)">
-            <span class="tooltiptext">Python</span>
-            <img class="langLogo" src="images/skills/python.png"   alt="Python"/>
-            <img src="images/skills/star.png" alt="star"><img src="images/skills/star.png" alt="star"><img src="images/skills/star.png" alt="star"><img src="images/skills/circle.png" alt="circle" /><img src="images/skills/circle.png" alt="circle" />
-          </div>
-        </li>
-        <li>
-          <div class="tooltip" onclick="showSkill(matlab,progLang)">
-            <span class="tooltiptext">MATLAB</span>
-            <img class="langLogo" src="images/skills/matlab.png"   alt="MATLAB"/>
-            <img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/circle.png" alt="circle" /><img src="images/skills/circle.png" alt="circle" />
-          </div>
-        </li>
-        <li>
-          <div class="tooltip" onclick="showSkill(nodeJS,progLang)">
-            <span class="tooltiptext">NodeJS</span>
-            <img class="langLogo" src="images/skills/nodejs.png"   alt="NodeJS"/>
-            <img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/circle.png" alt="circle" /><img src="images/skills/circle.png" alt="circle" /><img src="images/skills/circle.png" alt="circle" />
-          </div>
-        </li>
-      </ul>
-      <div class="textJava">
-      <h3>Java</h3>
-        <p>
-        My experience with Java started with auxiliary calculating applications,
-        while I was studying <strong>civil engineering</strong>, such as
-        <strong>column stress analysis</strong> and <strong>rebar calculation</strong>
-        for concrete members. Later on I refined my knowledge on Java with the equivalent
-        unit at University of Bristol.<br/><br/>
-        <span style="color:white"><strong>Projects:</strong></span> Mammography Interpretation Tool
-        (<a href="http://caffe.berkeleyvision.org/">Caffe</a>),<br/>
-        Face Recognition Pong Game, generic database.<br/><br/>
-        <span style="color:white"><strong>APIs used:</strong></span> SQL, OpenCV
-        </p>
-      </div>
-      <div class="textC">
-        <h3>C</h3>
+      </section>
+      <section id="skills" class="skills">
+        <div id="skillAnchor"></div>
+        <h1 onclick="closeClickSkill(skills,progLang)">+ Programming Skills</h1>
+        <ul id="skilList" class="skilList">
+          <li>
+            <a href="#skillText"><div id="skillText" class="tooltip" onclick="showSkill(javaProg,progLang)">
+              <span class="tooltiptext">Java</span>
+              <img class="langLogo" src="images/skills/java-logo.png" alt="Java"/>
+              <img src="images/skills/star.png" alt="star"><img src="images/skills/star.png" alt="star"><img src="images/skills/star.png" alt="star"><img src="images/skills/star.png" alt="star"><img src="images/skills/circle.png" alt="circle" />
+            </div></a>
+          </li>
+          <li>
+            <a href="#skillText"><div class="tooltip" onclick="showSkill(cProg,progLang)">
+              <span class="tooltiptext">C-programming</span>
+              <img class="langLogo" src="images/skills/c-logo.png"    alt="C-programming"/>
+              <img src="images/skills/star.png" alt="star"><img src="images/skills/star.png" alt="star"><img src="images/skills/star.png" alt="star"><img src="images/skills/circle.png" alt="circle" /><img src="images/skills/circle.png" alt="circle" />
+            </div></a>
+          </li>
+          <li>
+            <a href="#skillText"><div class="tooltip" onclick="showSkill(cpp,progLang)">
+              <span class="tooltiptext">C++</span>
+              <img class="langLogo" src="images/skills/cpp-logo.png"  alt="C++"/>
+              <img src="images/skills/star.png" alt="star"><img src="images/skills/star.png" alt="star"><img src="images/skills/circle.png" alt="circle" /><img src="images/skills/circle.png" alt="circle" /><img src="images/skills/circle.png" alt="circle" />
+            </div></a>
+          </li>
+          <li>
+            <a href="#skillText"><div class="tooltip" onclick="showSkill(htmlProg,progLang)">
+              <span class="tooltiptext">HTML</span>
+              <img class="langLogo" src="images/skills/html5-64.png"  alt="html"/>
+              <img src="images/skills/star.png" alt="star"><img src="images/skills/star.png" alt="star"><img src="images/skills/circle.png" alt="circle" /><img src="images/skills/circle.png" alt="circle" /><img src="images/skills/circle.png" alt="circle" />
+            </div></a>
+          </li>
+          <li>
+            <a href="#skillText"><div class="tooltip" onclick="showSkill(sqlite,progLang)">
+              <span class="tooltiptext">SQLite</span>
+              <img class="langLogo" src="images/skills/sql.png"       alt="SQLite"/>
+              <img src="images/skills/star.png" alt="star"><img src="images/skills/star.png" alt="star"><img src="images/skills/star.png" alt="star"><img src="images/skills/star.png" alt="star"><img src="images/skills/circle.png" alt="circle" />
+            </div></a>
+          </li>
+          <li>
+            <a href="#skillText"><div class="tooltip" onclick="showSkill(python,progLang)">
+              <span class="tooltiptext">Python</span>
+              <img class="langLogo" src="images/skills/python.png"   alt="Python"/>
+              <img src="images/skills/star.png" alt="star"><img src="images/skills/star.png" alt="star"><img src="images/skills/star.png" alt="star"><img src="images/skills/circle.png" alt="circle" /><img src="images/skills/circle.png" alt="circle" />
+            </div></a>
+          </li>
+          <li>
+            <a href="#skillText"><div class="tooltip" onclick="showSkill(matlab,progLang)">
+              <span class="tooltiptext">MATLAB</span>
+              <img class="langLogo" src="images/skills/matlab.png"   alt="MATLAB"/>
+              <img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/circle.png" alt="circle" /><img src="images/skills/circle.png" alt="circle" />
+            </div></a>
+          </li>
+          <li>
+            <a href="#skillText"><div class="tooltip" onclick="showSkill(nodeJS,progLang)">
+              <span class="tooltiptext">NodeJS</span>
+              <img class="langLogo" src="images/skills/nodejs.png"   alt="NodeJS"/>
+              <img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/circle.png" alt="circle" /><img src="images/skills/circle.png" alt="circle" /><img src="images/skills/circle.png" alt="circle" />
+            </div></a>
+          </li>
+        </ul>
+        <div class="textJava">
+          <h3>Java</h3>
+          <p>
+            My experience with Java started with auxiliary calculating applications,
+            while I was studying <strong>civil engineering</strong>, such as
+            <strong>column stress analysis</strong> and <strong>rebar calculation</strong>
+            for concrete members. Later on I refined my knowledge on Java with the equivalent
+            unit at University of Bristol.<br/><br/>
+            <span style="color:white"><strong>Projects:</strong></span> Mammography Interpretation Tool
+            (<a href="http://caffe.berkeleyvision.org/">Caffe</a>),<br/>
+            Face Recognition Pong Game, generic database.<br/><br/>
+            <span style="color:white"><strong>APIs used:</strong></span> SQL, OpenCV
+          </p>
+        </div>
+        <div class="textC">
+          <h3>C</h3>
           <p>
             The main programming language of my Master's course, was C. Within the course
             I used data structures, such as <strong> linked lists, queues, trees</strong> and <strong>stacks</strong>.<br/><br/>
             <span style="color:white"><strong>Projects:</strong></span> Teletext decoder, <a href="https://github.com/nikopapp/GameOfLife">Game Of Life</a>, Image Processing and Computer Vision apps using OpenCV.<br/><br/>
             <span style="color:white"><strong>Libraries used:</strong></span> SDL, OpenCV, atlas, lmdb, pthread.
-        </p>
-      </div>
-      <div class="textCpp">
-        <h3>C++</h3>
-        <p></p>
-      </div>
-      <div class="textHtml">
-        <h3>HTML5</h3>
-        <p>
-          I first started using HTML in a computer science class in High-School, then in University of bristol
-          I had a unit on web technologies. <a href="http://elvarce.com">Sample.</a>
-        </p>
-      </div>
-      <div class="textSQL">
+          </p>
+        </div>
+        <div class="textCpp">
+          <h3>C++</h3>
+          <p></p>
+        </div>
+        <div class="textHtml">
+          <h3>HTML5</h3>
+          <p>
+            I first started using HTML in a computer science class in High-School, then in University of bristol
+            I had a unit on web technologies. <a href="http://elvarce.com">Sample.</a>
+          </p>
+        </div>
+        <div class="textSQL">
           <h3>SQL</h3>
           <p>
-              The databases unit in my last degree included a complete implementation of the database
-              side of a faculty forum. The server was programmed in Java with an the SQLite database.
+            The databases unit in my last degree included a complete implementation of the database
+            side of a faculty forum. The server was programmed in Java with an the SQLite database.
           </p>
-      </div>
-      <div class="textJS">
+        </div>
+        <div class="textJS">
           <h3>NodeJS</h3>
           <p>
             I used NodeJS to program a server of a dynamic website, along with the database it is backed with.
           </p>
-      </div>
-      <div class="textMAT">
+        </div>
+        <div class="textMAT">
           <h3>MATLAB</h3>
-          <p></p>
-      </div>
-
-      <div class="textPy">
-        <h3>Python</h3>
-        <p>
-        I used Python, and more specifically Jupyter (iPython) Notebooks in order to visualize the layers
-        of the Convolutional Neural Network used for the Mammography Interpretation Tool.<br/><br/>
-        <span style="color:white"><strong>Modules Used:</strong></span> NumPy, matplotlib, caffe.
-        </p>
-      </div>
-    </div>
+          <p>
+            MATLAB was my first contact to programming, initially using the built-in libraries, in order to
+            solve mathematical and engineering problems. The libraries I used the most was the plotting library and
+            the one for fuzzy logic.
+          </p>
+          <p>
+            I used MATLAB for my final project in order to automate the preprocessing of the mammography dataset
+            which was compiled by 10480 X-ray images.
+          </p>
+        </div>
+        <div class="textPy">
+          <h3>Python</h3>
+          <p>
+            I used Python, and more specifically Jupyter (iPython) Notebooks in order to visualize the layers
+            of the Convolutional Neural Network used for the Mammography Interpretation Tool.<br/><br/>
+            <span style="color:white"><strong>Modules Used:</strong></span> NumPy, matplotlib, caffe.
+          </p>
+        </div>
+      </section>
 <!-- ******************************************************************************************** -->
-    <div class="work">
-      <h1 onclick="showClick(work)">Employment Experience +</h1>
-      <div id="worklist" class="worklist">
-        <h3>2016 - Motion Tracking Annotation (SHPERE, Bristol)</h3>
-        <p>Annotating raw data from motion detection cameras with VICON's Nexux Motion Capture Software.<br/> (2 months, Part-Time, Paid)</p><hr/>
-        <h3>2015 - Electrician Assistant (Bristol Sparks, Bristol)</h3>
-        <p> Installing electrical circuits and CCTV systems.<br/> (2 months, Part-Time, Paid)</p><hr/>
-        <h3>2015 - Bartender (Hole In The Wall, Bristol)</h3>
-        <p> Serving drinks and food and making sure the bar is organised and clean. <br/>(4 months, Full-Time, Paid)</p><hr/>
-        <h3>2013 - Research Assistant in (GTE, Madrid) </h3>
-        <p> Calculating simple structures for construction.<br/>
+      <section class="work">
+        <div id="workAnchor"></div>
+        <h1 onclick="showClick(work)">Employment Experience +</h1>
+        <div id="worklist" class="worklist">
+          <h3>2016 - Motion Tracking Annotation (SHPERE, Bristol)</h3>
+          <p>Annotating raw data from motion detection cameras with VICON's Nexux Motion Capture Software.<br/> (2 months, Part-Time, Paid)</p><hr/>
+          <h3>2015 - Electrician Assistant (Bristol Sparks, Bristol)</h3>
+          <p> Installing electrical circuits and CCTV systems.<br/> (2 months, Part-Time, Paid)</p><hr/>
+          <h3>2015 - Bartender (Hole In The Wall, Bristol)</h3>
+          <p> Serving drinks and food and making sure the bar is organised and clean. <br/>(4 months, Full-Time, Paid)</p><hr/>
+          <h3>2013 - Research Assistant in (GTE, Madrid) </h3>
+          <p> Calculating simple structures for construction.<br/>
            Researching <strong>folding trusses</strong> as a future investment. <br/>(4 months, Full-Time, Internship)</p><hr/>
-      </div>
-    </div>
+        </div>
+      </section>
 <!-- ******************************************************************************************** -->
-    <div class="languages">
-      <h1 onclick="closeClickSkill(language,spokLang)">+ Spoken Languages</h1>
-      <div class="eng">
-        Ielts band 8.0 2015<br/>
-        B2 Cambridge Advanced   2006<br/>
-        C1 Michigan Proficiency 2006
-      </div>
-      <div class="gre">
-        Mother language
-      </div>
-      <div class="spa">
-        B2 national greek dimploma.<br/>
-        Lived studyed worked in spain.
-      </div>
-      <div class="ger">
-        B2 Zertificat 2004
-      </div>
-      <ul id="languagelist" class="languagelist">
-        <li onclick="showSkill(english,spokLang)">
-          <h2>English</h2>
-          <img src="images/skills/star24.png" alt="star"><img src="images/skills/star24.png" alt="star"><img src="images/skills/star24.png" alt="star"><img src="images/skills/star24.png" alt="star"><img src="images/skills/star24.png" alt="star">
-        </li>
-        <li onclick="showSkill(spanish,spokLang)">
-          <h2>Spanish</h2><img src="images/skills/star24.png" alt="star"><img src="images/skills/star24.png" alt="star"><img src="images/skills/star24.png" alt="star"><img src="images/skills/star24.png" alt="star"><img src="images/skills/star24.png" alt="star">
-        </li>
-        <li onclick="showSkill(greek,spokLang)">
-          <h2>Greek</h2><img src="images/skills/star24.png" alt="star"><img src="images/skills/star24.png" alt="star"><img src="images/skills/star24.png" alt="star"><img src="images/skills/star24.png" alt="star"><img src="images/skills/star24.png" alt="star">
-        </li>
-        <li onclick="showSkill(german,spokLang)">
-          <h2>German</h2><img src="images/skills/star24.png" alt="star" /><img src="images/skills/star24.png" alt="star" /><img src="images/skills/circle24.png" alt="circle" /><img src="images/skills/circle24.png" alt="circle" /><img src="images/skills/circle24.png" alt="circle" />
-        </li>
-    </div>
+      <section class="languages">
+        <div id="langAnchor"></div>
+        <h1 onclick="closeClickSkill(language,spokLang)">+ Spoken Languages</h1>
+        <div class="eng">
+          Ielts band 8.0 2015<br/>
+          B2 Cambridge Advanced   2006<br/>
+          C1 Michigan Proficiency 2006
+        </div>
+        <div class="gre">
+          Mother language
+        </div>
+        <div class="spa">
+          B2 national greek dimploma.<br/>
+          Lived studyed worked in spain.
+        </div>
+        <div class="ger">
+          B2 Zertificat 2004
+        </div>
+        <ul id="languagelist" class="languagelist">
+          <li onclick="showSkill(english,spokLang)">
+            <h2>English</h2>
+            <img src="images/skills/star24.png" alt="star"><img src="images/skills/star24.png" alt="star"><img src="images/skills/star24.png" alt="star"><img src="images/skills/star24.png" alt="star"><img src="images/skills/star24.png" alt="star">
+          </li>
+          <li onclick="showSkill(spanish,spokLang)">
+            <h2>Spanish</h2><img src="images/skills/star24.png" alt="star"><img src="images/skills/star24.png" alt="star"><img src="images/skills/star24.png" alt="star"><img src="images/skills/star24.png" alt="star"><img src="images/skills/star24.png" alt="star">
+          </li>
+          <li onclick="showSkill(greek,spokLang)">
+            <h2>Greek</h2><img src="images/skills/star24.png" alt="star"><img src="images/skills/star24.png" alt="star"><img src="images/skills/star24.png" alt="star"><img src="images/skills/star24.png" alt="star"><img src="images/skills/star24.png" alt="star">
+          </li>
+          <li onclick="showSkill(german,spokLang)">
+            <h2>German</h2><img src="images/skills/star24.png" alt="star" /><img src="images/skills/star24.png" alt="star" /><img src="images/skills/circle24.png" alt="circle" /><img src="images/skills/circle24.png" alt="circle" /><img src="images/skills/circle24.png" alt="circle" />
+          </li>
+        </ul>
+      </section>
 <!-- ******************************************************************************************** -->
-    <div class="projects">
-      <h1 onclick="showClick(proj)">Projects +</h1>
-      <ul id="projectlist" class="projectlist">
+      <section class="projects">
+        <div id="projAnchor"></div>
+        <h1 onclick="showClick(proj)">Projects +</h1>
+        <ul id="projectlist" class="projectlist">
         <li>
           <h3>Mammography Interpretation Tool <br/>using Computer Vision (University of Bristol Dissertation)</h3>
           <p>
@@ -433,122 +488,125 @@ skills, and become a productive member of our society.
               <figcaption>Final design of the home page.</figcaption>
             </figure>
         </li>
-    </div>
+      </section>
 <!-- ******************************************************************************************** -->
-    <div class="software">
-      <h1 onclick="showClick(software)">+ Software</h1>
-      <div id="softList" class="softList">
-        <h3>Drawing</h3>
-        <ul>
-          <li>
-            <div class="tooltip">
-              <span class="tooltiptext">AutoCad</span>
-              <img src="images/software/autocad.png" alt="AutoCad"/>
-              <img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/circle.png" alt="circle" />
-            </div>
-          </li>
-          <li>
-            <div class="tooltip">
-              <span class="tooltiptext">Revit</span>
-              <img src="images/software/revit.png" alt="Revit"/>
-              <img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/circle.png" alt="circle" /><img src="images/skills/circle.png" alt="circle" /><img src="images/skills/circle.png" alt="circle" />
-            </div>
-          </li>
-          <li>
-            <div class="tooltip">
-              <span class="tooltiptext">SolidWorks</span>
-              <img src="images/software/solidworks.png" alt="SolidWorks"/>
-              <img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/circle.png" alt="circle" /><img src="images/skills/circle.png" alt="circle" />
-            </div>
-          </li>
-        </ul>
-        <h3>Rendering</h3>
-        <ul>
-          <li>
-            <div class="tooltip">
-              <span class="tooltiptext">Maya</span>
-              <img src="images/software/maya.png" alt="Maya"/>
-              <img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/circle.png" alt="circle" /><img src="images/skills/circle.png" alt="circle" /><img src="images/skills/circle.png" alt="circle" />
-          </li>
-          <li>
-            <div class="tooltip">
-              <span class="tooltiptext">Artlantis</span>
-              <img src="images/software/artlantis.png" alt="Artlantis"/>
-              <img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/circle.png" alt="circle" /><img src="images/skills/circle.png" alt="circle" />
-          </li>
-        </ul>
-        <h3>Finite Element Analysis</h3>
-        <ul>
-          <li>
-            <div class="tooltip">
+      <section class="software">
+        <div id="softAnchor"></div>
+        <h1 onclick="showClick(software)">+ Software</h1>
+        <div id="softList" class="softList">
+          <h3>Drawing</h3>
+          <ul>
+            <li>
+              <div class="tooltip">
+                <span class="tooltiptext">AutoCad</span>
+                <img src="images/software/autocad.png" alt="AutoCad"/>
+                <img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/circle.png" alt="circle" />
+              </div>
+            </li>
+            <li>
+              <div class="tooltip">
+                <span class="tooltiptext">Revit</span>
+                <img src="images/software/revit.png" alt="Revit"/>
+                <img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/circle.png" alt="circle" /><img src="images/skills/circle.png" alt="circle" /><img src="images/skills/circle.png" alt="circle" />
+              </div>
+            </li>
+            <li>
+              <div class="tooltip">
+                <span class="tooltiptext">SolidWorks</span>
+                <img src="images/software/solidworks.png" alt="SolidWorks"/>
+                <img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/circle.png" alt="circle" /><img src="images/skills/circle.png" alt="circle" />
+              </div>
+            </li>
+          </ul>
+          <h3>Rendering</h3>
+          <ul>
+            <li>
+              <div class="tooltip">
+                <span class="tooltiptext">Maya</span>
+                <img src="images/software/maya.png" alt="Maya"/>
+                <img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/circle.png" alt="circle" /><img src="images/skills/circle.png" alt="circle" /><img src="images/skills/circle.png" alt="circle" />
+              </div>
+            </li>
+            <li>
+              <div class="tooltip">
+                <span class="tooltiptext">Artlantis</span>
+                <img src="images/software/artlantis.png" alt="Artlantis"/>
+                <img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/circle.png" alt="circle" /><img src="images/skills/circle.png" alt="circle" />
+              </div>
+            </li>
+          </ul>
+          <h3>Finite Element Analysis</h3>
+          <ul>
+            <li>
+              <div class="tooltip">
               <span class="tooltiptext">Simulia Abaqus</span>
               <img src="images/software/abaqus.png" alt="Maya"/>
               <img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/circle.png" alt="circle" />
-            </div>
-          </li>
-          <li>
-            <div class="tooltip">
-              <span class="tooltiptext">Robot</span>
-              <img src="images/software/robot.png" alt="Robot Structural Analysis"/>
-              <img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/circle.png" alt="circle" /><img src="images/skills/circle.png" alt="circle" />
-            </div>
-          </li>
-          <li>
-            <div class="tooltip">
-              <span class="tooltiptext">Inventor</span>
-              <img src="images/software/inventor.png" alt="Inventor"/>
-              <img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/circle.png" alt="circle" /><img src="images/skills/circle.png" alt="circle" /><img src="images/skills/circle.png" alt="circle" />
-            </div>
-          </li>
-        </ul>
-        <h3>Presentation</h3>
-        <ul>
-          <li>
-            <div class="tooltip">
-              <span class="tooltiptext">Photoshop</span>
-              <img src="images/software/photoshop.png" alt="Photoshop"/>
-              <img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/circle.png" alt="circle" />
-            </div>
-          </li>
-          <li>
-            <div class="tooltip">
-              <span class="tooltiptext">InDesign</span>
-              <img src="images/software/indesign.png" alt="InDesign"/>
-              <img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/circle.png" alt="circle" /><img src="images/skills/circle.png" alt="circle" />
-            </div>
-          </li>
-          <li>
-            <div class="tooltip">
-              <span class="tooltiptext">Premier Pro</span>
-              <img src="images/software/premier.jpeg" alt="Premier Pro"/>
-              <img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/circle.png" alt="circle" /><img src="images/skills/circle.png" alt="circle" /><img src="images/skills/circle.png" alt="circle" />
-            </div>
-          </li>
-          <li>
-            <div class="tooltip">
-              <span class="tooltiptext">GIMP</span>
-              <img src="images/software/gimp.png" alt="GIMP"/>
-              <img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/circle.png" alt="circle" />
-            </div>
-          </li>
-          <li>
-            <div class="tooltip">
-              <span class="tooltiptext">Inkscape</span>
-              <img src="images/software/inkscape.png" alt="Inkscape"/>
-              <img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/circle.png" alt="circle" /><img src="images/skills/circle.png" alt="circle" />
-            </div>
-          </li>
-          <li>
-            <div class="tooltip">
-              <span class="tooltiptext">Blender</span>
-              <img src="images/software/blender.png" alt="Blender"/>
-              <img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/circle.png" alt="circle" /><img src="images/skills/circle.png" alt="circle" /><img src="images/skills/circle.png" alt="circle" />
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="hobbies">
+              </div>
+            </li>
+            <li>
+              <div class="tooltip">
+                <span class="tooltiptext">Robot</span>
+                <img src="images/software/robot.png" alt="Robot Structural Analysis"/>
+                <img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/circle.png" alt="circle" /><img src="images/skills/circle.png" alt="circle" />
+              </div>
+            </li>
+            <li>
+              <div class="tooltip">
+                <span class="tooltiptext">Inventor</span>
+                <img src="images/software/inventor.png" alt="Inventor"/>
+                <img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/circle.png" alt="circle" /><img src="images/skills/circle.png" alt="circle" /><img src="images/skills/circle.png" alt="circle" />
+              </div>
+            </li>
+          </ul>
+          <h3>Presentation</h3>
+          <ul>
+            <li>
+              <div class="tooltip">
+                <span class="tooltiptext">Photoshop</span>
+                <img src="images/software/photoshop.png" alt="Photoshop"/>
+                <img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/circle.png" alt="circle" />
+              </div>
+            </li>
+            <li>
+              <div class="tooltip">
+                <span class="tooltiptext">InDesign</span>
+                <img src="images/software/indesign.png" alt="InDesign"/>
+                <img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/circle.png" alt="circle" /><img src="images/skills/circle.png" alt="circle" />
+              </div>
+            </li>
+            <li>
+              <div class="tooltip">
+                <span class="tooltiptext">Premier Pro</span>
+                <img src="images/software/premier.jpeg" alt="Premier Pro"/>
+                <img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/circle.png" alt="circle" /><img src="images/skills/circle.png" alt="circle" /><img src="images/skills/circle.png" alt="circle" />
+              </div>
+            </li>
+            <li>
+              <div class="tooltip">
+                <span class="tooltiptext">GIMP</span>
+                <img src="images/software/gimp.png" alt="GIMP"/>
+                <img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/circle.png" alt="circle" />
+              </div>
+            </li>
+            <li>
+              <div class="tooltip">
+                <span class="tooltiptext">Inkscape</span>
+                <img src="images/software/inkscape.png" alt="Inkscape"/>
+                <img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/circle.png" alt="circle" /><img src="images/skills/circle.png" alt="circle" />
+              </div>
+            </li>
+            <li>
+              <div class="tooltip">
+                <span class="tooltiptext">Blender</span>
+                <img src="images/software/blender.png" alt="Blender"/>
+                <img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/circle.png" alt="circle" /><img src="images/skills/circle.png" alt="circle" /><img src="images/skills/circle.png" alt="circle" />
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="hobbies">
       <h1 onclick="showClick(hobbies)">Hobbies +</h1>
       <ul class="hobbyList">
         <li>
@@ -588,8 +646,24 @@ skills, and become a productive member of our society.
           </div>
         </li>
       </ul>
-    </div>
+      </section>
+    </main>
+    <footer>
+      <div id="disclaimerBack">
+        <h1>
+          Without javascript it is impossimle to display the content of this website,<br/>
+          please enable script execution in your Browser and refresh.
+        </h1>
+      </div>
+      <div id="disclaimer">
+        <h1>
+          Without javascript it is impossible to display the content of this website,<br/>
+          please enable script execution in your Browser and refresh.
+        </h1>
+      </div>
+      <hr style="width: 80%; margin:auto"/>
+      2016
+    </footer>
+    <script src="script.js" type="text/javascript"></script>
   </body>
-  <footer><hr style="width: 80%; margin:auto"/>2016</footer>
-  <script src="script.js" type="text/javascript"></script>
 </html>

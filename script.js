@@ -28,17 +28,18 @@ var uobList = document.getElementsByClassName("uob-unitList")[0];
 var duthList = document.getElementsByClassName("duth-unitList")[0];
 var anatoliaList = document.getElementsByClassName('anatolia-extraList')[0];
 var header = document.getElementsByTagName('header');
-function showClick(className){
+function showClick(className,noClose){
   var style = window.getComputedStyle(className);
   if(style.getPropertyValue("display")=="none"){
     className.style.display = "inline-block";
-  } else{
+  } else if(!noClose){
     className.style.display = "none";
   }
 }
-function showSkill(className,list){
-  closeSkill(list);
+function showSkill(className,list,noClose){
+  if(!noClose) closeSkill(list);
   className.style.display = "inline-block";
+
   // new---start
   // skills.style.width="30%";
   // skills.style.marginTop="3%";
@@ -53,18 +54,18 @@ function closeSkill(list){
     list[i].style.display = "none";
   }
 }
-function closeClickSkill(className,list){
-  closeSkill(list);
-  showClick(className);
+function closeClickSkill(className,list,noClose){
+  if(!noClose) closeSkill(list);
+  showClick(className,noClose);
 }
 function whenScrolling(){
   var top = (window.pageYOffset || document.scrollTop)  - (document.clientTop || 0);
   if(top>100){
-    // abst.style.opacity="0";
-    abst.className="myAbst-scrolled";
+    abst.style.opacity="0";
+    // abst.className="myAbst-scrolled";
   }else{
-    // abst.style.opacity="1";
-    abst.className="myAbst";
+    abst.style.opacity="1";
+    // abst.className="myAbst";
   }
   if(top>5){
     header[0].className = "header-scrolled";
