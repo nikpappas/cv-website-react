@@ -546,6 +546,30 @@ footer{
   background-color: white;
   color:black;
 }
+section h1{
+  font-size: 2em;
+}
+/*---------Contact------------*/
+.contact h1{
+  margin: 1em auto;
+  color: white;
+}
+.contact ul{
+  width:30%;
+  /*text-align: left;*/
+  margin: 1em auto;
+  color: #D8B517;
+  font-family: "Raleway", sans-serif;
+}
+.contact ul li{
+  margin: 1em auto;
+}
+.contact img{
+  vertical-align:middle;
+  border-radius: 3px;
+  width:2em;
+  height: 2em;
+}
 /*---------Tooltips-----------*/
 .tooltip{
   z-index: 4;
