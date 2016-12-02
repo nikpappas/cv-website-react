@@ -452,7 +452,7 @@ nav ul li .tooltiptext{
 }
 .langLogo{
   transition: all 0.3s ease;
-  border-radius: 12px;
+  border-radius: 10px;
   box-shadow: 0 0 4px 2px #151616;
   opacity: 0.82;
   background: white;
