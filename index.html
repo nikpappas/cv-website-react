@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8"/>
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Open+Sans+Condensed:300|Raleway" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700" rel="stylesheet"> -->
     <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> -->
     <!-- <link href='https://fonts.googleapis.com/css?family=Fredericka+the+Great' rel='stylesheet' type='text/css'/> -->
     <link rel="stylesheet" type="text/css"  href="mainStyle.css" />
@@ -282,11 +283,25 @@
             </div></a>
           </li>
           <li>
+            <a href="#skillText"><div class="tooltip" onclick="showSkill(jscript,progLang)">
+              <span class="tooltiptext">Javascript</span>
+              <img class="langLogo" src="images/skills/js.png"   alt="Javascript"/>
+              <img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/circle.png" alt="circle" /><img src="images/skills/circle.png" alt="circle" />
+            </div></a>
+          </li>
+          <li>
             <a href="#skillText"><div class="tooltip" onclick="showSkill(nodeJS,progLang)">
               <span class="tooltiptext">NodeJS</span>
               <img class="langLogo" src="images/skills/nodejs.png"   alt="NodeJS"/>
               <img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/circle.png" alt="circle" /><img src="images/skills/circle.png" alt="circle" /><img src="images/skills/circle.png" alt="circle" />
             </div></a>
+          </li>
+          <li>
+             <a href="#skillText"><div class="tooltip" onclick="showSkill(angJS,progLang)">
+                <span class="tooltiptext">AngularJS</span>
+                <img class="langLogo" src="images/skills/angularjs.png"   alt="AngularJS"/>
+                <img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="circle" /><img src="images/skills/circle.png" alt="circle" /><img src="images/skills/circle.png" alt="circle" />
+             </div></a>
           </li>
           <li>
             <a href="#skillText"><div class="tooltip" onclick="showSkill(gradle,progLang)">
@@ -327,7 +342,7 @@
           <h3>HTML5</h3>
           <p>
             I first started using HTML in a computer science class in High-School, then in University of bristol
-            I had a unit on web technologies. <a href="http://elvarce.com">Sample.</a>
+            I had a unit on web technologies. <a href="http://elvarce.com">Sample1</a>, <a href="http://tomorrows.com.s3-website-eu-west-1.amazonaws.com/">Sample2,</a>.
           </p>
         </div>
         <div class="textSQL">
@@ -337,9 +352,10 @@
             side of a faculty forum. The server was programmed in Java with an the SQLite database.
           </p>
         </div>
-        <div class="textJS">
+        <div class="textNodeJS">
           <h3>NodeJS</h3>
           <p>
+             <!-- TODO -->
             I used NodeJS to program a server of a dynamic website, along with the database it is backed with.
           </p>
         </div>
@@ -363,6 +379,25 @@
             <span style="color:white"><strong>Modules Used:</strong></span> NumPy, matplotlib, caffe.
           </p>
         </div>
+        <div class="textAngJS">
+          <h3>AngularJS</h3>
+          <p>
+             <!-- TODO -->
+          </p>
+        </div>
+        <div class="textJS">
+          <h3>Javascript</h3>
+          <p>
+             <!-- TODO -->
+          </p>
+        </div>
+        <div class="textGradle">
+          <h3>Gradle</h3>
+          <p>
+             <!-- TODO -->
+          </p>
+        </div>
+
       </section>
 <!-- ******************************************************************************************** -->
       <section class="work">
@@ -495,6 +530,18 @@
               <figcaption>Final design of the home page.</figcaption>
             </figure>
         </li>
+        <li>
+           <h3>Web based real estate speculation game <strong>participate</strong></h3>
+           <p>
+             Candidate for the exhibition <a href="http://www.sgt.gr/eng/SPG1/?"><em>Tomorrows</em><a>.
+          </p>
+            <figure>
+              <a class="photoLink" target="blank" href="http://tomorrows.com.s3-website-eu-west-1.amazonaws.com/">
+              <img class="projectImage" src="images/projects/tomorrows.png" alt="Sample of the website" height="350px" />
+            </a>
+              <figcaption>Final design of the home page.</figcaption>
+            </figure>
+
       </section>
 <!-- ******************************************************************************************** -->
       <section class="software">
@@ -658,9 +705,9 @@
         <h1>Contact</h1>
         <ul>
           <li>
-            <img src="images/contact/tel.png" alt="tel"/> <br/><hr/>07751718491</li>
+            <img src="images/contact/mail.png" alt="e-Mail"/>nikolaospappa@gmail.com
           <li>
-            <img src="images/contact/mail.png" alt="e-Mail"/> <br/><hr/>nikolaospappa@gmail.com
+             <img src="images/contact/tel.png" alt="tel"/> 07751718491</li>
           </li>
         </ul>
       </section>
@@ -678,7 +725,7 @@
           please enable script execution in your Browser and refresh.
         </h1>
       </div>
-      <hr style="width: 80%; margin:auto"/>
+      <!-- <hr style="width: 80%; margin:auto"/> -->
       2016
     </footer>
     <script src="script.js" type="text/javascript"></script>

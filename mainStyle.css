@@ -104,7 +104,6 @@ header.header-scrolled{
   height: 40px;
 }
 header h1 {
-  align:center;
   font-variant: small-caps;
   margin-bottom: 0;
   font-size: 2.5em;
@@ -175,7 +174,7 @@ header li{
 #myAbst{
   transition: all 0.6s ease;
   color: white;
-  padding: 10% auto;
+  /*padding: 10%;*/
   width:100%;
   font-size: large;
 }
@@ -259,7 +258,6 @@ nav ul li .tooltiptext{
   display: none;
 }
 .edu-entries{
-  padding: 10% auto;
   padding-top: 5%;
 }
 .edu-entries-m{
@@ -378,13 +376,14 @@ nav ul li .tooltiptext{
   color: gold;
   margin: .25em auto;
 }
-.textJava h3, .textC h3, .textHtml h3, .textCpp h3,
- .textSQL h3, .textJS h3, .textPy h3, .textMAT h3{
+.textJava h3, .textC h3, .textHtml h3, .textCpp h3, .textGradle h3,
+ .textSQL h3, .textJS h3, .textNodeJS h3, .textPy h3, .textMAT h3, .textAngJS h3{
    text-align: center;
    font-weight: bold;
    font-size: larger;
 }
-.textJava, .textC, .textHtml, .textCpp, .textSQL, .textJS, .textPy,.textMAT,
+.textJava, .textC, .textHtml, .textCpp, .textSQL, .textGradle,
+.textJS, .textPy, .textMAT, .textAngJS, .textNodeJS,
 .eng,.gre,.spa,.ger{
   /*vertical-align: bottom;*/
   margin:0% auto;
@@ -404,7 +403,8 @@ nav ul li .tooltiptext{
   padding: 3% auto;
   color: #e9cc4e; /*text gold*/
 }
-.textJava p, .textC p, .textHtml p, .textCpp p, .textSQL p, .textJS p, .textPy p,.textMAT p{
+.textJava p, .textC p, .textHtml p, .textCpp p, .textSQL p,
+.textJS p, .textPy p,.textMAT p, .textAngJS p, .textNodeJS p, .textGradle p{
   width:90%;
   margin-bottom: 5%;
 }
@@ -455,6 +455,7 @@ nav ul li .tooltiptext{
   border-radius: 12px;
   box-shadow: 0 0 4px 2px #151616;
   opacity: 0.82;
+  background: white;
 }
 .skills li:hover .langLogo,.skills li:focus .langLogo{
   opacity: 1;
@@ -555,16 +556,18 @@ section h1{
   color: white;
 }
 .contact ul{
-  width:30%;
+  width:50%;
   /*text-align: left;*/
   margin: 1em auto;
   color: #D8B517;
   font-family: "Raleway", sans-serif;
 }
 .contact ul li{
-  margin: 1em auto;
+  margin: 1em 1em;
+  display: inline-block;
 }
 .contact img{
+   margin: 1em 0.5em;
   vertical-align:middle;
   border-radius: 3px;
   width:2em;

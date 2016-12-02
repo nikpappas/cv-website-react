@@ -10,11 +10,15 @@ var javaProg = document.getElementsByClassName('textJava')[0];
 var cProg    = document.getElementsByClassName('textC')[0];
 var htmlProg = document.getElementsByClassName('textHtml')[0];
 var sqlite   = document.getElementsByClassName('textSQL')[0];
-var nodeJS   = document.getElementsByClassName('textJS')[0];
+var nodeJS   = document.getElementsByClassName('textNodeJS')[0];
 var matlab   = document.getElementsByClassName('textMAT')[0];
 var python   = document.getElementsByClassName('textPy')[0];
 var cpp      = document.getElementsByClassName('textCpp')[0];
-var progLang = [javaProg, cProg, htmlProg, sqlite, nodeJS, python, cpp, matlab];
+var angJS    = document.getElementsByClassName('textAngJS')[0];
+var gradle   = document.getElementsByClassName('textGradle')[0];
+var jscript  = document.getElementsByClassName('textJS')[0];
+var progLang = [javaProg, cProg, htmlProg, sqlite, nodeJS,
+                  python, cpp,jscript, matlab, angJS, gradle];
 // ------- spoken languages
 var english  = document.getElementsByClassName('eng')[0];
 var greek    = document.getElementsByClassName('gre')[0];
