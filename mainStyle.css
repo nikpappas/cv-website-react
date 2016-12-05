@@ -217,6 +217,13 @@ nav ul li .tooltiptext{
   /*top:-1.6em;*/
   right:0;
 }
+nav.nav-m ul li img{
+   height: 4em;
+}
+.header-scrolled nav.nav-m ul li img{
+   height: 4em;
+}
+
 #skillAnchor, #workAnchor, #langAnchor, #projAnchor, #softAnchor{
   position: relative;
   top:-8em;
@@ -230,12 +237,12 @@ nav ul li .tooltiptext{
 }
 .myAbst-m{
   color: white;
-  font-size: small;
   width: 100%;
   margin:0;
   padding:0;
 }
 .myAbst-m p{
+   font-size: 25px;
   width: 80%;
   margin:0;
   padding:0;
@@ -541,7 +548,7 @@ figure figcaption{
   width:100%;
 }
 .footer-m{
-  font-size: smaller;
+  font-size: 20px;
 }
 footer{
   background-color: white;
@@ -549,6 +556,15 @@ footer{
 }
 section h1{
   font-size: 2em;
+}
+.education h1.h1-m, .work h1.h1-m, .projects h1.h1-m, .hobbies h1.h1-m{
+   right: 3%;
+}
+.skills h1.h1-m, .languages h1.h1-m, .software h1.h1-m{
+   left: 3%;
+}
+section h1.h1-m{
+   font-size: 4em;
 }
 /*---------Contact------------*/
 .contact h1{

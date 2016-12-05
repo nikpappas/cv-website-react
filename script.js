@@ -78,18 +78,28 @@ function whenScrolling(){
   }
 }
 function whenMobile(){
-  document.getElementById('myAbst').className="myAbst-m";
-  document.getElementsByTagName('body')[0].className="body-m";
-  document.getElementsByTagName('footer')[0].className="footer-m";
-  document.getElementById('edu-entries').className="edu-entries-m";
-  document.getElementById('worklist').className="worklist-m";
+   document.getElementById('myAbst').className="myAbst-m";
+   document.getElementsByTagName('body')[0].className="body-m";
+   document.getElementsByTagName('footer')[0].className="footer-m";
+   document.getElementById('edu-entries').className="edu-entries-m";
+   document.getElementById('worklist').className="worklist-m";
+   document.getElementsByTagName('nav')[0].className="nav-m";
+   var h1 = document.getElementsByTagName('h1');
+   for(var i =0;i<h1.length;i++){
+      h1[i].className="h1-m";
+   }
 }
 function whenDesktop(){
-  document.getElementById('myAbst').className="myAbst";
-  document.getElementsByTagName('body')[0].className="";
-  document.getElementsByTagName('footer')[0].className="";
-  document.getElementById('edu-entries').className="edu-entries";
-  document.getElementById('worklist').className="worklist";
+   document.getElementById('myAbst').className="myAbst";
+   document.getElementsByTagName('body')[0].className="";
+   document.getElementsByTagName('footer')[0].className="";
+   document.getElementById('edu-entries').className="edu-entries";
+   document.getElementById('worklist').className="worklist";
+   document.getElementsByTagName('nav')[0].className="";
+   var h1 = document.getElementsByTagName('h1');
+   for(var i =0;i<h1.length;i++){
+      h1[i].className="";
+   }
 }
 function whenResize(){
   var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0)
