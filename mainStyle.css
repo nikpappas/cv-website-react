@@ -256,8 +256,8 @@ nav.nav-m ul li img{
   background-color: white;
 }
 .education, .work, .skills, .languages, .hobbies, .software, .projects {
-  padding-top: 2%;
-  padding-bottom: 2%;
+  padding-top: 3em;
+  padding-bottom: 3em;
   min-height: 55px;
   width: 100%;
 }
