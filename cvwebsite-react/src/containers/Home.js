@@ -1,5 +1,5 @@
-import React, {Component} from 'react'
-import { withSiteData } from 'react-static'
+import React, {Component} from 'react';
+import { withSiteData } from 'react-static';
 import Header from './header';
 import Education from "containers/sections/education";
 import ProgrammingSkills from "containers/sections/programming";
@@ -7,8 +7,10 @@ import Work from "containers/sections/work";
 import Languages from "containers/sections/languages";
 import Projects from "containers/sections/projects";
 import SoftwareSkills from "containers/sections/software";
-//
-import logoImg from '../logo.png'
+import Hobbies from "containers/sections/hobbies";
+import Contact from "containers/sections/contact";
+import Footer from "containers/sections/footer";
+
 
 class Home extends Component {
   constructor(){
@@ -19,7 +21,10 @@ class Home extends Component {
         prog: false,
         work: false,
         lang: false,
-        soft: false},
+        soft: false,
+        hobbies: false,
+        contact: false,
+      },
     };
     this.showHideSwap = showHideSwap.bind(this);
   }
@@ -45,8 +50,10 @@ class Home extends Component {
           <Languages showHide={this.state.showHide["lang"]} onClick={() => this.showHideSwap("lang")} />
           <Projects showHide={this.state.showHide["proj"]} onClick={() => this.showHideSwap("proj")} />
           <SoftwareSkills showHide={this.state.showHide["soft"]} onClick={() => this.showHideSwap("soft")} />
+          <Hobbies showHide={this.state.showHide["hobbies"]} onClick={() => this.showHideSwap("hobbies")} />
+          <Contact />
         </main>
-        <img src={logoImg} alt="" />
+        <Footer />
       </div>
     )
   }
