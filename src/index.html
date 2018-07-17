@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-GB" xml:lang="en-GB">
+  <head>
+    <meta charset="utf-8"/>
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Open+Sans+Condensed:300|Raleway" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700" rel="stylesheet"> -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> -->
+    <!-- <link href='https://fonts.googleapis.com/css?family=Fredericka+the+Great' rel='stylesheet' type='text/css'/> -->
+    <link rel="stylesheet" type="text/css"  href="mainStyle.css" />
+    <link rel="shortcut icon" href="images/logo-outer64.png"/>
+    <title>Nikolaos Pappas Curriculum Vitae</title>
+    <noscript>
+      <style>
+        body{         overflow: hidden; }
+        #disclaimer,#disclaimerBack{  visibility: visible;  }
+      </style>
+    </noscript>
+  </head>
+  <body>
+    <header>
+      <div class="header-left">
+        <div class="logo">
+          <img src="images/logo-outer128.png" alt="MyLogo" height="94" />
+        </div>
+        <div class="personal">
+          <h1>Nikolaos Pappas</h1>
+        </div>
+        <nav>
+          <ul>
+            <li>
+              <div class="tooltip">
+                <a href="#myAbst" onclick="showClick(edu,true)"><img src="images/nav/edu.png">
+                <span class="tooltiptext">Education</span></a>
+              </div>
+            </li>
+            <li>
+              <div class="tooltip">
+                <a href="#skillAnchor" onclick="closeClickSkill(skills,progLang,true)"><img src="images/nav/skills.png">
+                <span class="tooltiptext">Programming Skills</span></a>
+              </div>
+            </li>
+            <li>
+              <div class="tooltip">
+                <a href="#workAnchor" onclick="showClick(work,true)"><img src="images/nav/work.png">
+                <span class="tooltiptext">Working Experience</span></a>
+              </div>
+            </li>
+            <li>
+              <div class="tooltip">
+                <a href="#langAnchor" onclick="closeClickSkill(language,spokLang,true)"><img src="images/nav/lang.png">
+                <span class="tooltiptext">Spoken Languages</span></a>
+              </div>
+            </li>
+            <li>
+              <div class="tooltip">
+                <a href="#projAnchor" onclick="showClick(proj,true)"><img src="images/nav/project.png">
+                <span class="tooltiptext">Projects</span></a>
+              </div>
+            </li>
+            <li>
+              <div class="tooltip">
+                <a href="#softAnchor" onclick="showClick(software,true)"><img src="images/nav/software.png">
+                <span class="tooltiptext">Software</span></a>
+              </div>
+            </li>
+
+          </ul>
+        </nav>
+      </div>
+      <div class="Plinks">
+        <div class="personalInfo">
+          <a href="downloads/npcv.pdf" download><strong>Curriculum Vitae</strong></a><br/>
+          Phone number: +447751718491<br/>
+          e-Mail : nikolaospappa@gmail.com
+        </div>
+        <ul class="Plist">
+          <li><a target="blank" href="https://uk.linkedin.com/in/nikos-pappas"><img src="images/linkedin.png" alt="linkedIn" height="50" /></a></li>
+          <li><a href="mailto:nikolaospappa@gmail.com"><img src="images/mail.png" alt="e-Mail" height="50" /></a></li>
+          <li><a onclick="showClick(perInfo)"><img src="images/contact.png" alt="Contact info" height="50" /></a></li>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <section id="edu" class="education">
+        <heading><h1 onclick="showClick(edu)">Education +</h1></heading>
+        <div id="edu-entries" class="edu-entries">
+          <div class ="uob">
+            <table>
+              <tr>
+                <th class=dates>
+                  2015 - 2016
+                </th>
+                <th class="logo">
+                  <div class="uob-logo">
+                    <img src="images/uoblogo.png" alt="University of Bristol Logo" height="52" />
+                  </div>
+                </th>
+                <th>
+                  Computer Science MSc
+                </th>
+              </tr>
+            </table>
+            <div class="uob-details">
+              <ul>
+                <li><strong>Average: 74</strong> %</li>
+                <li><strong>Project:</strong> <em>Mammography Interpretation Tool<br/>
+                  using Covolutional Neural Networks </em><a href="downloads/npposter.pdf" download><strong>(Poster)</strong></a></li>
+                  <li class="expandableTxt" onclick="showClick(uobList)">Units List +</li>
+                  <li><ul class="uob-unitList">
+                    <li>Programming in C - <strong>73</strong> %</li>
+                    <li>Computer Architecture - <strong>75</strong> %</li>
+                    <li>Software Engineering - <strong>68</strong> %</li>
+                    <li>Web Technologies -<strong>78</strong> %</li>
+                    <li>Databases - <strong>82</strong> %</li>
+                    <li>Research Skills - <strong>66</strong> %</li>
+                    <li>Object Oriented Programming - Java - <strong>75</strong> %</li>
+                  </ul></li>
+                </ul>
+              </div>
+            </div>
+            <hr/>
+            <div class ="ugr">
+              <table>
+                <tr>
+                  <th class=dates>
+                    2011 - 2012
+                  </th>
+                  <th class="logo">
+                    <div class="ugr-logo">
+                      <img src="images/logo_ugr.gif" alt="Universidad de Granada" height="52" />
+                    </div>
+                  </th>
+                  <th>
+                    Civil Engineering<br/>
+                    Erasmus Exchange
+                  </th>
+                </tr>
+              </table>
+            </div>
+            <hr/>
+            <div class ="duth">
+              <table>
+                <tr>
+                  <th class=dates>
+                    2007 - 2014
+                  </th>
+                  <th class=logo>
+                    <div class="duth-logo">
+                      <img src="images/Duth_logo.png" alt="Democritus University of Thrace Logo" height="52"  />
+                      <div class="duth-logo-letters">
+                        <h2>Democritus</h2>
+                        <h3>University</h3>
+                        <h3>of Thrace</h3>
+                      </div>
+                    </div>
+                  </th>
+                  <th>
+                    Civil Engineering BEng<br/>
+                    Structural Engineering MEng
+                  </th>
+                </table>
+                <div class="duth-details">
+                  <ul>
+                    <li><strong>Average: 7.07</strong>/10</li>
+                    <li><strong>Project:</strong> <em>Experimental Corroboration Of The <br/>
+                      Behaviour Of A Bolted RBS Connection<br/>
+                      Under Cyclic Load </em><a href="downloads/nppresentation.pdf" download><strong>(Presentation)</strong></a></li>
+                      <li class="expandableTxt" onclick="showClick(duthList)">Selected Unit List +</li>
+                      <li><ul class="duth-unitList">
+                        <li>Fuzzy Logic - <strong>10/</strong>10</li>
+                        <li>Informatics - Fortran <strong>9</strong>/10</li>
+                        <li>Mechanics of Rigid Body - <strong>9</strong>/10</li>
+                        <li>Theory of Elastic Stability - <strong>10</strong>/10</li>
+                        <li>Plates and Shells - <strong>9.5</strong>/10</li>
+                        <li>Theory of Elasticity - <strong>7.5</strong>/10</li>
+                        <li>Steel Structures - <strong>8.5</strong>/10</li>
+                        <li>Laboratory Topics in Reinforced Concrete - <strong>8.5</strong>/10</li>
+                        <li>Fluid Mechanics - <strong>7</strong>/10</li>
+                        <li>Numerical Analysis - <strong>7</strong>/10</li>
+                      </ul></li>
+                    </ul>
+                  </div>
+                </div>
+                <hr/>
+            <div class ="anatolia">
+              <table>
+                <tr>
+                  <th class=dates>
+                    2001 - 2007
+                  </th>
+                  <th class="logo">
+              <div class="duth-logo">
+                <img src="images/logo_anatolia_rgb.jpg" alt="Anatolia College" height="52" />
+                <div class="duth-logo-letters">
+                  <h2>Anatolia</h2>
+                  <h3>College of</h3>
+                  <h3>Thessaloniki</h3>
+                </div>
+              </div>
+            </div>
+                    </th>
+                    <th>
+                      High School
+                    </th>
+                  </tr>
+                </table>
+                <div class="anatolia-details">
+                  <ul>
+                    <li><strong>Average: 18.67</strong>/20</li>
+                    <li class="expandableTxt" onclick="showClick(anatoliaList)">Extra Curricular Activities +</li>
+                    <li><ul class="anatolia-extraList">
+                      <li>Greek Theater Club</li>
+                      <li>Chess Club</li>
+                      <li>Tennis Club</li>
+                      <li>School Newspaper Club</li>
+                    </ul></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+      </section>
+<!-- ******************************************************************************************** -->
+      <section class="work">
+        <div id="workAnchor"></div>
+        <h1 onclick="showClick(work)">Employment Experience +</h1>
+        <div id="worklist" class="worklist">
+          <h3>2016 - Motion Tracking Annotation (SHPERE, Bristol)</h3>
+          <p>Annotating raw data from motion detection cameras with VICON's Nexux Motion Capture Software.<br/> (2 months, Part-Time, Paid)</p><hr/>
+          <h3>2015 - Electrician Assistant (Bristol Sparks, Bristol)</h3>
+          <p> Installing electrical circuits and CCTV systems.<br/> (2 months, Part-Time, Paid)</p><hr/>
+          <h3>2015 - Bartender (Hole In The Wall, Bristol)</h3>
+          <p> Serving drinks and food and making sure the bar is organised and clean. <br/>(4 months, Full-Time, Paid)</p><hr/>
+          <h3>2013 - Research Assistant in (GTE, Madrid) </h3>
+          <p> Calculating simple structures for construction.<br/>
+           Researching <strong>folding trusses</strong> as a future investment. <br/>(4 months, Full-Time, Internship)</p><hr/>
+        </div>
+      </section>
+<!-- ******************************************************************************************** -->
+<!-- ******************************************************************************************** -->
+      <section class="projects">
+        <div id="projAnchor"></div>
+        <h1 onclick="showClick(proj)">Projects +</h1>
+        <ul id="projectlist" class="projectlist">
+        <li>
+          <h3>Mammography Interpretation Tool <br/>using Computer Vision (University of Bristol Dissertation)</h3>
+          <p>
+            <strong>Convolutional Neural Networks</strong> (CNNs) are <strong>machine
+            learning</strong> structures able to implement aspects of
+            biological vision systems. They can be used in
+            <strong>Computer Vision</strong> applications to recognise and classify
+            objects in given imagery. <br/><br/>
+            This project aims at producing
+            a <strong>mammary gland screening tool</strong> using CNNs.
+            A tool that is, at least, able to segment volumes with
+            densities that differ from the expected in a provided mammography
+            sample. The project aims at highlighting suspected regions of
+            malignant tumour in these segments. The system would
+            ideally be able to assist doctors in the assessment of
+            mammography samples.
+          </p><br>
+          <figure>
+            <img class="projectImage" src="images/projects/processed.png" alt="Diagnosed Image" height="350" />
+            <figcaption>Sample of an analysed X-ray mammography.</figcaption>
+          </figure>
+          <figure>
+            <img class="projectImage" src="images/projects/ImageProcCross.png" alt="Processed Images" height="350" />
+            <figcaption>Selection of image filters applied to a mammography.</figcaption>
+          </figure>
+          <!-- <embed src="downloads/FlowChart.pdf" height="350px" alt="pdf" pluginspage="http://www.adobe.com/products/acrobat/readstep2.html"> -->
+          <!-- <img class="projectImage" src="images/downloads/FlowChart.pdf" height="350px" /> -->
+          <p>
+            The <strong>framework</strong> used for the CNNs is <a href="http://caffe.berkeleyvision.org/">Caffe</a>,
+            a framework developed by <em>Berkeley Vision and Learning Center</em>.
+          </p>
+          <figure>
+            <video class="projectImage" src="videos/Video1.mp4" alt="GUI Presentation" height="350" autoplay loop />
+            <figcaption>An actual clip from the project's Graphical User Interphase.</figcaption>
+          </figure>
+        </li>
+        <li>
+          <h3>Experimental Corroboration of<br/> Reduced Beam Section moment connections (DUTh Dissertation)</h3>
+          <p>
+            The aim of this project is to protect connections and columns in steel frames,
+            from brittle failure, by the controlled weakening of the beam.
+
+            This project included a full scale Eurocode compliant epxeriment and its
+            corroboration from a <strong>Finite Element Analysis</strong> model run in
+            <a target="blank" href="http://www.3ds.com/products-services/simulia/products/abaqus/">Abaqus/CAE</a>.
+          </p><br>
+          <figure>
+            <img class="projectImage" src="images/projects/experiment.jpg" alt="Diagnosed Image" height="350" />
+            <figcaption>Overview of the experiment assembly.</figcaption>
+          </figure>
+          <figure>
+            <img id="projExp" class="projectImage" src="images/projects/experiment-real.png" alt="Processed Images" height="350" />
+            <figcaption>Comparison of the resulting deformations between the real experimental component and the result of the simulation.</figcaption>
+          </figure>
+        </li>
+        <li>
+          <h3>University forum website database (University of Bristol)</h3>
+          <p>
+            This was a group project (4 people) for the <em>databases</em> unit.
+            Each member of the group was responsible for the implementation of
+            separate method, each one of which included an SQL query and the
+            equivalent Java server method. Key part of the project's success were
+            the productivity platforms and the <strong>test driven development</strong>.
+            This project recieved <strong>best of class mark</strong> (100%).
+          </p>
+        </li>
+        <li>
+          <h3>Website of Artist (University of Bristol)</h3>
+          <p>
+            This project began with the <em>Web Technologies</em> unit and was later developed
+            into a collaboration with a real artist. This project received best of class mark. <a target="blank" href="http://elvarce.com">Sample</a>
+          </p>
+            <figure>
+              <a class="photoLink" target="blank" href="http://elvarce.com">
+              <img class="projectImage" src="images/projects/elva.jpg" alt="Sample of the website" height="350px" />
+            </a>
+              <figcaption>Final design of the home page.</figcaption>
+            </figure>
+        </li>
+        <li>
+           <h3>Web based real estate speculation game <strong>participate</strong></h3>
+           <p>
+             Candidate for the <a href="http://www.sgt.gr/eng/SPG1/?"><em>Tomorrows</em></a> exhibition.
+          </p>
+            <figure>
+              <a class="photoLink" target="blank" href="http://tomorrows.com.s3-website-eu-west-1.amazonaws.com/">
+              <img class="projectImage" src="images/projects/tomorrows.png" alt="Sample of the website" height="350px" />
+            </a>
+              <figcaption>The START screen, where the logo of the game can be seen.</figcaption>
+            </figure>
+
+      </section>
+<!-- ******************************************************************************************** -->
+      <section class="software">
+        <div id="softAnchor"></div>
+        <h1 onclick="showClick(software)">+ Software</h1>
+        <div id="softList" class="softList">
+          <h3>Drawing</h3>
+          <ul>
+            <li>
+              <div class="tooltip">
+                <span class="tooltiptext">AutoCad</span>
+                <img src="images/software/autocad.png" alt="AutoCad"/>
+                <img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/circle.png" alt="circle" />
+              </div>
+            </li>
+            <li>
+              <div class="tooltip">
+                <span class="tooltiptext">Revit</span>
+                <img src="images/software/revit.png" alt="Revit"/>
+                <img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/circle.png" alt="circle" /><img src="images/skills/circle.png" alt="circle" /><img src="images/skills/circle.png" alt="circle" />
+              </div>
+            </li>
+            <li>
+              <div class="tooltip">
+                <span class="tooltiptext">SolidWorks</span>
+                <img src="images/software/solidworks.png" alt="SolidWorks"/>
+                <img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/circle.png" alt="circle" /><img src="images/skills/circle.png" alt="circle" />
+              </div>
+            </li>
+          </ul>
+          <h3>Rendering</h3>
+          <ul>
+            <li>
+              <div class="tooltip">
+                <span class="tooltiptext">Maya</span>
+                <img src="images/software/maya.png" alt="Maya"/>
+                <img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/circle.png" alt="circle" /><img src="images/skills/circle.png" alt="circle" /><img src="images/skills/circle.png" alt="circle" />
+              </div>
+            </li>
+            <li>
+              <div class="tooltip">
+                <span class="tooltiptext">Artlantis</span>
+                <img src="images/software/artlantis.png" alt="Artlantis"/>
+                <img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/circle.png" alt="circle" /><img src="images/skills/circle.png" alt="circle" />
+              </div>
+            </li>
+          </ul>
+          <h3>Finite Element Analysis</h3>
+          <ul>
+            <li>
+              <div class="tooltip">
+              <span class="tooltiptext">Simulia Abaqus</span>
+              <img src="images/software/abaqus.png" alt="Maya"/>
+              <img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/circle.png" alt="circle" />
+              </div>
+            </li>
+            <li>
+              <div class="tooltip">
+                <span class="tooltiptext">Robot</span>
+                <img src="images/software/robot.png" alt="Robot Structural Analysis"/>
+                <img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/circle.png" alt="circle" /><img src="images/skills/circle.png" alt="circle" />
+              </div>
+            </li>
+            <li>
+              <div class="tooltip">
+                <span class="tooltiptext">Inventor</span>
+                <img src="images/software/inventor.png" alt="Inventor"/>
+                <img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/circle.png" alt="circle" /><img src="images/skills/circle.png" alt="circle" /><img src="images/skills/circle.png" alt="circle" />
+              </div>
+            </li>
+          </ul>
+          <h3>Presentation</h3>
+          <ul>
+            <li>
+              <div class="tooltip">
+                <span class="tooltiptext">Photoshop</span>
+                <img src="images/software/photoshop.png" alt="Photoshop"/>
+                <img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/circle.png" alt="circle" />
+              </div>
+            </li>
+            <li>
+              <div class="tooltip">
+                <span class="tooltiptext">InDesign</span>
+                <img src="images/software/indesign.png" alt="InDesign"/>
+                <img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/circle.png" alt="circle" /><img src="images/skills/circle.png" alt="circle" />
+              </div>
+            </li>
+            <li>
+              <div class="tooltip">
+                <span class="tooltiptext">Premier Pro</span>
+                <img src="images/software/premier.jpeg" alt="Premier Pro"/>
+                <img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/circle.png" alt="circle" /><img src="images/skills/circle.png" alt="circle" /><img src="images/skills/circle.png" alt="circle" />
+              </div>
+            </li>
+            <li>
+              <div class="tooltip">
+                <span class="tooltiptext">GIMP</span>
+                <img src="images/software/gimp.png" alt="GIMP"/>
+                <img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/circle.png" alt="circle" />
+              </div>
+            </li>
+            <li>
+              <div class="tooltip">
+                <span class="tooltiptext">Inkscape</span>
+                <img src="images/software/inkscape.png" alt="Inkscape"/>
+                <img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/circle.png" alt="circle" /><img src="images/skills/circle.png" alt="circle" />
+              </div>
+            </li>
+            <li>
+              <div class="tooltip">
+                <span class="tooltiptext">Blender</span>
+                <img src="images/software/blender.png" alt="Blender"/>
+                <img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/circle.png" alt="circle" /><img src="images/skills/circle.png" alt="circle" /><img src="images/skills/circle.png" alt="circle" />
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="hobbies">
+      <h1 onclick="showClick(hobbies)">Hobbies +</h1>
+      <ul class="hobbyList">
+        <li>
+          <div class="tooltip">
+            <span class="tooltiptext">Skiing</span>
+            <img src="images/hobbies/ski.jpg" alt="skiing" />
+          </div>
+        </li>
+        <li>
+          <div class="tooltip">
+            <span class="tooltiptext">Capoeira</span>
+            <img src="images/hobbies/capoeira.jpg" alt="capoeira" />
+          </div>
+        </li>
+        <li>
+          <div class="tooltip">
+            <span class="tooltiptext">Chess</span>
+            <img src="images/hobbies/chess.jpeg" alt="chess" />
+          </div>
+        </li>
+        <li>
+          <div class="tooltip">
+            <span class="tooltiptext">Climbing</span>
+            <img src="images/hobbies/climbing.jpg" alt="climbing" />
+          </div>
+        </li>
+        <li>
+          <div class="tooltip">
+            <span class="tooltiptext">Photography</span>
+            <img src="images/hobbies/photog.jpg" alt="photography" />
+          </div>
+        </li>
+        <li>
+          <div class="tooltip">
+            <span class="tooltiptext">Digital Music Production</span>
+            <img src="images/hobbies/musicprodCrop.jpg" alt="music production" />
+          </div>
+        </li>
+      </ul>
+      </section>
+      <section class="contact">
+        <h1>Contact</h1>
+        <ul>
+          <li>
+            <img src="images/contact/mail.png" alt="e-Mail"/>nikolaospappa@gmail.com
+          <li>
+             <img src="images/contact/tel.png" alt="tel"/> 07751718491</li>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <div id="disclaimerBack">
+        <h1>
+          Without javascript it is impossimle to display the content of this website,<br/>
+          please enable script execution in your Browser and refresh.
+        </h1>
+      </div>
+      <div id="disclaimer">
+        <h1>
+          Without javascript it is impossible to display the content of this website,<br/>
+          please enable script execution in your Browser and refresh.
+        </h1>
+      </div>
+      <!-- <hr style="width: 80%; margin:auto"/> -->
+      2016
+    </footer>
+    <script src="script.js" type="text/javascript"></script>
+  </body>
+</html>

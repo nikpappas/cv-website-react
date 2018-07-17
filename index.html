@@ -17,218 +17,7 @@
     </noscript>
   </head>
   <body>
-    <header>
-      <div class="header-left">
-        <div class="logo">
-          <img src="images/logo-outer128.png" alt="MyLogo" height="94" />
-        </div>
-        <div class="personal">
-          <h1>Nikolaos Pappas</h1>
-        </div>
-        <nav>
-          <ul>
-            <li>
-              <div class="tooltip">
-                <a href="#myAbst" onclick="showClick(edu,true)"><img src="images/nav/edu.png">
-                <span class="tooltiptext">Education</span></a>
-              </div>
-            </li>
-            <li>
-              <div class="tooltip">
-                <a href="#skillAnchor" onclick="closeClickSkill(skills,progLang,true)"><img src="images/nav/skills.png">
-                <span class="tooltiptext">Programming Skills</span></a>
-              </div>
-            </li>
-            <li>
-              <div class="tooltip">
-                <a href="#workAnchor" onclick="showClick(work,true)"><img src="images/nav/work.png">
-                <span class="tooltiptext">Working Experience</span></a>
-              </div>
-            </li>
-            <li>
-              <div class="tooltip">
-                <a href="#langAnchor" onclick="closeClickSkill(language,spokLang,true)"><img src="images/nav/lang.png">
-                <span class="tooltiptext">Spoken Languages</span></a>
-              </div>
-            </li>
-            <li>
-              <div class="tooltip">
-                <a href="#projAnchor" onclick="showClick(proj,true)"><img src="images/nav/project.png">
-                <span class="tooltiptext">Projects</span></a>
-              </div>
-            </li>
-            <li>
-              <div class="tooltip">
-                <a href="#softAnchor" onclick="showClick(software,true)"><img src="images/nav/software.png">
-                <span class="tooltiptext">Software</span></a>
-              </div>
-            </li>
-
-          </ul>
-        </nav>
-      </div>
-      <div class="Plinks">
-        <div class="personalInfo">
-          <a href="downloads/npcv.pdf" download><strong>Curriculum Vitae</strong></a><br/>
-          Phone number: +447751718491<br/>
-          e-Mail : nikolaospappa@gmail.com
-        </div>
-        <ul class="Plist">
-          <li><a target="blank" href="https://uk.linkedin.com/in/nikos-pappas"><img src="images/linkedin.png" alt="linkedIn" height="50" /></a></li>
-          <li><a href="mailto:nikolaospappa@gmail.com"><img src="images/mail.png" alt="e-Mail" height="50" /></a></li>
-          <li><a onclick="showClick(perInfo)"><img src="images/contact.png" alt="Contact info" height="50" /></a></li>
-        </ul>
-      </div>
-    </header>
     <main>
-      <section id="myAbst" class="myAbst">
-        <p>I have recently graduated from the University of Bristol, where I had a MSc
-          course in <strong>Computer Science</strong>, expecting a first class degree. I have previously
-          studied <strong>Civil Engineering (Structural)</strong> at the Democritus University of Thrace. The skills
-          I obtained from my education, along with my experience working and undertaking
-          projects, are mainly <strong>problem solving</strong>, ease in <strong>adapting rapidly</strong> and the capability
-          to undertake a broad variety of tasks. I am looking forward to using and enhancing these
-          skills, and become a productive member of our society.
-        </p>
-      </section>
-      <section id="edu" class="education">
-        <heading><h1 onclick="showClick(edu)">Education +</h1></heading>
-        <div id="edu-entries" class="edu-entries">
-          <div class ="uob">
-            <table>
-              <tr>
-                <th class=dates>
-                  2015 - 2016
-                </th>
-                <th class="logo">
-                  <div class="uob-logo">
-                    <img src="images/uoblogo.png" alt="University of Bristol Logo" height="52" />
-                  </div>
-                </th>
-                <th>
-                  Computer Science MSc
-                </th>
-              </tr>
-            </table>
-            <div class="uob-details">
-              <ul>
-                <li><strong>Average: 74</strong> %</li>
-                <li><strong>Project:</strong> <em>Mammography Interpretation Tool<br/>
-                  using Covolutional Neural Networks </em><a href="downloads/npposter.pdf" download><strong>(Poster)</strong></a></li>
-                  <li class="expandableTxt" onclick="showClick(uobList)">Units List +</li>
-                  <li><ul class="uob-unitList">
-                    <li>Programming in C - <strong>73</strong> %</li>
-                    <li>Computer Architecture - <strong>75</strong> %</li>
-                    <li>Software Engineering - <strong>68</strong> %</li>
-                    <li>Web Technologies -<strong>78</strong> %</li>
-                    <li>Databases - <strong>82</strong> %</li>
-                    <li>Research Skills - <strong>66</strong> %</li>
-                    <li>Object Oriented Programming - Java - <strong>75</strong> %</li>
-                  </ul></li>
-                </ul>
-              </div>
-            </div>
-            <hr/>
-            <div class ="ugr">
-              <table>
-                <tr>
-                  <th class=dates>
-                    2011 - 2012
-                  </th>
-                  <th class="logo">
-                    <div class="ugr-logo">
-                      <img src="images/logo_ugr.gif" alt="Universidad de Granada" height="52" />
-                    </div>
-                  </th>
-                  <th>
-                    Civil Engineering<br/>
-                    Erasmus Exchange
-                  </th>
-                </tr>
-              </table>
-            </div>
-            <hr/>
-            <div class ="duth">
-              <table>
-                <tr>
-                  <th class=dates>
-                    2007 - 2014
-                  </th>
-                  <th class=logo>
-                    <div class="duth-logo">
-                      <img src="images/Duth_logo.png" alt="Democritus University of Thrace Logo" height="52"  />
-                      <div class="duth-logo-letters">
-                        <h2>Democritus</h2>
-                        <h3>University</h3>
-                        <h3>of Thrace</h3>
-                      </div>
-                    </div>
-                  </th>
-                  <th>
-                    Civil Engineering BEng<br/>
-                    Structural Engineering MEng
-                  </th>
-                </table>
-                <div class="duth-details">
-                  <ul>
-                    <li><strong>Average: 7.07</strong>/10</li>
-                    <li><strong>Project:</strong> <em>Experimental Corroboration Of The <br/>
-                      Behaviour Of A Bolted RBS Connection<br/>
-                      Under Cyclic Load </em><a href="downloads/nppresentation.pdf" download><strong>(Presentation)</strong></a></li>
-                      <li class="expandableTxt" onclick="showClick(duthList)">Selected Unit List +</li>
-                      <li><ul class="duth-unitList">
-                        <li>Fuzzy Logic - <strong>10/</strong>10</li>
-                        <li>Informatics - Fortran <strong>9</strong>/10</li>
-                        <li>Mechanics of Rigid Body - <strong>9</strong>/10</li>
-                        <li>Theory of Elastic Stability - <strong>10</strong>/10</li>
-                        <li>Plates and Shells - <strong>9.5</strong>/10</li>
-                        <li>Theory of Elasticity - <strong>7.5</strong>/10</li>
-                        <li>Steel Structures - <strong>8.5</strong>/10</li>
-                        <li>Laboratory Topics in Reinforced Concrete - <strong>8.5</strong>/10</li>
-                        <li>Fluid Mechanics - <strong>7</strong>/10</li>
-                        <li>Numerical Analysis - <strong>7</strong>/10</li>
-                      </ul></li>
-                    </ul>
-                  </div>
-                </div>
-                <hr/>
-            <div class ="anatolia">
-              <table>
-                <tr>
-                  <th class=dates>
-                    2001 - 2007
-                  </th>
-                  <th class="logo">
-              <div class="duth-logo">
-                <img src="images/logo_anatolia_rgb.jpg" alt="Anatolia College" height="52" />
-                <div class="duth-logo-letters">
-                  <h2>Anatolia</h2>
-                  <h3>College of</h3>
-                  <h3>Thessaloniki</h3>
-                </div>
-              </div>
-            </div>
-                    </th>
-                    <th>
-                      High School
-                    </th>
-                  </tr>
-                </table>
-                <div class="anatolia-details">
-                  <ul>
-                    <li><strong>Average: 18.67</strong>/20</li>
-                    <li class="expandableTxt" onclick="showClick(anatoliaList)">Extra Curricular Activities +</li>
-                    <li><ul class="anatolia-extraList">
-                      <li>Greek Theater Club</li>
-                      <li>Chess Club</li>
-                      <li>Tennis Club</li>
-                      <li>School Newspaper Club</li>
-                    </ul></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-      </section>
       <section id="skills" class="skills">
         <div id="skillAnchor"></div>
         <h1 onclick="closeClickSkill(skills,progLang)">+ Programming Skills</h1>
@@ -237,77 +26,121 @@
             <a href="#skillText"><div id="skillText" class="tooltip" onclick="showSkill(javaProg,progLang)">
               <span class="tooltiptext">Java</span>
               <img class="langLogo" src="images/skills/java-logo.png" alt="Java"/>
-              <img src="images/skills/star.png" alt="star"><img src="images/skills/star.png" alt="star"><img src="images/skills/star.png" alt="star"><img src="images/skills/star.png" alt="star"><img src="images/skills/circle.png" alt="circle" />
+              <img src="images/skills/star.png" alt="star">
+	      <img src="images/skills/star.png" alt="star">
+	      <img src="images/skills/star.png" alt="star">
+	      <img src="images/skills/star.png" alt="star">
+	      <img src="images/skills/circle.png" alt="circle" />
             </div></a>
           </li>
           <li>
             <a href="#skillText"><div class="tooltip" onclick="showSkill(cProg,progLang)">
               <span class="tooltiptext">C-programming</span>
               <img class="langLogo" src="images/skills/c-logo.png"    alt="C-programming"/>
-              <img src="images/skills/star.png" alt="star"><img src="images/skills/star.png" alt="star"><img src="images/skills/star.png" alt="star"><img src="images/skills/circle.png" alt="circle" /><img src="images/skills/circle.png" alt="circle" />
+              <img src="images/skills/star.png" alt="star">
+	      <img src="images/skills/star.png" alt="star">
+	      <img src="images/skills/star.png" alt="star">
+	      <img src="images/skills/circle.png" alt="circle" />
+	      <img src="images/skills/circle.png" alt="circle" />
             </div></a>
           </li>
           <li>
             <a href="#skillText"><div class="tooltip" onclick="showSkill(cpp,progLang)">
               <span class="tooltiptext">C++</span>
               <img class="langLogo" src="images/skills/cpp-logo.png"  alt="C++"/>
-              <img src="images/skills/star.png" alt="star"><img src="images/skills/star.png" alt="star"><img src="images/skills/circle.png" alt="circle" /><img src="images/skills/circle.png" alt="circle" /><img src="images/skills/circle.png" alt="circle" />
+              <img src="images/skills/star.png" alt="star">
+	      <img src="images/skills/star.png" alt="star">
+	      <img src="images/skills/circle.png" alt="circle" />
+	      <img src="images/skills/circle.png" alt="circle" />
+	      <img src="images/skills/circle.png" alt="circle" />
             </div></a>
           </li>
           <li>
             <a href="#skillText"><div class="tooltip" onclick="showSkill(htmlProg,progLang)">
               <span class="tooltiptext">HTML</span>
               <img class="langLogo" src="images/skills/html5-64.png"  alt="html"/>
-              <img src="images/skills/star.png" alt="star"><img src="images/skills/star.png" alt="star"><img src="images/skills/circle.png" alt="circle" /><img src="images/skills/circle.png" alt="circle" /><img src="images/skills/circle.png" alt="circle" />
+              <img src="images/skills/star.png" alt="star">
+	      <img src="images/skills/star.png" alt="star">
+	      <img src="images/skills/circle.png" alt="star" />
+	      <img src="images/skills/circle.png" alt="star" />
+	      <img src="images/skills/circle.png" alt="circle" />
             </div></a>
           </li>
           <li>
             <a href="#skillText"><div class="tooltip" onclick="showSkill(sqlite,progLang)">
               <span class="tooltiptext">SQLite</span>
               <img class="langLogo" src="images/skills/sql.png"       alt="SQLite"/>
-              <img src="images/skills/star.png" alt="star"><img src="images/skills/star.png" alt="star"><img src="images/skills/star.png" alt="star"><img src="images/skills/star.png" alt="star"><img src="images/skills/circle.png" alt="circle" />
+              <img src="images/skills/star.png" alt="star">
+	      <img src="images/skills/star.png" alt="star">
+	      <img src="images/skills/star.png" alt="star">
+	      <img src="images/skills/star.png" alt="star">
+	      <img src="images/skills/circle.png" alt="circle" />
             </div></a>
           </li>
           <li>
             <a href="#skillText"><div class="tooltip" onclick="showSkill(python,progLang)">
               <span class="tooltiptext">Python</span>
               <img class="langLogo" src="images/skills/python.png"   alt="Python"/>
-              <img src="images/skills/star.png" alt="star"><img src="images/skills/star.png" alt="star"><img src="images/skills/star.png" alt="star"><img src="images/skills/circle.png" alt="circle" /><img src="images/skills/circle.png" alt="circle" />
+              <img src="images/skills/star.png" alt="star">
+	      <img src="images/skills/star.png" alt="star">
+	      <img src="images/skills/star.png" alt="star">
+	      <img src="images/skills/circle.png" alt="circle" />
+	      <img src="images/skills/circle.png" alt="circle" />
             </div></a>
           </li>
           <li>
             <a href="#skillText"><div class="tooltip" onclick="showSkill(matlab,progLang)">
               <span class="tooltiptext">MATLAB</span>
               <img class="langLogo" src="images/skills/matlab.png"   alt="MATLAB"/>
-              <img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/circle.png" alt="circle" /><img src="images/skills/circle.png" alt="circle" />
+              <img src="images/skills/star.png" alt="star" />
+	      <img src="images/skills/star.png" alt="star" />
+	      <img src="images/skills/star.png" alt="star" />
+	      <img src="images/skills/circle.png" alt="circle" />
+	      <img src="images/skills/circle.png" alt="circle" />
             </div></a>
           </li>
           <li>
             <a href="#skillText"><div class="tooltip" onclick="showSkill(jscript,progLang)">
               <span class="tooltiptext">Javascript</span>
               <img class="langLogo" src="images/skills/js.png"   alt="Javascript"/>
-              <img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/circle.png" alt="circle" /><img src="images/skills/circle.png" alt="circle" />
+              <img src="images/skills/star.png" alt="star" />
+	      <img src="images/skills/star.png" alt="star" />
+	      <img src="images/skills/star.png" alt="star" />
+	      <img src="images/skills/circle.png" alt="circle" />
+	      <img src="images/skills/circle.png" alt="circle" />
             </div></a>
           </li>
           <li>
             <a href="#skillText"><div class="tooltip" onclick="showSkill(nodeJS,progLang)">
               <span class="tooltiptext">NodeJS</span>
               <img class="langLogo" src="images/skills/nodejs.png"   alt="NodeJS"/>
-              <img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/circle.png" alt="circle" /><img src="images/skills/circle.png" alt="circle" /><img src="images/skills/circle.png" alt="circle" />
+              <img src="images/skills/star.png" alt="star" />
+	      <img src="images/skills/star.png" alt="star" />
+	      <img src="images/skills/circle.png" alt="circle" />
+	      <img src="images/skills/circle.png" alt="circle" />
+	      <img src="images/skills/circle.png" alt="circle" />
             </div></a>
           </li>
           <li>
              <a href="#skillText"><div class="tooltip" onclick="showSkill(angJS,progLang)">
                 <span class="tooltiptext">AngularJS</span>
                 <img class="langLogo" src="images/skills/angularjs.png"   alt="AngularJS"/>
-                <img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/circle.png" alt="circle" /><img src="images/skills/circle.png" alt="circle" /><img src="images/skills/circle.png" alt="circle" />
+                <img src="images/skills/star.png" alt="star" />
+		<img src="images/skills/star.png" alt="star" />
+		<img src="images/skills/circle.png" alt="circle" />
+		<img src="images/skills/circle.png" alt="circle" />
+		<img src="images/skills/circle.png" alt="circle" />
              </div></a>
           </li>
           <li>
             <a href="#skillText"><div class="tooltip" onclick="showSkill(gradle,progLang)">
               <span class="tooltiptext">Gradle</span>
               <img class="langLogo" src="images/skills/gradle.png"   alt="Gradle"/>
-              <img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="star" /><img src="images/skills/star.png" alt="circle" /><img src="images/skills/circle.png" alt="circle" /><img src="images/skills/circle.png" alt="circle" />
+              <img src="images/skills/star.png" alt="star" />
+	      <img src="images/skills/star.png" alt="star" />
+	      <img src="images/skills/star.png" alt="circle" />
+	      <img src="images/skills/circle.png" alt="circle" />
+	      <img src="images/skills/circle.png" alt="circle" />
             </div></a>
           </li>
         </ul>

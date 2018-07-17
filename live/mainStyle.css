@@ -1,0 +1,630 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+h1{
+  transition: all 0.15s ease;
+}
+::selection {
+  background: #d8b517; /* WebKit/Blink Browsers */
+  color: #202121;
+}
+::-moz-selection {
+  background: #d8b517; /* Gecko Browsers */
+  color: #202121;
+}
+a{
+  text-decoration: none;
+  color: #BA0000;
+}
+a:hover{
+  opacity: 0.6;
+}
+.photoLink:hover{
+  opacity: 1;
+}
+.photoLink:hover img{
+  filter:brightness(0.8);
+}
+body{
+  scroll-behavior: smooth;
+  text-align: center;
+  margin-top: 150px;
+  overflow-x: hidden;
+  /*font-family: "Raleway","Helvetica Neue",Helvetica,Arial,sans-serif;*/
+  font-family: "Open Sans Condensed","Helvetica Neue",Helvetica,Arial,sans-serif;
+  background-color: #343636;
+  color: black;
+  width: 100%;
+}
+.body-m{
+  font-size: small;
+}
+ul{
+  list-style-type: none;
+}
+header{
+  text-align: left;
+  background-color: #202121;
+  width: 100%;
+  position: fixed;
+  top:0;
+  transition: all 0.6s ease;
+  z-index: 3;
+}
+header span img{
+  margin-bottom: 0.5em;
+  animation-name: spin;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes spin {
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+.cog{
+  fill:#aa0000;
+}
+header span{
+  text-align: center;
+  position:absolute;
+  top: 10px;
+  left:-300px;
+  display: inline-block;
+  width: 300px;
+  font-family: "Raleway",sans-serif;
+  font-size: 80%;
+}
+.skills, .languages, .software{
+  color: white;
+  background-color: #202121;
+}
+header.header-scrolled{
+  /*background-color: #203121; //green header*/
+  background-color: #343636;
+  opacity: 0.97;
+}
+.header-left{
+  position: relative;
+  left: 5%;
+  top: 0;
+  padding-bottom: 2%;
+  color:white;
+  transition: all 0.6s ease;
+}
+.header-left img{
+  transition: all 0.6s ease;
+}
+.header-scrolled .header-left img{
+  height: 40px;
+}
+header h1 {
+  font-variant: small-caps;
+  margin-bottom: 0;
+  font-size: 2.5em;
+  transition: all 0.6s ease;
+}
+header.header-scrolled h1 {
+  font-size: 1.7em;
+}
+
+.header h3{
+  float:left;
+  padding-bottom: 2%;
+}
+.logo{
+  margin-top: 2%;
+  display: inline-block;
+}
+.personal{
+  position: absolute;
+  top:30%;
+  margin-left: 2%;
+  padding-bottom: 1%;
+  display: inline-block;
+}
+.Plinks{
+  position: fixed;
+  right:2%;
+  top: 2%;
+  z-index: 4;
+  transition: all 0.6s ease;
+}
+.Plist img{
+  /*filter: sepia(100) hue-rotate(10deg) saturate(100);*/
+  transition: all 0.6s ease;
+}
+.header-scrolled li{
+  float:right;
+  display: inline;
+  vertical-align: top;
+}
+header li{
+  transition: all 0.6s ease;
+  transition-delay: 0.6s;
+}
+.Plinks img{
+  cursor: pointer;
+  height: 30px;
+}
+.Plinks img:hover{
+  filter: opacity(.5);
+}
+.personalInfo{
+  display: none;
+  /*display: inline-block;*/
+  position: absolute;
+  padding: 20px;
+  right: 100%;
+  margin-right: 10px;
+  border-radius: 3px;
+  /*color: #e9cc4e;*/
+  color: #BFC1C1;
+  min-width: 200px;
+  width:25%;
+  background-color: #343636;
+  opacity: 0.93;
+  z-index: 2;
+}
+#myAbst{
+  transition: all 0.6s ease;
+  color: white;
+  /*padding: 10%;*/
+  width:100%;
+  font-size: large;
+}
+#myAbst p{
+  text-align: justify;
+  margin: 5% auto;
+  padding-top: 50px;
+  margin: 3% auto;
+}
+.myAbst p{
+  width:50%;
+
+}
+nav{
+  position: absolute;
+  width:80%;
+  display: inline-block;
+  text-align: right;
+}
+nav ul{
+  position: absolute;
+  right:0%;
+  margin: 3em auto;
+  display: flex;
+}
+nav ul li{
+  display: inline;
+  margin-left:20px;
+}
+nav ul li img{
+  height: 2em;
+}
+nav ul li a{
+  color:white;
+  transition: all 0.6s ease;
+}
+nav ul li .tooltiptext{
+  position:absolute;
+  text-align: right;
+  /*top:-1.6em;*/
+  right:0;
+}
+nav.nav-m ul li img{
+   height: 4em;
+}
+.header-scrolled nav.nav-m ul li img{
+   height: 4em;
+}
+
+#skillAnchor, #workAnchor, #langAnchor, #projAnchor, #softAnchor{
+  position: relative;
+  top:-8em;
+}
+.header-scrolled nav ul{
+  margin: 1em auto;
+}
+.header-scrolled nav ul li img{
+  height: 0.5em;
+
+}
+.myAbst-m{
+  color: white;
+  width: 100%;
+  margin:0;
+  padding:0;
+}
+.myAbst-m p{
+   font-size: 25px;
+  width: 80%;
+  margin:0;
+  padding:0;
+  padding-top: 30px;
+}
+.myAbst{
+  /*background-color: #353737;*/
+  font-size: large;
+}
+.education, .work, .projects, .hobbies{
+  background-color: white;
+}
+.education, .work, .skills, .languages, .hobbies, .software, .projects {
+  padding-top: 3em;
+  padding-bottom: 3em;
+  min-height: 55px;
+  width: 100%;
+}
+#edu-entries{
+  display: none;
+}
+.edu-entries{
+  padding-top: 5%;
+}
+.edu-entries-m{
+  transform: scale(0.7);
+  -moz-transform: scale(0.7);
+}
+.education hr{
+  left: -10%;
+  position:relative;
+}
+.education h1, .work h1, .projects h1, .hobbies h1{
+  text-shadow: 0px 0px 10px rgba(100,110,110,.4);
+  z-index: 1;
+  position: absolute;
+  right: 15%;
+  text-align: right;
+  width: 100%;
+  padding-bottom: 1em;
+}
+.education, .work, .projects, .hobbies{
+  color: #202121;
+}
+.education h1:hover, .work h1:hover, .software h1:hover,
+.skills h1:hover, .languages h1:hover, .projects h1:hover, .hobbies h1:hover{
+  cursor: pointer;
+  opacity: 0.65;
+  text-shadow: 0px 0px 5px rgba(80,110,100,.8);
+  transform: translate(2px,3px);
+}
+.education th{
+  min-width: 240px;
+  position: relative;
+  left: -10%;
+}
+.dates{
+  font-size: 130%;
+  font-weight:bolder;
+}
+.expandableTxt{
+  cursor: pointer;
+  font-weight: bold;
+  opacity: 0.9;
+}
+.expandableTxt:hover{
+  color:black;
+  opacity: 1;
+}
+.skills h1, .languages h1, .software h1{
+  text-shadow: 0px 0px 10px rgba(170,150,150,.3);
+  position: absolute;
+  left: 15%;
+  text-align: left;
+  width: 100%;
+  z-index: 1;
+  padding-bottom: 1em;
+}
+.uob,.duth,.ugr, .anatolia {
+  width: 110%;
+  padding: 20px;
+  position:relative;
+  left: -20%;
+}
+.uob-logo, .ugr-logo{
+  position:relative;
+  left:-14%;
+}
+.duth-logo {
+  min-width: 240px;
+  font-weight: bold;
+  font-family: Arial;
+  font-size: 70%;
+  color: #292C2C;
+}
+.duth-logo img{
+  display: inline-block;
+  position:relative;
+  padding-right: 10px;
+  float:left;
+}
+.duth-logo-letters h1,h2,h3{
+  position: relative;
+  left:-2%;
+  display: block;
+  text-align: left;
+}
+.uob-details ul, .ugr-details ul, .duth-details ul , .anatolia-details ul{
+  text-align: right;
+  position: relative;
+  /*left:-5%;*/
+}
+.uob-unitList, .duth-unitList, .anatolia-extraList{
+  display: none;
+}
+.worklist-m{
+  font-size: smaller;
+}
+.worklist{
+  text-align: right;
+  padding-top: 5%;
+  position: relative;
+  left:-5%;
+  padding-bottom: 3%;
+}
+.worklist-m{
+  margin: 5em auto;
+  font-family: "Raleway";
+}
+#worklist p{
+  margin-top: 1em;
+  font-family: "Raleway";
+}
+.worklist hr{
+  margin-bottom: 1em;
+}
+.skills hr{
+  color: gold;
+  margin: .25em auto;
+}
+.textJava h3, .textC h3, .textHtml h3, .textCpp h3, .textGradle h3,
+ .textSQL h3, .textJS h3, .textNodeJS h3, .textPy h3, .textMAT h3, .textAngJS h3{
+   text-align: center;
+   font-weight: bold;
+   font-size: larger;
+}
+.textJava, .textC, .textHtml, .textCpp, .textSQL, .textGradle,
+.textJS, .textPy, .textMAT, .textAngJS, .textNodeJS,
+.eng,.gre,.spa,.ger{
+  /*vertical-align: bottom;*/
+  margin:0% auto;
+  left:5%;
+  background-color: #202121;
+  display: none;
+  text-align: justify;
+  width: 40%;
+  position: relative;
+  /*display: block;*/
+  /*top: 25%;*/
+  z-index: 1;
+  min-height: 200px;
+  /*font-family: "Josefin Sans";*/
+  font-size: large;
+  font-family: "Raleway", sans-serif;
+  padding: 3% auto;
+  color: #e9cc4e; /*text gold*/
+}
+.textJava p, .textC p, .textHtml p, .textCpp p, .textSQL p,
+.textJS p, .textPy p,.textMAT p, .textAngJS p, .textNodeJS p, .textGradle p{
+  width:90%;
+  margin-bottom: 5%;
+}
+.eng,.gre,.spa,.ger{
+  min-height: 250px;
+  width: 20%;
+  text-align: right;
+  margin-right: 0;
+}
+.skills ul, .hobbies ul{
+  margin:auto;
+  margin-top: 5%;
+  width: 45%;
+}
+#skilList, .languagelist, #softList, #worklist, #projectlist{
+  display: none;
+  padding-top: 5%;
+}
+#projectlist{
+  position:relative;
+  left:-3%;
+}
+
+.languages ul{
+  width: 25%;
+  cursor: pointer;
+  position:relative;
+  left:12%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+.skills ul{
+  position: relative;
+  width:50%;
+  padding-top: 5%;
+  padding-left:  10%;
+  padding-right: 10%;
+  padding-bottom: 5%;
+  text-align: right;
+}
+.skills li{
+  display: inline-block;
+  vertical-align: top;
+  padding-right: 3%;
+}
+.langLogo{
+  transition: all 0.3s ease;
+  border-radius: 10px;
+  box-shadow: 0 0 4px 2px #151616;
+  opacity: 0.82;
+  background: white;
+}
+.skills li:hover .langLogo,.skills li:focus .langLogo{
+  opacity: 1;
+  box-shadow: 0 0 4px 1px #AC8;
+}
+.languages li{
+  display: inline-block;
+  vertical-align: top;
+  padding-right: 8%;
+}
+.software ul{
+  position: relative;
+  /*left:5%;*/
+  margin:5% auto;
+  width: 45%;
+}
+.software li{
+  display: inline-block;
+  padding-right: 3%;
+}
+.skills li a{
+  outline: 0;
+  color:white;
+}
+.skills li img, .software li img{
+  height: 45px;
+  cursor: pointer;
+}
+.hobbies ul{
+  margin-top: 4em;
+  margin-bottom: 3em;
+}
+.hobbies li{
+  vertical-align: top;
+  float: right;
+  margin-right: 4%;
+}
+.hobbies img{
+  height: 100px;
+  border-radius: 3px;
+}
+.hobbyList{
+  display: none;
+}
+.software h3{
+  text-align: right;
+  /*position:absolute;*/
+  left:-15%;
+}
+.projects ul{
+  left:10%;
+  padding: 5%;
+  text-align: center;
+}
+.projectlist p{
+  width:50%;
+  margin-left: 5%;
+  font-family: "Raleway",sans-serif;
+  /*color: #e9cc4e; /*text gold*/
+  color: black;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  display: inline-block;
+  text-align: justify;
+}
+.projectlist h3{
+  margin-top: 1em;
+  margin-left: 25%;
+}
+.projectImage{
+  left:10%;
+  padding: 5%;
+  border-radius: 3px;
+  margin-left: 5%;
+  max-width: 50%;
+  height: auto;
+  max-height: 400px;
+}
+figure figcaption{
+  margin-left: 5%;
+}
+.row{
+  width:100%;
+}
+.footer-m{
+  font-size: 20px;
+}
+footer{
+  background-color: white;
+  color:black;
+}
+section h1{
+  font-size: 2em;
+}
+.education h1.h1-m, .work h1.h1-m, .projects h1.h1-m, .hobbies h1.h1-m{
+   right: 3%;
+}
+.skills h1.h1-m, .languages h1.h1-m, .software h1.h1-m{
+   left: 3%;
+}
+section h1.h1-m{
+   font-size: 4em;
+}
+/*---------Contact------------*/
+.contact h1{
+  margin: 1em auto;
+  color: white;
+}
+.contact ul{
+  width:50%;
+  /*text-align: left;*/
+  margin: 1em auto;
+  color: #D8B517;
+  font-family: "Raleway", sans-serif;
+}
+.contact ul li{
+  margin: 1em 1em;
+  display: inline-block;
+}
+.contact img{
+   margin: 1em 0.5em;
+  vertical-align:middle;
+  border-radius: 3px;
+  width:2em;
+  height: 2em;
+}
+/*---------Tooltips-----------*/
+.tooltip{
+  z-index: 4;
+}
+.tooltiptext {
+  visibility: hidden;
+  display: block;
+  font-family: "Raleway", sans-serif;
+  z-index: 4;
+  position: relative;
+}
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+/*------No script warning screen -------*/
+#disclaimer,#disclaimerBack{
+  visibility: hidden;
+  top:0;
+  left:0;
+  z-index: 7;
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(20, 21, 21, 0.1);
+  text-align: center;
+  color:white;
+}
+#disclaimerBack{
+  color:rgba(210,214,215,1);
+  background-color: rgba(20, 21, 21, 0.8);
+  filter: blur(1em);
+}
+
+#disclaimer h1, #disclaimerBack h1{
+  text-align: center;
+  margin: 6em auto;
+  background-color: rgba(0,0,0,0);
+}

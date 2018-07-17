@@ -1,0 +1,24 @@
+{
+  "name": "cvwebsite",
+  "version": "1.0.0",
+  "description": "My web version cv",
+  "main": " ",
+  "scripts": {
+    "start": "cd cvwebsite-react && npm run start &",
+    "build": "cd cvwebsite-react && npm run build",
+    "serve": "cd cvwebsite-react/dist && ../../node_modules/lite-server/bin/lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://nikopapp@bitbucket.org/nikopapp/cvwebsite.git"
+  },
+  "keywords": [
+    "cv"
+  ],
+  "author": "Nikolaos Pappas",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/nikopapp/cvwebsite#readme",
+  "devDependencies": {
+    "lite-server": "^2.3.0"
+  }
+}
