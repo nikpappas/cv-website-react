@@ -11,7 +11,6 @@ import Hobbies from "containers/sections/hobbies";
 import Contact from "containers/sections/contact";
 import Footer from "containers/sections/footer";
 
-
 class Home extends Component {
   constructor(){
     super();
@@ -32,7 +31,7 @@ class Home extends Component {
   render(){
       return (
         <div>
-          <Header />
+          <Header navListener={this.showHideSwap} />
           <main>
           <section id="myAbst" className="myAbst">
             <p>I have recently graduated from the University of Bristol, where I had a MSc
@@ -58,7 +57,6 @@ class Home extends Component {
     )
   }
 }
-
 function showHideSwap(section){
   this.setState((prevState) => {
     console.log(prevState)

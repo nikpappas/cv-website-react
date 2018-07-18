@@ -1,10 +1,11 @@
 import React from "react";
-
 export default (props) => (
   <section className="work">
     <div id="workAnchor"></div>
     <h1 onClick={props.onClick}>Employment Experience +</h1>
     <div id="worklist" className={"worklist "+(props.showHide?"displayed":"not-displayed")}>
+      <h3>Present - Consultant Software Developer (Scott Logic, Bristol)</h3>
+      <p>Developing bespoke software.<br/> ({getCurrentWorkDuration()} months, Full-Time, Paid)</p><hr/>
       <h3>2016 - Motion Tracking Annotation (SHPERE, Bristol)</h3>
       <p>Annotating raw data from motion detection cameras with VICON&#39;s Nexux Motion Capture Software.<br/> (2 months, Part-Time, Paid)</p><hr/>
       <h3>2015 - Electrician Assistant (Bristol Sparks, Bristol)</h3>
@@ -17,3 +18,8 @@ export default (props) => (
     </div>
   </section>
 );
+function getCurrentWorkDuration(){
+  const today = new Date();
+  const scottLogicStart = new Date(2017,2,6);
+  return (today.getYear() - scottLogicStart.getYear()) * 12 + (today.getMonth() - scottLogicStart.getMonth());
+}

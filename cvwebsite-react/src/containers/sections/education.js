@@ -1,44 +1,84 @@
-import React from "react";
-export default (props) => (
-  <section id="edu" className="education">
-    <heading><h1 onClick={props.onClick}>Education +</h1></heading>
-    <div id="edu-entries" className={"edu-entries "+ (props.showHide?"displayed":"not-displayed")} >
-      <div className ="uob">
-        <table>
-          <tr>
-            <th className="dates">
-              2015 - 2016
-            </th>
-            <th className="logo">
-              <div className="uob-logo">
-                <img src="images/uoblogo.png" alt="University of Bristol Logo" height="52" />
-              </div>
-            </th>
-            <th>
-              Computer Science MSc
-            </th>
-          </tr>
-        </table>
-        <div className="uob-details">
-          <ul>
-            <li><strong>Average: 74</strong> %</li>
-            <li><strong>Project:</strong> <em>Mammography Interpretation Tool<br/>
-              using Covolutional Neural Networks </em><a href="downloads/npposter.pdf" download><strong>(Poster)</strong></a></li>
-              <li className="expandableTxt" onclick="showClick(uobList)">Units List +</li>
-              <li><ul className="uob-unitList">
-                <li>Programming in C - <strong>73</strong> %</li>
-                <li>Computer Architecture - <strong>75</strong> %</li>
-                <li>Software Engineering - <strong>68</strong> %</li>
-                <li>Web Technologies -<strong>78</strong> %</li>
-                <li>Databases - <strong>82</strong> %</li>
-                <li>Research Skills - <strong>66</strong> %</li>
-                <li>Object Oriented Programming - Java - <strong>75</strong> %</li>
-              </ul></li>
-            </ul>
+import React, { Component } from "react";
+
+import duthLogo from "images/Duth_logo.png";
+import ugrLogo from "images/logo_ugr.gif";
+import uobLogo from "images/uoblogo.png";
+import anatoliaLogo from "images/logo_anatolia_rgb.jpg";
+
+const duthUnitList = [
+  {name: "Fuzzy Logic", mark:10 },
+  {name: "Informatics - Fortran" , mark:9},
+  {name: "Mechanics of Rigid Body" , mark:9},
+  {name: "Theory of Elastic Stability" , mark:10},
+  {name: "Plates and Shells" , mark:9.5},
+  {name: "Theory of Elasticity" , mark:7.5},
+  {name: "Steel Structures" , mark:8.5},
+  {name: "Reinforced Concrete Laboratory" , mark:8.5},
+  {name: "Fluid Mechanics" , mark:7},
+  {name: "Numerical Analysis" , mark:7},
+];
+
+const uobUnitList = [
+    {name: "Programming in C", mark:73 },
+    {name: "Computer Architecture", mark:75 },
+    {name: "Software Engineering", mark:68 },
+    {name: "Web Technologies", mark:78 },
+    {name: "Databases", mark:82 },
+    {name: "Research Skills", mark:66 },
+    {name: "Object Oriented Programming - Java", mark:75 },
+];
+
+class Education extends Component{
+  constructor(props){
+    super(props);
+    this.showHideSwap = showHideSwap.bind(this);
+    this.state = {
+      showHide:{
+        uobUnitList: false,
+        anatoliaList: false
+      }
+    };
+  }
+  render(){
+    console.log(this.state.showHide.uobUnitList)
+    return (
+      <section id="edu" className="education">
+        <heading><h1 onClick={this.props.onClick}>Education +</h1></heading>
+        <div id="edu-entries" className={"edu-entries "+ (this.props.showHide?"displayed":"not-displayed")} >
+          <div className ="uob">
+            <table>
+              <tr>
+                <th className="dates">
+                  2015 - 2016
+                </th>
+                <th className="logo">
+                  <div className="uob-logo">
+                    <img src={uobLogo} alt="University of Bristol Logo" height="52" />
+                  </div>
+                </th>
+                <th>
+                  Computer Science MSc
+                </th>
+              </tr>
+            </table>
+            <div className="uob-details">
+              <ul>
+                <li><strong>Average: 74</strong> %</li>
+                <li><strong>Project:</strong> <em>Mammography Interpretation Tool<br/>
+                using Covolutional Neural Networks </em><a href="downloads/npposter.pdf" download><strong>(Poster)</strong></a></li>
+              <li className="expandableTxt" onClick={() => this.showHideSwap("uobUnitList")}>Units List +</li>
+              {this.state.showHide.uobUnitList?(
+                <ul className={"uob-unitList displayed"}>
+                  {uobUnitList.map(x => (
+                    <li>{x.name} - <strong>{x.mark}</strong> %</li>
+                  ))}
+                </ul>
+              ):(<ul></ul>)}
+              </ul>
+            </div>
           </div>
-        </div>
-        <hr/>
-        <div className ="ugr">
+          <hr/>
+          <div className ="ugr">
           <table>
             <tr>
               <th className="dates">
@@ -46,7 +86,7 @@ export default (props) => (
               </th>
               <th className="logo">
                 <div className="ugr-logo">
-                  <img src="images/logo_ugr.gif" alt="Universidad de Granada" height="52" />
+                  <img src={ugrLogo} alt="Universidad de Granada" height="52" />
                 </div>
               </th>
               <th>
@@ -59,13 +99,13 @@ export default (props) => (
         <hr/>
         <div className ="duth">
           <table>
-          <tr>
+            <tr>
               <th className="dates">
                 2007 - 2014
               </th>
               <th className="logo">
                 <div className="duth-logo">
-                  <img src="images/Duth_logo.png" alt="Democritus University of Thrace Logo" height="52"  />
+                  <img src={duthLogo} alt="Democritus University of Thrace Logo" height="52"  />
                   <div className="duth-logo-letters">
                     <h2>Democritus</h2>
                     <h3>University</h3>
@@ -77,31 +117,28 @@ export default (props) => (
                 Civil Engineering BEng<br/>
                 Structural Engineering MEng
               </th>
-              </tr>
-            </table>
-            <div className="duth-details">
-              <ul>
-                <li><strong>Average: 7.07</strong>/10</li>
-                <li><strong>Project:</strong> <em>Experimental Corroboration Of The <br/>
-                  Behaviour Of A Bolted RBS Connection<br/>
-                  Under Cyclic Load </em><a href="downloads/nppresentation.pdf" download><strong>(Presentation)</strong></a></li>
-                  <li className="expandableTxt" onclick="showClick(duthList)">Selected Unit List +</li>
-                  <li><ul className="duth-unitList">
-                    <li>Fuzzy Logic - <strong>10/</strong>10</li>
-                    <li>Informatics - Fortran <strong>9</strong>/10</li>
-                    <li>Mechanics of Rigid Body - <strong>9</strong>/10</li>
-                    <li>Theory of Elastic Stability - <strong>10</strong>/10</li>
-                    <li>Plates and Shells - <strong>9.5</strong>/10</li>
-                    <li>Theory of Elasticity - <strong>7.5</strong>/10</li>
-                    <li>Steel Structures - <strong>8.5</strong>/10</li>
-                    <li>Laboratory Topics in Reinforced Concrete - <strong>8.5</strong>/10</li>
-                    <li>Fluid Mechanics - <strong>7</strong>/10</li>
-                    <li>Numerical Analysis - <strong>7</strong>/10</li>
-                  </ul></li>
-                </ul>
-              </div>
-            </div>
-            <hr/>
+            </tr>
+          </table>
+          <div className="duth-details">
+            <ul>
+              <li><strong>Average: 7.07</strong>/10</li>
+              <li><strong>Project:</strong> <em>Experimental Corroboration Of The <br/>
+                Behaviour Of A Bolted RBS Connection<br/>
+                Under Cyclic Load </em><a href="downloads/nppresentation.pdf" download><strong>(Presentation)</strong></a></li>
+              <li className="expandableTxt" onClick={() => this.showHideSwap("duthUnitList")} >Selected Unit List +</li>
+              <li>
+                {this.state.showHide.duthUnitList?(
+                  <ul className="duth-unitList">
+                    {duthUnitList.map(x => (
+                      <li key={x.name+"Unit"}>{x.name} - <strong>{x.mark}/</strong>10</li>
+                    ))}
+                  </ul>
+                ):(<ul></ul>)}
+              </li>
+            </ul>
+          </div>
+        </div>
+        <hr/>
         <div className ="anatolia">
           <table>
             <tr>
@@ -110,32 +147,52 @@ export default (props) => (
               </th>
               <th className="logo">
                 <div className="duth-logo">
-                  <img src="images/logo_anatolia_rgb.jpg" alt="Anatolia College" height="52" />
+                  <img src={anatoliaLogo} alt="Anatolia College" height="52" />
                   <div className="duth-logo-letters">
                     <h2>Anatolia</h2>
                     <h3>College of</h3>
                     <h3>Thessaloniki</h3>
                   </div>
                 </div>
-                </th>
-                </tr>
+              </th>
+            </tr>
             <th>
               High School
             </th>
-            </table>
-            <div className="anatolia-details">
-              <ul>
-                <li><strong>Average: 18.67</strong>/20</li>
-                <li className="expandableTxt" onclick="showClick(anatoliaList)">Extra Curricular Activities +</li>
-                <li><ul className="anatolia-extraList">
-                  <li>Greek Theater Club</li>
-                  <li>Chess Club</li>
-                  <li>Tennis Club</li>
-                  <li>School Newspaper Club</li>
-                </ul></li>
-              </ul>
-            </div>
+          </table>
+          <div className="anatolia-details">
+            <ul>
+              <li><strong>Average: 18.67</strong>/20</li>
+              <li className="expandableTxt" onClick={() => this.showHideSwap("anatoliaList")}>Extra Curricular Activities +</li>
+              <li>
+                {this.state.showHide.anatoliaList?(
+                  <ul className="anatolia-extraList">
+                    <li>Greek Theater Club</li>
+                    <li>Chess Club</li>
+                    <li>Tennis Club</li>
+                    <li>School Newspaper Club</li>
+                  </ul>
+                ):(<ul></ul>)}
+              </li>
+            </ul>
           </div>
         </div>
-  </section>
+      </div>
+    </section>
   );
+  }
+}
+
+function showHideSwap(item){
+  this.setState((prevState) => {
+    console.log(item)
+    prevState.showHide[item] = !prevState.showHide[item];
+    const obj = {...prevState};
+    console.log(obj)
+    return obj;
+  });
+  this.forceUpdate();
+
+
+}
+export default Education;

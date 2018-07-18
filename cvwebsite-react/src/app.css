@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
 * {
   margin: 0;
   padding: 0;
@@ -353,9 +356,6 @@ nav.nav-m ul li img{
   text-align: right;
   position: relative;
   /*left:-5%;*/
-}
-.uob-unitList, .duth-unitList, .anatolia-extraList{
-  display: none;
 }
 .worklist-m{
   font-size: smaller;
