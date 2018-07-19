@@ -28,10 +28,17 @@ class Home extends Component {
     this.showHideSwap = showHideSwap.bind(this);
   }
 
+  // <ProgrammingSkills showHide={this.state.showHide["prog"]} onClick={() => this.showHideSwap("prog")} />
+  // <Work showHide={this.state.showHide["work"]} onClick={() => this.showHideSwap("work")} />
+  // <Languages showHide={this.state.showHide["lang"]} onClick={() => this.showHideSwap("lang")} />
+  // <Projects showHide={this.state.showHide["proj"]} onClick={() => this.showHideSwap("proj")} />
+  // <SoftwareSkills showHide={this.state.showHide["soft"]} onClick={() => this.showHideSwap("soft")} />
+  // <Hobbies showHide={this.state.showHide["hobbies"]} onClick={() => this.showHideSwap("hobbies")} />
+  // <Contact />
   render(){
       return (
         <div>
-          <Header navListener={this.showHideSwap} />
+          <Header navListener={this.show} />
           <main>
           <section id="myAbst" className="myAbst">
             <p>I have recently graduated from the University of Bristol, where I had a MSc
@@ -44,13 +51,6 @@ class Home extends Component {
             </p>
           </section>
           <Education showHide={this.state.showHide["edu"]} onClick={() => this.showHideSwap("edu")} />
-          <ProgrammingSkills showHide={this.state.showHide["prog"]} onClick={() => this.showHideSwap("prog")} />
-          <Work showHide={this.state.showHide["work"]} onClick={() => this.showHideSwap("work")} />
-          <Languages showHide={this.state.showHide["lang"]} onClick={() => this.showHideSwap("lang")} />
-          <Projects showHide={this.state.showHide["proj"]} onClick={() => this.showHideSwap("proj")} />
-          <SoftwareSkills showHide={this.state.showHide["soft"]} onClick={() => this.showHideSwap("soft")} />
-          <Hobbies showHide={this.state.showHide["hobbies"]} onClick={() => this.showHideSwap("hobbies")} />
-          <Contact />
         </main>
         <Footer />
       </div>
@@ -67,4 +67,15 @@ function showHideSwap(section){
   }
   );
 }
+function show(section){
+  this.setState((prevState) => {
+    console.log(prevState)
+    prevState.showHide[section] = true;
+    const obj = {...prevState};
+    console.log(obj)
+    return obj;
+  }
+  );
+}
+
 export default Home;

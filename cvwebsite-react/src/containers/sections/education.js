@@ -43,23 +43,25 @@ class Education extends Component{
     console.log(this.state.showHide.uobUnitList)
     return (
       <section id="edu" className="education">
-        <heading><h1 onClick={this.props.onClick}>Education +</h1></heading>
+        <h1 onClick={this.props.onClick}>Education +</h1>
         <div id="edu-entries" className={"edu-entries "+ (this.props.showHide?"displayed":"not-displayed")} >
           <div className ="uob">
             <table>
-              <tr>
-                <th className="dates">
-                  2015 - 2016
-                </th>
-                <th className="logo">
-                  <div className="uob-logo">
-                    <img src={uobLogo} alt="University of Bristol Logo" height="52" />
-                  </div>
-                </th>
-                <th>
-                  Computer Science MSc
-                </th>
-              </tr>
+              <tbody>
+                <tr>
+                  <th className="dates">
+                    2015 - 2016
+                  </th>
+                  <th className="logo">
+                    <div className="uob-logo">
+                      <img src={uobLogo} alt="University of Bristol Logo" height="52" />
+                    </div>
+                  </th>
+                  <th>
+                    Computer Science MSc
+                  </th>
+                </tr>
+              </tbody>
             </table>
             <div className="uob-details">
               <ul>
@@ -70,7 +72,7 @@ class Education extends Component{
               {this.state.showHide.uobUnitList?(
                 <ul className={"uob-unitList displayed"}>
                   {uobUnitList.map(x => (
-                    <li>{x.name} - <strong>{x.mark}</strong> %</li>
+                    <li key={x.name+"uobUnitList"} >{x.name} - <strong>{x.mark}</strong> %</li>
                   ))}
                 </ul>
               ):(<ul></ul>)}
@@ -80,44 +82,48 @@ class Education extends Component{
           <hr/>
           <div className ="ugr">
           <table>
-            <tr>
-              <th className="dates">
-                2011 - 2012
-              </th>
-              <th className="logo">
-                <div className="ugr-logo">
-                  <img src={ugrLogo} alt="Universidad de Granada" height="52" />
-                </div>
-              </th>
-              <th>
-                Civil Engineering<br/>
+            <tbody>
+              <tr>
+                <th className="dates">
+                  2011 - 2012
+                </th>
+                <th className="logo">
+                  <div className="ugr-logo">
+                    <img src={ugrLogo} alt="Universidad de Granada" height="52" />
+                  </div>
+                </th>
+                <th>
+                  Civil Engineering<br/>
                 Erasmus Exchange
               </th>
             </tr>
+            </tbody>
           </table>
         </div>
         <hr/>
         <div className ="duth">
           <table>
-            <tr>
-              <th className="dates">
-                2007 - 2014
-              </th>
-              <th className="logo">
-                <div className="duth-logo">
-                  <img src={duthLogo} alt="Democritus University of Thrace Logo" height="52"  />
-                  <div className="duth-logo-letters">
-                    <h2>Democritus</h2>
-                    <h3>University</h3>
-                    <h3>of Thrace</h3>
+            <tbody>
+              <tr>
+                <th className="dates">
+                  2007 - 2014
+                </th>
+                <th className="logo">
+                  <div className="duth-logo">
+                    <img src={duthLogo} alt="Democritus University of Thrace Logo" height="52"  />
+                    <div className="duth-logo-letters">
+                      <h2>Democritus</h2>
+                      <h3>University</h3>
+                      <h3>of Thrace</h3>
+                    </div>
                   </div>
-                </div>
-              </th>
-              <th>
-                Civil Engineering BEng<br/>
+                </th>
+                <th>
+                  Civil Engineering BEng<br/>
                 Structural Engineering MEng
               </th>
             </tr>
+            </tbody>
           </table>
           <div className="duth-details">
             <ul>
@@ -130,7 +136,7 @@ class Education extends Component{
                 {this.state.showHide.duthUnitList?(
                   <ul className="duth-unitList">
                     {duthUnitList.map(x => (
-                      <li key={x.name+"Unit"}>{x.name} - <strong>{x.mark}/</strong>10</li>
+                      <li key={x.name+"DuthUnitList"}>{x.name} - <strong>{x.mark}/</strong>10</li>
                     ))}
                   </ul>
                 ):(<ul></ul>)}
@@ -141,24 +147,26 @@ class Education extends Component{
         <hr/>
         <div className ="anatolia">
           <table>
-            <tr>
-              <th className="dates">
-                2001 - 2007
-              </th>
-              <th className="logo">
-                <div className="duth-logo">
-                  <img src={anatoliaLogo} alt="Anatolia College" height="52" />
-                  <div className="duth-logo-letters">
-                    <h2>Anatolia</h2>
-                    <h3>College of</h3>
-                    <h3>Thessaloniki</h3>
+            <tbody>
+              <tr>
+                <th className="dates">
+                  2001 - 2007
+                </th>
+                <th className="logo">
+                  <div className="duth-logo">
+                    <img src={anatoliaLogo} alt="Anatolia College" height="52" />
+                    <div className="duth-logo-letters">
+                      <h2>Anatolia</h2>
+                      <h3>College of</h3>
+                      <h3>Thessaloniki</h3>
+                    </div>
                   </div>
-                </div>
-              </th>
-            </tr>
-            <th>
-              High School
-            </th>
+                </th>
+                <th>
+                  High School
+                </th>
+              </tr>
+            </tbody>
           </table>
           <div className="anatolia-details">
             <ul>

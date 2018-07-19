@@ -35,7 +35,7 @@ export default (props) => (
     <h1 onClick={props.onClick}>+ Programming Skills</h1>
     <ul id="skilList" className={"skilList "+(props.showHide?"displayed":"not-displayed")}>
       { skills.map((x) => (
-        <Skill name={x.name} stars={x.stars} imgSrc={x.imgSrc} />
+        <Skill key={x.name+"Skill"} name={x.name} stars={x.stars} imgSrc={x.imgSrc} />
       ))}
     </ul>
     <div className="textJava">

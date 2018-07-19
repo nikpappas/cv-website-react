@@ -17,13 +17,13 @@ export default (props) => (
     </div>
     <div className="spa">
       B2 national greek dimploma.<br/>
-      Lived studyed worked in spain.
+    Lived, studied, worked in spain.
     </div>
     <div className="ger">
       B2 Zertificat 2004
     </div>
     <ul id="languagelist" className={"languagelist "+ (props.showHide?"displayed":"not-displayed")} >
-      <li onclick="showSkill(english,spokLang)">
+      <li onClick={"showSkill(english,spokLang)"}>
         <h2>English</h2>
         <img src={star} alt="star" /><img src={star} alt="star" /><img src={star} alt="star" /><img src={star} alt="star" /><img src={star} alt="star" />
       </li>

@@ -23,7 +23,7 @@ export default (props) => (
   <ul className={"hobbylist "+(props.showHide?"displayed":"not-displayed")}>
     {
       hobbies.map(x => (
-        <li jey={x.name}>
+        <li key={x.name}>
           <div className="tooltip">
             <span className="tooltiptext">{x.name}</span>
             <img src={x.imgSrc} alt={x.name} />

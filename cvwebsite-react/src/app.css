@@ -159,8 +159,7 @@ header li{
   filter: opacity(.5);
 }
 .personalInfo{
-  display: none;
-  /*display: inline-block;*/
+  display: inline-block;
   position: absolute;
   padding: 20px;
   right: 100%;

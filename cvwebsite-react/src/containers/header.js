@@ -78,6 +78,6 @@ function showHideSwap(section){
     const obj = {...prevState};
     console.log(obj)
     return obj;
-  }
-  );
+  });
+  this.forceUpdate();
 }
