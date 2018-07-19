@@ -28,7 +28,6 @@ class Home extends Component {
     this.showHideSwap = showHideSwap.bind(this);
   }
 
-  // <ProgrammingSkills showHide={this.state.showHide["prog"]} onClick={() => this.showHideSwap("prog")} />
   // <Work showHide={this.state.showHide["work"]} onClick={() => this.showHideSwap("work")} />
   // <Languages showHide={this.state.showHide["lang"]} onClick={() => this.showHideSwap("lang")} />
   // <Projects showHide={this.state.showHide["proj"]} onClick={() => this.showHideSwap("proj")} />
@@ -51,6 +50,7 @@ class Home extends Component {
             </p>
           </section>
           <Education showHide={this.state.showHide["edu"]} onClick={() => this.showHideSwap("edu")} />
+          <ProgrammingSkills showHide={this.state.showHide["prog"]} onClick={() => this.showHideSwap("prog")} />
         </main>
         <Footer />
       </div>
