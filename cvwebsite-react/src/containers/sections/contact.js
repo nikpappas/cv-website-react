@@ -8,8 +8,9 @@ export default () => (
     <ul>
       <li>
         <img src={mailImg} alt="e-Mail"/>nikolaospappa@gmail.com
+      </li>
       <li>
-         <img src={telImg} alt="tel"/> 07751718491</li>
+         <img src={telImg} alt="tel"/>07751718491
       </li>
     </ul>
   </section>

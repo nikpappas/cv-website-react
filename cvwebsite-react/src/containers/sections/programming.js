@@ -12,24 +12,31 @@ import nodeImg from "images/skills/nodejs.png";
 import angularImg from "images/skills/angularjs.png";
 import gradleImg from "images/skills/gradle.png";
 
-import text from "../text/programmingSkills";
+import ProgrammingSkillsText from "../progSkillText";
 
 const skills = [
-  {name: "Java", imgSrc: javaImg, stars: 4, text:text.java},
-  {name: "C-programming", imgSrc: cImg, stars: 3},
-  {name: "C++", imgSrc: cppImg, stars: 2},
-  {name: "HTML", imgSrc: htmlImg, stars: 4},
-  {name: "SQL", imgSrc: sqlImg, stars: 4},
-  {name: "Python", imgSrc: pyImg, stars: 3},
-  {name: "MATLAB", imgSrc: matlabImg, stars: 3},
-  {name: "Javascript", imgSrc: jscriptImg, stars: 4},
-  {name: "NodeJs", imgSrc: nodeImg, stars: 3},
-  {name: "AngularJs", imgSrc: angularImg, stars: 3},
-  {name: "Gradle", imgSrc: gradleImg, stars: 2},
+  {name: "Java", imgSrc: javaImg, stars: 4, text:"java"},
+  {name: "C-programming", imgSrc: cImg, stars: 3, text: "c"},
+  {name: "C++", imgSrc: cppImg, stars: 2, text: "cpp"},
+  {name: "HTML", imgSrc: htmlImg, stars: 4, text: "html"},
+  {name: "SQL", imgSrc: sqlImg, stars: 4, text:"sql"},
+  {name: "Python", imgSrc: pyImg, stars: 3, text:"python"},
+  {name: "MATLAB", imgSrc: matlabImg, stars: 3, text:"matlab"},
+  {name: "Javascript", imgSrc: jscriptImg, stars: 4, text:"javascript"},
+  {name: "NodeJs", imgSrc: nodeImg, stars: 3, text: "nodejs"},
+  {name: "AngularJs", imgSrc: angularImg, stars: 3, text:"angularjs"},
+  {name: "Gradle", imgSrc: gradleImg, stars: 2, text:"gradle"},
 
 
 ];
 class ProgrammingSkills extends Component {
+  constructor(props){
+    super(props);
+    this.chooseLanguage = chooseLanguage.bind(this);
+    this.state ={
+      language: "",
+    }
+  }
 
   render(){
     return (
@@ -37,97 +44,25 @@ class ProgrammingSkills extends Component {
         <div id="skillAnchor"></div>
         <h1 onClick={this.props.onClick}>+ Programming Skills</h1>
         <ul id="skilList" className={"skilList "+(this.props.showHide?"displayed":"not-displayed")}>
+          <ProgrammingSkillsText language={this.state.language} />
           { skills.map((x) => (
-            <Skill key={x.name+"Skill"} name={x.name} stars={x.stars} imgSrc={x.imgSrc} />
+            <Skill
+              key={x.name+"Skill"}
+              name={x.name}
+              stars={x.stars}
+              imgSrc={x.imgSrc}
+              text={x.text}
+              listener={this.chooseLanguage}/>
           ))}
         </ul>
-
-        <div className="textJava">
-          <h3>Java</h3>
-          <p>
-            {text.java}
-            <br/><br/>
-          <span style={{color:"white"}}><strong>Projects:</strong></span> Mammography Interpretation Tool
-            (<a href="http://caffe.berkeleyvision.org/">Caffe</a>),<br/>
-          Face Recognition Pong Game, generic database.<br/><br/>
-        <span style={{color:"white"}}><strong>APIs used:</strong></span> SQL, OpenCV
-        </p>
-      </div>
-      <div className="textC">
-        <h3>C</h3>
-        <p>
-          The main programming language of my Master&#39;s course, was C. Within the course
-          I used data structures, such as <strong> linked lists, queues, trees</strong> and <strong>stacks</strong>.<br/><br/>
-        <span style={{color:'white'}}><strong>Projects:</strong></span> Teletext decoder, <a href="https://github.com/nikopapp/GameOfLife">Game Of Life</a>, Image Processing and Computer Vision apps using OpenCV.<br/><br/>
-        <span style={{color:'white'}}><strong>Libraries used:</strong></span> SDL, OpenCV, atlas, lmdb, pthread.
-        </p>
-      </div>
-      <div className="textCpp">
-        <h3>C++</h3>
-        <p></p>
-      </div>
-      <div className="textHtml">
-        <h3>HTML5</h3>
-        <p>
-          I first started using HTML in a computer science className in High-School, then in University of bristol
-          I had a unit on web technologies. <a href="http://elvarce.com">Sample1</a>, <a href="http://tomorrows.com.s3-website-eu-west-1.amazonaws.com/">Sample2,</a>.
-        </p>
-      </div>
-      <div className="textSQL">
-        <h3>SQL</h3>
-        <p>
-          The databases unit in my last degree included a complete implementation of the database
-          side of a faculty forum. The server was programmed in Java with an the SQLite database.
-        </p>
-      </div>
-      <div className="textNodeJS">
-        <h3>NodeJS</h3>
-        <p>
-          // TODO
-          I used NodeJS to program a server of a dynamic website, along with the database it is backed with.
-        </p>
-      </div>
-      <div className="textMAT">
-        <h3>MATLAB</h3>
-        <p>
-          MATLAB was my first contact to programming, initially using the built-in libraries, in order to
-          solve mathematical and engineering problems. The libraries I used the most was the plotting library and
-          the one for fuzzy logic.
-        </p>
-        <p>
-          I used MATLAB for my final project in order to automate the preprocessing of the mammography dataset
-          which was compiled by 10480 X-ray images.
-        </p>
-      </div>
-      <div className="textPy">
-        <h3>Python</h3>
-        <p>
-          I used Python, and more specifically Jupyter (iPython) Notebooks in order to visualize the layers
-          of the Convolutional Neural Network used for the Mammography Interpretation Tool.<br/><br/>
-        <span style={{color:"white"}}><strong>Modules Used:</strong></span> NumPy, matplotlib, caffe.
-        </p>
-      </div>
-      <div className="textAngJS">
-        <h3>AngularJS</h3>
-        <p>
-          //  TODO -->
-        </p>
-      </div>
-      <div className="textJS">
-        <h3>Javascript</h3>
-        <p>
-          //   TODO -->
-        </p>
-      </div>
-      <div className="textGradle">
-        <h3>Gradle</h3>
-        <p>
-          //   TODO -->
-        </p>
-      </div>
-
     </section>
     );
   }
 }
 export default ProgrammingSkills;
+
+function chooseLanguage(lang){
+  this.setState((prevState) => {
+    return {...prevState, language: lang};
+  });
+}

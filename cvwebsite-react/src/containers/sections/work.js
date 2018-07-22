@@ -5,9 +5,13 @@ export default (props) => (
     <h1 onClick={props.onClick}>Employment Experience +</h1>
     <div id="worklist" className={"worklist "+(props.showHide?"displayed":"not-displayed")}>
       <h3>Present - Consultant Software Developer (Scott Logic, Bristol)</h3>
-      <p>Developing bespoke software.<br/> ({getCurrentWorkDuration()} months, Full-Time, Paid)</p><hr/>
+      <p>
+        Developing bespoke software. <br /> <a>Projects</a><br/>
+        ({getCurrentWorkDuration()} months, Full-Time, Paid)
+      </p>
+      <hr/>
       <h3>2016 - Motion Tracking Annotation (SHPERE, Bristol)</h3>
-      <p>Annotating raw data from motion detection cameras with VICON&#39;s Nexux Motion Capture Software.<br/> (2 months, Part-Time, Paid)</p><hr/>
+      <p>Annotating raw data from motion detection cameras <br/>with VICON&#39;s Nexux Motion Capture Software.<br/> (2 months, Part-Time, Paid)</p><hr/>
       <h3>2015 - Electrician Assistant (Bristol Sparks, Bristol)</h3>
       <p> Installing electrical circuits and CCTV systems.<br/> (2 months, Part-Time, Paid)</p><hr/>
       <h3>2015 - Bartender (Hole In The Wall, Bristol)</h3>

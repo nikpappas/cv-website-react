@@ -28,10 +28,17 @@ class Header extends Component{
       showHide: {personalInfo: false,}
     };
     self.showHideSwap = showHideSwap.bind(self);
+    self.handleScroll = handleScroll.bind(self);
+  }
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll);
+  }
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
   }
   render(){
     return (
-      <header>
+      <header className={this.state.headerClassName}>
         <div className="header-left">
           <div className="logo">
             <img src={logo} alt="MyLogo" height="94" />
@@ -44,7 +51,7 @@ class Header extends Component{
               {bookmarks.map(x => (
                 <li key={x.name}>
                   <div className="tooltip">
-                    <a href={x.href} onClick={() => props.navListener(x.onClickRef)}><img src={x.src} alt={x.name}/>
+                    <a href={x.href} onClick={() => this.props.navListener(x.onClickRef)}><img src={x.src} alt={x.name}/>
                     <span className="tooltiptext">{x.name}</span></a>
                   </div>
                 </li>
@@ -80,4 +87,21 @@ function showHideSwap(section){
     return obj;
   });
   this.forceUpdate();
+}
+function handleScroll(event){
+  const top = (window.pageYOffset || document.scrollTop)  - (document.clientTop || 0);
+  if(top>100){
+    // abst.style.opacity="0";
+  } else {
+    // abst.style.opacity="1";
+  }
+  if (top>5) {
+    this.setState((prevState) => {
+      return {...prevState, headerClassName: "header-scrolled"};
+    });
+  } else {
+    this.setState((prevState) => {
+      return {...prevState, headerClassName: ""};
+    });
+  }
 }

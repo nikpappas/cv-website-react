@@ -19,8 +19,8 @@ export default (props) => (
       <p>
         <strong>Convolutional Neural Networks</strong> (CNNs) are <strong>machine
         learning</strong> structures able to implement aspects of
-        biological vision systems. They can be used in
-        <strong>Computer Vision</strong> applications to recognise and classify
+        biological vision systems. They can be used
+        in <strong>Computer Vision</strong> applications to recognise and classify
         objects in given imagery.
         <br /><br />
         This project aims at producing

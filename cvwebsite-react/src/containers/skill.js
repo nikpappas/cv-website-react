@@ -1,11 +1,21 @@
-import React from "react";
+import React, { Component } from "react";
 import Stars from "./stars";
-export default (props) => (
-  <li key={props.name}>
-    <a href="#skillText"><div id="skillText" className="tooltip" onClick={"showSkill(javaProg,progLang)"}>
-    <span className="tooltiptext">{props.name}</span>
-      <img className="langLogo" src={props.imgSrc} alt={props.name}/>
-      <Stars stars={props.stars} />
-  </div></a>
-  </li>
-);
+
+class Skill extends Component{
+  constructor(props){
+    super(props);
+  }
+  render() {
+    return (
+      <li key={this.props.name}>
+        <a href="#skillText"><div id="skillText" className="tooltip" onClick={() => this.props.listener(this.props.text)}>
+          <span className="tooltiptext">{this.props.name}</span>
+          <img className="langLogo" src={this.props.imgSrc} alt={this.props.name}/>
+          <Stars stars={this.props.stars} />
+        </div></a>
+      </li>
+    );
+  }
+}
+
+export default Skill;
