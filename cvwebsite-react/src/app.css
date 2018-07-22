@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
 * {
   margin: 0;
   padding: 0;
@@ -37,7 +40,7 @@ body{
   color: black;
   width: 100%;
 }
-.body-m{
+.main-wrapper-m{
   font-size: small;
 }
 ul{
@@ -93,7 +96,7 @@ header.header-scrolled{
   position: relative;
   left: 5%;
   top: 0;
-  padding-bottom: 2%;
+  padding-bottom: 1%;
   color:white;
   transition: all 0.6s ease;
 }
@@ -156,8 +159,7 @@ header li{
   filter: opacity(.5);
 }
 .personalInfo{
-  display: none;
-  /*display: inline-block;*/
+  display: inline-block;
   position: absolute;
   padding: 20px;
   right: 100%;
@@ -174,19 +176,15 @@ header li{
 #myAbst{
   transition: all 0.6s ease;
   color: white;
-  /*padding: 10%;*/
   width:100%;
   font-size: large;
 }
 #myAbst p{
   text-align: justify;
-  margin: 5% auto;
-  padding-top: 50px;
-  margin: 3% auto;
+  margin: 1% auto;
 }
 .myAbst p{
   width:50%;
-
 }
 nav{
   position: absolute;
@@ -248,12 +246,8 @@ nav.nav-m ul li img{
   padding:0;
   padding-top: 30px;
 }
-.myAbst{
-  /*background-color: #353737;*/
-  font-size: large;
-}
 .education, .work, .projects, .hobbies{
-  background-color: white;
+  background-color: #d1d1d2;
 }
 .education, .work, .skills, .languages, .hobbies, .software, .projects {
   padding-top: 3em;
@@ -262,6 +256,7 @@ nav.nav-m ul li img{
   width: 100%;
 }
 #edu-entries{
+  display: inline-block;
 }
 .edu-entries{
   padding-top: 5%;
@@ -287,7 +282,7 @@ nav.nav-m ul li img{
   color: #202121;
 }
 .education h1:hover, .work h1:hover, .software h1:hover,
-.skills h1:hover, .languages h1:hover, .projects h1:hover, .hobbies h1:hover{
+.skills h1:hover, .languages h1:hover, .projects h1:hover, .hobbies h1:hover, .myAbst h3:hover{
   cursor: pointer;
   opacity: 0.65;
   text-shadow: 0px 0px 5px rgba(80,110,100,.8);
@@ -354,9 +349,6 @@ nav.nav-m ul li img{
   position: relative;
   /*left:-5%;*/
 }
-.uob-unitList, .duth-unitList, .anatolia-extraList{
-  display: none;
-}
 .worklist-m{
   font-size: smaller;
 }
@@ -391,23 +383,19 @@ nav.nav-m ul li img{
 .textJava, .textC, .textHtml, .textCpp, .textSQL, .textGradle,
 .textJS, .textPy, .textMAT, .textAngJS, .textNodeJS,
 .eng,.gre,.spa,.ger{
-  /*vertical-align: bottom;*/
   margin:0% auto;
   left:5%;
   background-color: #202121;
-  display: none;
   text-align: justify;
   width: 40%;
   position: relative;
-  /*display: block;*/
-  /*top: 25%;*/
   z-index: 1;
   min-height: 200px;
   /*font-family: "Josefin Sans";*/
   font-size: large;
   font-family: "Raleway", sans-serif;
   padding: 3% auto;
-  color: #e9cc4e; /*text gold*/
+  color: #e9cc4e;
 }
 .textJava p, .textC p, .textHtml p, .textCpp p, .textSQL p,
 .textJS p, .textPy p,.textMAT p, .textAngJS p, .textNodeJS p, .textGradle p{
@@ -419,6 +407,7 @@ nav.nav-m ul li img{
   width: 20%;
   text-align: right;
   margin-right: 0;
+  display: inline-block;
 }
 .skills ul, .hobbies ul{
   margin:auto;
@@ -426,7 +415,7 @@ nav.nav-m ul li img{
   width: 45%;
 }
 #skilList, .languagelist, #softList, #worklist, #projectlist{
-  padding-top: 5%;
+  padding-top: 10%;
 }
 #projectlist{
   position:relative;
@@ -489,10 +478,6 @@ nav.nav-m ul li img{
   height: 45px;
   cursor: pointer;
 }
-.hobbies ul{
-  margin-top: 4em;
-  margin-bottom: 3em;
-}
 .hobbies li{
   vertical-align: top;
   float: right;
@@ -502,8 +487,10 @@ nav.nav-m ul li img{
   height: 100px;
   border-radius: 3px;
 }
-.hobbyList{
-  display: none;
+.hobbylist{
+  margin-top: 4em;
+  margin-bottom: 3em;
+  max-width: 640px;
 }
 .software h3{
   text-align: right;
