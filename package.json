@@ -17,8 +17,5 @@
   ],
   "author": "Nikolaos Pappas",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/nikopapp/cvwebsite#readme",
-  "devDependencies": {
-    "lite-server": "^2.3.0"
-  }
+  "homepage": "https://bitbucket.org/nikopapp/cvwebsite#readme"
 }
